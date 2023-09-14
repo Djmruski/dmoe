@@ -1,0 +1,163 @@
+Namespace(alpha=0.3, backbone_type='whole', batch_size=20, buffer_size=10, dataid=0, dataset='mod-har', debug_mode=0, disable_log=0, distributed='no', ignore_other_metrics=0, load_data='', lr=0.01, minibatch_size=20, model='der_mod', n_epochs=200, non_verbose=0, notes=None, nowand=0, ntask=6, optim_mom=0.0, optim_nesterov=0, optim_wd=0.0001, save_path='../har_experiments/for_paper_2/heatmap/der_pamap_4.pkl', seed=None, validation=0, wandb_entity='frahman', wandb_project='mammoth')
+Namespace(alpha=0.3, backbone_type='whole', batch_size=20, buffer_size=10, conf_host='elquinto', conf_jobnum='35eefa93-0e59-4c54-a76f-e9aa3bb748b3', conf_timestamp='2023-08-04 14:28:59.809460', dataid=0, dataset='mod-har', debug_mode=0, disable_log=0, distributed='no', ignore_other_metrics=0, load_data='', lr=0.01, minibatch_size=20, model='der_mod', n_epochs=200, non_verbose=0, notes=None, nowand=0, ntask=6, optim_mom=0.0, optim_nesterov=0, optim_wd=0.0001, save_path='../har_experiments/for_paper_2/heatmap/der_pamap_4.pkl', seed=None, validation=0, wandb_entity='frahman', wandb_project='mammoth')
+====TRAINING TASK: 0
+SimpleMLP(
+  (fc1): Linear(in_features=243, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=12, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=243, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=12, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=243, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=12, bias=True)
+    )
+  )
+)
+
+Accuracy for 1 task(s): 	 [Class-IL]: 96.54 % 	 [Task-IL]: 96.54 %
+
+====TRAINING TASK: 1
+SimpleMLP(
+  (fc1): Linear(in_features=243, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=12, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=243, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=12, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=243, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=12, bias=True)
+    )
+  )
+)
+
+Accuracy for 2 task(s): 	 [Class-IL]: 94.9 % 	 [Task-IL]: 97.14 %
+
+====TRAINING TASK: 2
+SimpleMLP(
+  (fc1): Linear(in_features=243, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=12, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=243, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=12, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=243, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=12, bias=True)
+    )
+  )
+)
+
+Accuracy for 3 task(s): 	 [Class-IL]: 73.78 % 	 [Task-IL]: 97.76 %
+
+====TRAINING TASK: 3
+SimpleMLP(
+  (fc1): Linear(in_features=243, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=12, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=243, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=12, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=243, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=12, bias=True)
+    )
+  )
+)
+
+Accuracy for 4 task(s): 	 [Class-IL]: 62.64 % 	 [Task-IL]: 97.04 %
+
+====TRAINING TASK: 4
+SimpleMLP(
+  (fc1): Linear(in_features=243, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=12, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=243, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=12, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=243, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=12, bias=True)
+    )
+  )
+)
+
+Accuracy for 5 task(s): 	 [Class-IL]: 58.95 % 	 [Task-IL]: 97.58 %
+
+====TRAINING TASK: 5
+SimpleMLP(
+  (fc1): Linear(in_features=243, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=12, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=243, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=12, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=243, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=12, bias=True)
+    )
+  )
+)
+
+Accuracy for 6 task(s): 	 [Class-IL]: 55.67 % 	 [Task-IL]: 94.0 %
+
+CLASS_IL_ACC: 
+	[83.77659574468085, 32.86713286713287, 57.19557195571956, 67.88617886178862, 12.5, 79.76539589442815]
+TASK_IL_ACC: 
+	[97.6063829787234, 95.45454545454545, 98.1549815498155, 98.78048780487805, 93.38235294117648, 80.64516129032258]
+f1_micro: 61.59420289855072
+f1_macro: 60.1941800399138
+              precision    recall  f1-score   support
+
+           0       0.82      0.79      0.80       219
+           1       0.90      0.91      0.91       157
+           2       0.64      0.09      0.16       174
+           3       0.86      0.70      0.77       112
+           4       0.95      0.98      0.96        95
+           5       0.44      0.35      0.39       176
+           6       0.34      0.63      0.44       197
+           7       0.93      0.88      0.91        49
+           8       1.00      0.48      0.65        33
+           9       0.04      0.01      0.02       103
+          10       0.54      1.00      0.70       231
+          11       0.81      0.38      0.52       110
+
+    accuracy                           0.62      1656
+   macro avg       0.69      0.60      0.60      1656
+weighted avg       0.64      0.62      0.58      1656
+
+task_train_time: {0: 14.350920492, 1: 9.903108685, 2: 12.743550789000004, 3: 6.831516163000003, 4: 7.166772831000003, 5: 14.093606062999996}
+prediction_time: 0.00018014799999832576
+Parameters: 256012
+Task parameters: {0: 256012, 1: 256012, 2: 256012, 3: 256012, 4: 256012, 5: 256012}

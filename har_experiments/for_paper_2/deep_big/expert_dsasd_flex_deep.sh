@@ -1,0 +1,10 @@
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > dsads_1.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > dsads_2.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > dsads_3.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > dsads_4.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > dsads_5.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > wisdm_1.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > wisdm_2.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > wisdm_3.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > wisdm_4.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 1 -gate_type 2 -hidden_size 50 > wisdm_5.txt

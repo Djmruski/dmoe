@@ -1,0 +1,371 @@
+CLASS_ORDER: [0, 15, 2, 4, 17, 8, 16, 18, 7, 12, 9, 6, 3, 10, 14, 1, 5, 11, 13]
+class_group: [(0, 15, 2), (4, 17), (8, 16), (18, 7), (12, 9), (6, 3), (10, 14), (1, 5), (11, 13)]
+STEP-1	Epoch: 10/200	loss: 0.3479	step1_train_accuracy: 83.9120
+STEP-1	Epoch: 20/200	loss: 0.2421	step1_train_accuracy: 90.0463
+STEP-1	Epoch: 30/200	loss: 0.2234	step1_train_accuracy: 91.0880
+STEP-1	Epoch: 40/200	loss: 0.1375	step1_train_accuracy: 95.0231
+STEP-1	Epoch: 50/200	loss: 0.1820	step1_train_accuracy: 93.9815
+STEP-1	Epoch: 60/200	loss: 0.0676	step1_train_accuracy: 97.8009
+STEP-1	Epoch: 70/200	loss: 0.0360	step1_train_accuracy: 99.1898
+STEP-1	Epoch: 80/200	loss: 0.0281	step1_train_accuracy: 99.3056
+STEP-1	Epoch: 90/200	loss: 0.0106	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0070	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0050	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0039	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0031	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0026	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0022	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0020	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0017	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0015	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0014	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0013	step1_train_accuracy: 100.0000
+Task-1	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10})
+Counter({0: 10, 1: 10, 2: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 95.3704	gate_accuracy: 100.0000
+	GATE_ACCURACY: 100.0000
+
+
+STEP-1	Epoch: 10/200	loss: 0.0143	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/200	loss: 0.0049	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0028	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0019	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0014	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0003	step1_train_accuracy: 100.0000
+Task-2	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 94.9074	gate_accuracy: 99.5370
+	Task-1	val_accuracy: 100.0000	gate_accuracy: 100.0000
+	GATE_ACCURACY: 99.7222
+
+
+STEP-1	Epoch: 10/200	loss: 0.0148	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/200	loss: 0.0054	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0031	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0022	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0017	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0013	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0003	step1_train_accuracy: 100.0000
+Task-3	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 94.9074	gate_accuracy: 99.5370
+	Task-1	val_accuracy: 99.3056	gate_accuracy: 97.9167
+	Task-2	val_accuracy: 100.0000	gate_accuracy: 100.0000
+	GATE_ACCURACY: 99.2063
+
+
+STEP-1	Epoch: 10/200	loss: 0.0279	step1_train_accuracy: 99.4792
+STEP-1	Epoch: 20/200	loss: 0.0122	step1_train_accuracy: 99.6528
+STEP-1	Epoch: 30/200	loss: 0.0067	step1_train_accuracy: 99.8264
+STEP-1	Epoch: 40/200	loss: 0.0048	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0030	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0023	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0018	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0014	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0012	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0004	step1_train_accuracy: 100.0000
+Task-4	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 94.9074	gate_accuracy: 99.5370
+	Task-1	val_accuracy: 97.2222	gate_accuracy: 98.6111
+	Task-2	val_accuracy: 98.6111	gate_accuracy: 97.2222
+	Task-3	val_accuracy: 97.2222	gate_accuracy: 96.5278
+	GATE_ACCURACY: 98.1481
+
+
+STEP-1	Epoch: 10/200	loss: 0.0168	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/200	loss: 0.0058	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0033	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0023	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0017	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0014	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0010	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0003	step1_train_accuracy: 100.0000
+Task-5	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 94.4444	gate_accuracy: 99.0741
+	Task-1	val_accuracy: 95.1389	gate_accuracy: 95.8333
+	Task-2	val_accuracy: 100.0000	gate_accuracy: 94.4444
+	Task-3	val_accuracy: 96.5278	gate_accuracy: 96.5278
+	Task-4	val_accuracy: 99.3056	gate_accuracy: 97.2222
+	GATE_ACCURACY: 96.8434
+
+
+STEP-1	Epoch: 10/200	loss: 0.1194	step1_train_accuracy: 96.7014
+STEP-1	Epoch: 20/200	loss: 0.0710	step1_train_accuracy: 97.9167
+STEP-1	Epoch: 30/200	loss: 0.0423	step1_train_accuracy: 99.3056
+STEP-1	Epoch: 40/200	loss: 0.0259	step1_train_accuracy: 99.1319
+STEP-1	Epoch: 50/200	loss: 0.0125	step1_train_accuracy: 99.6528
+STEP-1	Epoch: 60/200	loss: 0.0087	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0053	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0040	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0032	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0025	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0021	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0017	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0015	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0014	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0012	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0010	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0008	step1_train_accuracy: 100.0000
+Task-6	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 64.3519	gate_accuracy: 87.5000
+	Task-1	val_accuracy: 95.1389	gate_accuracy: 95.8333
+	Task-2	val_accuracy: 99.3056	gate_accuracy: 100.0000
+	Task-3	val_accuracy: 90.9722	gate_accuracy: 91.6667
+	Task-4	val_accuracy: 100.0000	gate_accuracy: 99.3056
+	Task-5	val_accuracy: 88.1944	gate_accuracy: 52.7778
+	GATE_ACCURACY: 87.8205
+
+
+STEP-1	Epoch: 10/200	loss: 0.0124	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/200	loss: 0.0048	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0028	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0020	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0015	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0012	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0010	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0003	step1_train_accuracy: 100.0000
+Task-7	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 80.0926	gate_accuracy: 92.5926
+	Task-1	val_accuracy: 99.3056	gate_accuracy: 99.3056
+	Task-2	val_accuracy: 100.0000	gate_accuracy: 96.5278
+	Task-3	val_accuracy: 84.7222	gate_accuracy: 85.4167
+	Task-4	val_accuracy: 99.3056	gate_accuracy: 99.3056
+	Task-5	val_accuracy: 84.0278	gate_accuracy: 56.9444
+	Task-6	val_accuracy: 90.2778	gate_accuracy: 47.2222
+	GATE_ACCURACY: 83.1481
+
+
+STEP-1	Epoch: 10/200	loss: 0.0179	step1_train_accuracy: 99.8264
+STEP-1	Epoch: 20/200	loss: 0.0060	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0034	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0023	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0017	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0013	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0003	step1_train_accuracy: 100.0000
+Task-8	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10, 15: 10, 16: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10, 15: 10, 16: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 63.8889	gate_accuracy: 88.8889
+	Task-1	val_accuracy: 90.9722	gate_accuracy: 95.8333
+	Task-2	val_accuracy: 97.2222	gate_accuracy: 95.1389
+	Task-3	val_accuracy: 92.3611	gate_accuracy: 90.9722
+	Task-4	val_accuracy: 97.2222	gate_accuracy: 96.5278
+	Task-5	val_accuracy: 73.6111	gate_accuracy: 52.7778
+	Task-6	val_accuracy: 92.3611	gate_accuracy: 63.8889
+	Task-7	val_accuracy: 72.9167	gate_accuracy: 32.6389
+	GATE_ACCURACY: 77.7778
+
+
+STEP-1	Epoch: 10/200	loss: 0.0091	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/200	loss: 0.0039	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0024	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0017	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0013	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0009	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0008	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0007	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0006	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0004	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0003	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0003	step1_train_accuracy: 100.0000
+Task-9	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10, 15: 10, 16: 10, 17: 10, 18: 10})
+Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10, 15: 10, 16: 10, 17: 10, 18: 10})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 72.2222	gate_accuracy: 97.2222
+	Task-1	val_accuracy: 96.5278	gate_accuracy: 97.2222
+	Task-2	val_accuracy: 100.0000	gate_accuracy: 99.3056
+	Task-3	val_accuracy: 88.1944	gate_accuracy: 88.1944
+	Task-4	val_accuracy: 96.5278	gate_accuracy: 96.5278
+	Task-5	val_accuracy: 58.3333	gate_accuracy: 42.3611
+	Task-6	val_accuracy: 92.3611	gate_accuracy: 57.6389
+	Task-7	val_accuracy: 74.3056	gate_accuracy: 37.5000
+	Task-8	val_accuracy: 99.3056	gate_accuracy: 99.3056
+	GATE_ACCURACY: 80.4094
+
+
+
+Execution time:
+CPU time: 00:11:00	Wall time: 00:01:56
+CPU time: 660.907380729	Wall time: 116.32552647590637
+FAA: 93.62139917695474
+FF: 16.666666666666668
+
+TRAINER.METRIC.ACCURACY
+0: [95.37037037037037]
+1: [94.9074074074074, 100.0]
+2: [94.9074074074074, 99.30555555555556, 100.0]
+3: [94.9074074074074, 97.22222222222221, 98.61111111111111, 97.22222222222221]
+4: [94.44444444444444, 95.13888888888889, 100.0, 96.52777777777779, 99.30555555555556]
+5: [64.35185185185185, 95.13888888888889, 99.30555555555556, 90.97222222222221, 100.0, 88.19444444444444]
+6: [80.0925925925926, 99.30555555555556, 100.0, 84.72222222222221, 99.30555555555556, 84.02777777777779, 90.27777777777779]
+7: [63.888888888888886, 90.97222222222221, 97.22222222222221, 92.36111111111111, 97.22222222222221, 73.61111111111111, 92.36111111111111, 72.91666666666666]
+8: [72.22222222222221, 96.52777777777779, 100.0, 88.19444444444444, 96.52777777777779, 58.333333333333336, 92.36111111111111, 74.30555555555556, 99.30555555555556]
+
+=====RUNNING ON TEST SET=====
+CALCULATING TEST ACCURACY PER TASK
+	TASK-0	CLASSES: [0 1 2]	test_accuracy: 76.9444
+	TASK-1	CLASSES: [3 4]	test_accuracy: 70.4167
+	TASK-2	CLASSES: [5 6]	test_accuracy: 98.7500
+	TASK-3	CLASSES: [7 8]	test_accuracy: 87.0833
+	TASK-4	CLASSES: [ 9 10]	test_accuracy: 64.1667
+	TASK-5	CLASSES: [11 12]	test_accuracy: 41.2500
+	TASK-6	CLASSES: [13 14]	test_accuracy: 90.4167
+	TASK-7	CLASSES: [15 16]	test_accuracy: 65.8333
+	TASK-8	CLASSES: [17 18]	test_accuracy: 99.1667
+PREDICTION TIME: 0.0018176089999997203
+
+====================
+
+f1_score(micro): 77.10526315789473
+f1_score(macro): 75.56593287369762
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.58      0.67      0.62       120
+           1       0.95      0.79      0.86       120
+           2       0.58      0.85      0.69       120
+           3       0.90      0.97      0.94       120
+           4       0.88      0.43      0.58       120
+           5       0.95      0.99      0.97       120
+           6       0.92      0.98      0.95       120
+           7       0.92      0.96      0.94       120
+           8       0.87      0.78      0.82       120
+           9       0.75      0.94      0.83       120
+          10       0.87      0.34      0.49       120
+          11       0.69      0.66      0.67       120
+          12       0.40      0.17      0.24       120
+          13       0.66      0.86      0.75       120
+          14       0.82      0.95      0.88       120
+          15       0.77      0.52      0.62       120
+          16       0.86      0.80      0.83       120
+          17       0.56      1.00      0.72       120
+          18       0.93      0.98      0.96       120
+
+    accuracy                           0.77      2280
+   macro avg       0.78      0.77      0.76      2280
+weighted avg       0.78      0.77      0.76      2280
+
+Parameters: 187702

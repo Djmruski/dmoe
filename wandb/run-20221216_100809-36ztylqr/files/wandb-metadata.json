@@ -1,0 +1,199 @@
+{
+    "os": "Linux-5.15.0-52-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-12-16T10:08:10.872566",
+    "startedAt": "2022-12-16T10:08:09.378600",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "wbtest.py",
+    "codePath": "wbtest.py",
+    "host": "elquinto",
+    "username": "fr27",
+    "executable": "/home/fr27/pytorch/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 3015.2707499999997,
+        "min": 1500.0,
+        "max": 2800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3095.93,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2767.672,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2782.349,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3187.952,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2895.78,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2896.952,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2904.985,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2938.074,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3179.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3027.337,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3171.633,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3145.408,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3175.8,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3009.115,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3060.403,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3183.924,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3180.709,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3110.997,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3185.817,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3142.455,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 3069.765,
+            "min": 1500.0,
+            "max": 2800.0
+        },
+        {
+            "current": 2800.0,
+            "min": 1500.0,
+            "max": 2800.0
+        }
+    ],
+    "disk": {
+        "total": 863.1991004943848,
+        "used": 329.77941513061523
+    },
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A6000",
+            "memory_total": 51527024640
+        }
+    ],
+    "memory": {
+        "total": 251.57802200317383
+    }
+}

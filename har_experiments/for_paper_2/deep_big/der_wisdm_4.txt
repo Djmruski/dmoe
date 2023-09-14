@@ -1,0 +1,1881 @@
+Namespace(alpha=0.3, backbone_type='whole', batch_size=20, buffer_size=10, dataid=5, dataset='mod-har', debug_mode=0, disable_log=0, distributed='no', ignore_other_metrics=0, load_data='', lr=0.0001, minibatch_size=20, model='der_har', n_epochs=200, non_verbose=0, notes=None, nowand=0, ntask=44, optim_mom=0.0, optim_nesterov=0, optim_wd=0.0001, save_path='', seed=None, validation=0, wandb_entity='frahman', wandb_project='mammoth')
+Namespace(alpha=0.3, backbone_type='whole', batch_size=20, buffer_size=10, conf_host='elquinto', conf_jobnum='fd41dcaa-1b48-4e2c-b3ea-ec733fad9377', conf_timestamp='2023-08-09 14:30:24.448132', dataid=5, dataset='mod-har', debug_mode=0, disable_log=0, distributed='no', ignore_other_metrics=0, load_data='', lr=0.0001, minibatch_size=20, model='der_har', n_epochs=200, non_verbose=0, notes=None, nowand=0, ntask=44, optim_mom=0.0, optim_nesterov=0, optim_wd=0.0001, save_path='', seed=None, validation=0, wandb_entity='frahman', wandb_project='mammoth')
+====TRAINING TASK: 0
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 1 task(s): 	 [Class-IL]: 0.0 % 	 [Task-IL]: 6.11 %
+
+====TRAINING TASK: 1
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 2 task(s): 	 [Class-IL]: 0.0 % 	 [Task-IL]: 4.95 %
+
+====TRAINING TASK: 2
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 3 task(s): 	 [Class-IL]: 0.0 % 	 [Task-IL]: 2.97 %
+
+====TRAINING TASK: 3
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 4 task(s): 	 [Class-IL]: 0.0 % 	 [Task-IL]: 2.23 %
+
+====TRAINING TASK: 4
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 5 task(s): 	 [Class-IL]: 1.22 % 	 [Task-IL]: 4.02 %
+
+====TRAINING TASK: 5
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 6 task(s): 	 [Class-IL]: 2.31 % 	 [Task-IL]: 3.52 %
+
+====TRAINING TASK: 6
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 7 task(s): 	 [Class-IL]: 2.03 % 	 [Task-IL]: 4.26 %
+
+====TRAINING TASK: 7
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 8 task(s): 	 [Class-IL]: 1.87 % 	 [Task-IL]: 4.18 %
+
+====TRAINING TASK: 8
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 9 task(s): 	 [Class-IL]: 1.75 % 	 [Task-IL]: 4.34 %
+
+====TRAINING TASK: 9
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 10 task(s): 	 [Class-IL]: 1.48 % 	 [Task-IL]: 4.32 %
+
+====TRAINING TASK: 10
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 11 task(s): 	 [Class-IL]: 1.37 % 	 [Task-IL]: 4.21 %
+
+====TRAINING TASK: 11
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 12 task(s): 	 [Class-IL]: 1.63 % 	 [Task-IL]: 3.91 %
+
+====TRAINING TASK: 12
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 13 task(s): 	 [Class-IL]: 1.45 % 	 [Task-IL]: 3.58 %
+
+====TRAINING TASK: 13
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 14 task(s): 	 [Class-IL]: 1.26 % 	 [Task-IL]: 3.82 %
+
+====TRAINING TASK: 14
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 15 task(s): 	 [Class-IL]: 1.23 % 	 [Task-IL]: 4.24 %
+
+====TRAINING TASK: 15
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 16 task(s): 	 [Class-IL]: 1.31 % 	 [Task-IL]: 4.71 %
+
+====TRAINING TASK: 16
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 17 task(s): 	 [Class-IL]: 1.28 % 	 [Task-IL]: 4.58 %
+
+====TRAINING TASK: 17
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 18 task(s): 	 [Class-IL]: 1.08 % 	 [Task-IL]: 4.66 %
+
+====TRAINING TASK: 18
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 19 task(s): 	 [Class-IL]: 1.22 % 	 [Task-IL]: 4.62 %
+
+====TRAINING TASK: 19
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 20 task(s): 	 [Class-IL]: 1.11 % 	 [Task-IL]: 4.33 %
+
+====TRAINING TASK: 20
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 21 task(s): 	 [Class-IL]: 1.55 % 	 [Task-IL]: 4.48 %
+
+====TRAINING TASK: 21
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 22 task(s): 	 [Class-IL]: 1.71 % 	 [Task-IL]: 4.31 %
+
+====TRAINING TASK: 22
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 23 task(s): 	 [Class-IL]: 1.64 % 	 [Task-IL]: 4.16 %
+
+====TRAINING TASK: 23
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 24 task(s): 	 [Class-IL]: 1.61 % 	 [Task-IL]: 4.32 %
+
+====TRAINING TASK: 24
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 25 task(s): 	 [Class-IL]: 1.7 % 	 [Task-IL]: 4.3 %
+
+====TRAINING TASK: 25
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 26 task(s): 	 [Class-IL]: 1.39 % 	 [Task-IL]: 4.45 %
+
+====TRAINING TASK: 26
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 27 task(s): 	 [Class-IL]: 1.3 % 	 [Task-IL]: 4.49 %
+
+====TRAINING TASK: 27
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 28 task(s): 	 [Class-IL]: 1.35 % 	 [Task-IL]: 4.85 %
+
+====TRAINING TASK: 28
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 29 task(s): 	 [Class-IL]: 1.59 % 	 [Task-IL]: 5.0 %
+
+====TRAINING TASK: 29
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 30 task(s): 	 [Class-IL]: 1.6 % 	 [Task-IL]: 4.8 %
+
+====TRAINING TASK: 30
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 31 task(s): 	 [Class-IL]: 1.57 % 	 [Task-IL]: 5.02 %
+
+====TRAINING TASK: 31
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 32 task(s): 	 [Class-IL]: 1.54 % 	 [Task-IL]: 5.14 %
+
+====TRAINING TASK: 32
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 33 task(s): 	 [Class-IL]: 1.5 % 	 [Task-IL]: 5.25 %
+
+====TRAINING TASK: 33
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 34 task(s): 	 [Class-IL]: 1.4 % 	 [Task-IL]: 5.45 %
+
+====TRAINING TASK: 34
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 35 task(s): 	 [Class-IL]: 1.48 % 	 [Task-IL]: 5.49 %
+
+====TRAINING TASK: 35
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 36 task(s): 	 [Class-IL]: 1.57 % 	 [Task-IL]: 5.45 %
+
+====TRAINING TASK: 36
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 37 task(s): 	 [Class-IL]: 1.52 % 	 [Task-IL]: 5.28 %
+
+====TRAINING TASK: 37
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 38 task(s): 	 [Class-IL]: 1.48 % 	 [Task-IL]: 5.41 %
+
+====TRAINING TASK: 38
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 39 task(s): 	 [Class-IL]: 1.33 % 	 [Task-IL]: 5.49 %
+
+====TRAINING TASK: 39
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 40 task(s): 	 [Class-IL]: 1.32 % 	 [Task-IL]: 5.69 %
+
+====TRAINING TASK: 40
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 41 task(s): 	 [Class-IL]: 1.31 % 	 [Task-IL]: 5.57 %
+
+====TRAINING TASK: 41
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 42 task(s): 	 [Class-IL]: 1.31 % 	 [Task-IL]: 5.84 %
+
+====TRAINING TASK: 42
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 43 task(s): 	 [Class-IL]: 1.29 % 	 [Task-IL]: 5.74 %
+
+====TRAINING TASK: 43
+SimpleMLP(
+  (fc1): Linear(in_features=91, out_features=1000, bias=True)
+  (fc2): Linear(in_features=1000, out_features=894, bias=True)
+  (_features): Identity()
+  (classifier): Sequential(
+    (0): Linear(in_features=91, out_features=1000, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1000, out_features=894, bias=True)
+  )
+  (net): Sequential(
+    (0): Identity()
+    (1): Sequential(
+      (0): Linear(in_features=91, out_features=1000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=1000, out_features=894, bias=True)
+    )
+  )
+)
+
+Accuracy for 44 task(s): 	 [Class-IL]: 1.28 % 	 [Task-IL]: 5.65 %
+
+CLASS_IL_ACC: 
+	[0.0, 0.0, 0.0, 0.0, 2.0408163265306123, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.217391304347826, 0.0, 0.0, 0.0, 0.7936507936507936, 0.0, 0.0, 0.9345794392523363, 0.0, 7.476635514018691, 0.8771929824561403, 0.0, 0.8928571428571428, 0.0, 7.199999999999999, 1.6, 8.547008547008547, 10.0, 1.9230769230769231, 0.8547008547008548, 0.0, 1.8691588785046727, 0.0, 3.1746031746031744, 0.0, 0.0, 0.9523809523809524, 0.0, 0.0, 0.0, 1.7699115044247788, 0.0, 0.0]
+TASK_IL_ACC: 
+	[6.666666666666667, 1.9607843137254901, 0.0, 0.0, 10.204081632653061, 0.0, 9.836065573770492, 0.0, 5.405405405405405, 6.557377049180328, 3.7383177570093453, 1.7391304347826086, 0.0, 6.306306306306306, 7.43801652892562, 12.698412698412698, 1.8181818181818181, 4.807692307692308, 0.0, 0.0, 6.5420560747663545, 0.0, 0.0, 8.035714285714286, 3.0927835051546393, 10.4, 6.4, 11.11111111111111, 9.090909090909092, 0.9615384615384616, 10.256410256410255, 7.339449541284404, 9.345794392523365, 16.666666666666664, 7.142857142857142, 2.7522935779816518, 0.0, 8.571428571428571, 8.411214953271028, 13.725490196078432, 0.0, 13.274336283185843, 3.8834951456310676, 12.264150943396226]
+f1_micro: 1.3016066707341873
+f1_macro: 0.32298271634126513
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00         4
+           1       0.00      0.00      0.00         9
+           2       0.00      0.00      0.00         4
+           3       0.00      0.00      0.00         4
+           4       0.00      0.00      0.00         4
+           5       0.00      0.00      0.00         4
+           6       0.00      0.00      0.00         9
+           7       0.00      0.00      0.00         5
+           8       0.00      0.00      0.00         5
+           9       0.00      0.00      0.00         4
+          10       0.00      0.00      0.00         4
+          11       0.00      0.00      0.00         9
+          12       0.00      0.00      0.00         5
+          13       0.00      0.00      0.00         4
+          14       0.00      0.00      0.00         9
+          15       0.00      0.00      0.00         5
+          16       0.00      0.00      0.00         9
+          17       0.00      0.00      0.00         4
+          18       0.00      0.00      0.00         4
+          19       0.00      0.00      0.00         5
+          20       0.00      0.00      0.00         5
+          21       0.00      0.00      0.00         5
+          22       0.00      0.00      0.00         9
+          23       0.00      0.00      0.00         4
+          24       0.00      0.00      0.00         4
+          25       0.00      0.00      0.00         4
+          26       0.00      0.00      0.00         4
+          27       0.00      0.00      0.00         9
+          28       0.00      0.00      0.00         5
+          29       0.00      0.00      0.00         4
+          30       0.00      0.00      0.00         4
+          31       0.00      0.00      0.00         5
+          32       0.00      0.00      0.00         4
+          33       0.00      0.00      0.00         4
+          34       0.00      0.00      0.00         4
+          35       0.00      0.00      0.00         4
+          36       0.00      0.00      0.00         4
+          37       0.00      0.00      0.00         4
+          38       0.00      0.00      0.00         5
+          39       0.00      0.00      0.00         9
+          40       0.00      0.00      0.00         9
+          41       0.00      0.00      0.00         4
+          42       0.00      0.00      0.00         4
+          43       0.00      0.00      0.00         5
+          44       0.00      0.00      0.00         4
+          45       0.00      0.00      0.00         4
+          46       0.00      0.00      0.00         4
+          47       0.00      0.00      0.00         5
+          48       0.00      0.00      0.00         9
+          49       0.00      0.00      0.00         5
+          50       0.00      0.00      0.00         6
+          51       0.00      0.00      0.00         4
+          52       0.00      0.00      0.00         4
+          53       0.00      0.00      0.00         5
+          54       0.00      0.00      0.00         9
+          55       0.00      0.00      0.00         5
+          56       0.00      0.00      0.00         9
+          57       0.00      0.00      0.00         4
+          58       0.00      0.00      0.00         4
+          59       0.00      0.00      0.00         4
+          60       0.00      0.00      0.00         5
+          61       0.00      0.00      0.00         5
+          62       0.00      0.00      0.00         9
+          63       0.00      0.00      0.00         4
+          64       0.00      0.00      0.00         4
+          65       0.00      0.00      0.00         4
+          66       0.00      0.00      0.00         4
+          67       0.00      0.00      0.00         5
+          68       0.00      0.00      0.00         4
+          69       0.00      0.00      0.00         9
+          70       0.00      0.00      0.00         9
+          71       0.00      0.00      0.00         4
+          72       0.00      0.00      0.00         5
+          73       0.00      0.00      0.00         9
+          74       0.00      0.00      0.00         9
+          75       0.00      0.00      0.00         9
+          76       0.00      0.00      0.00         4
+          77       0.00      0.00      0.00         9
+          78       0.00      0.00      0.00         4
+          79       0.00      0.00      0.00         4
+          80       0.00      0.00      0.00         9
+          81       0.00      0.00      0.00         9
+          82       0.00      0.00      0.00         9
+          83       0.00      0.00      0.00         4
+          84       0.00      0.00      0.00         5
+          85       0.00      0.00      0.00         4
+          86       0.00      0.00      0.00         4
+          87       0.00      0.00      0.00         5
+          88       0.00      0.00      0.00         9
+          89       0.00      0.00      0.00         9
+          90       0.00      0.00      0.00         9
+          91       0.00      0.00      0.00         5
+          92       0.00      0.00      0.00         4
+          93       0.00      0.00      0.00         4
+          94       0.00      0.00      0.00         4
+          95       0.00      0.00      0.00         4
+          96       0.00      0.00      0.00         4
+          97       0.00      0.00      0.00         4
+          98       0.00      0.00      0.00         4
+          99       0.12      0.22      0.15         9
+         100       0.00      0.00      0.00         9
+         101       0.00      0.00      0.00         4
+         102       0.00      0.00      0.00         9
+         103       0.00      0.00      0.00         5
+         104       0.00      0.00      0.00         4
+         105       0.00      0.00      0.00         4
+         106       0.00      0.00      0.00         4
+         107       0.00      0.00      0.00         4
+         108       0.00      0.00      0.00         4
+         109       0.00      0.00      0.00         5
+         110       0.00      0.00      0.00         4
+         111       0.00      0.00      0.00         4
+         112       0.00      0.00      0.00         5
+         113       0.00      0.00      0.00         4
+         114       0.00      0.00      0.00         5
+         115       0.00      0.00      0.00         4
+         116       0.00      0.00      0.00         4
+         117       0.00      0.00      0.00         5
+         118       0.00      0.00      0.00         4
+         119       0.00      0.00      0.00         5
+         120       0.00      0.00      0.00         4
+         121       0.00      0.00      0.00         4
+         122       0.00      0.00      0.00         4
+         123       0.00      0.00      0.00         9
+         124       0.00      0.00      0.00         9
+         125       0.00      0.00      0.00         4
+         126       0.00      0.00      0.00         9
+         127       0.00      0.00      0.00         4
+         128       0.00      0.00      0.00         9
+         129       0.00      0.00      0.00         4
+         130       0.00      0.00      0.00         4
+         131       0.00      0.00      0.00         4
+         132       0.00      0.00      0.00         4
+         133       0.00      0.00      0.00         4
+         134       0.00      0.00      0.00         5
+         135       0.00      0.00      0.00         9
+         136       0.00      0.00      0.00         9
+         137       0.00      0.00      0.00         4
+         138       0.00      0.00      0.00         9
+         139       0.00      0.00      0.00         5
+         140       0.00      0.00      0.00         4
+         141       0.00      0.00      0.00         4
+         142       0.00      0.00      0.00         9
+         143       0.00      0.00      0.00         5
+         144       0.00      0.00      0.00         4
+         145       0.00      0.00      0.00         5
+         146       0.00      0.00      0.00         9
+         147       0.00      0.00      0.00         9
+         148       0.00      0.00      0.00         5
+         149       0.00      0.00      0.00         9
+         150       0.00      0.00      0.00         5
+         151       0.00      0.00      0.00         4
+         152       0.00      0.00      0.00         4
+         153       0.00      0.00      0.00         5
+         154       0.00      0.00      0.00         4
+         155       0.00      0.00      0.00         9
+         156       0.00      0.00      0.00         4
+         157       0.00      0.00      0.00         4
+         158       0.00      0.00      0.00         9
+         159       0.00      0.00      0.00         9
+         160       0.00      0.00      0.00         4
+         161       0.00      0.00      0.00         4
+         162       0.00      0.00      0.00         4
+         163       0.00      0.00      0.00         4
+         164       0.00      0.00      0.00         9
+         165       0.00      0.00      0.00         5
+         166       0.00      0.00      0.00         4
+         167       0.00      0.00      0.00         9
+         168       0.00      0.00      0.00         4
+         169       0.00      0.00      0.00         4
+         170       0.00      0.00      0.00         4
+         171       0.00      0.00      0.00         9
+         172       0.00      0.00      0.00         5
+         173       0.00      0.00      0.00         4
+         174       0.00      0.00      0.00         4
+         175       0.00      0.00      0.00         4
+         176       0.00      0.00      0.00         4
+         177       0.00      0.00      0.00         4
+         178       0.00      0.00      0.00         4
+         179       0.00      0.00      0.00         9
+         180       0.00      0.00      0.00         4
+         181       0.00      0.00      0.00         9
+         182       0.00      0.00      0.00         9
+         183       0.00      0.00      0.00         5
+         184       0.00      0.00      0.00         9
+         185       0.00      0.00      0.00         7
+         186       0.00      0.00      0.00         4
+         187       0.00      0.00      0.00         4
+         188       0.00      0.00      0.00         9
+         189       0.00      0.00      0.00         5
+         190       0.00      0.00      0.00         4
+         191       0.00      0.00      0.00         4
+         192       0.00      0.00      0.00         5
+         193       0.00      0.00      0.00         4
+         194       0.00      0.00      0.00         9
+         195       0.00      0.00      0.00         9
+         196       0.00      0.00      0.00         5
+         197       0.00      0.00      0.00         4
+         198       0.00      0.00      0.00         4
+         199       0.00      0.00      0.00         9
+         200       0.00      0.00      0.00         4
+         201       0.00      0.00      0.00         9
+         202       0.00      0.00      0.00         9
+         203       0.00      0.00      0.00         9
+         204       0.00      0.00      0.00         4
+         205       0.00      0.00      0.00         4
+         206       0.00      0.00      0.00         5
+         207       0.00      0.00      0.00         4
+         208       0.00      0.00      0.00         4
+         209       0.00      0.00      0.00         9
+         210       0.00      0.00      0.00         9
+         211       0.00      0.00      0.00         4
+         212       0.00      0.00      0.00         4
+         213       0.00      0.00      0.00         4
+         214       0.00      0.00      0.00         4
+         215       0.00      0.00      0.00         5
+         216       0.00      0.00      0.00         4
+         217       0.00      0.00      0.00         4
+         218       0.00      0.00      0.00         4
+         219       0.00      0.00      0.00         4
+         220       0.00      0.00      0.00         9
+         221       0.00      0.00      0.00         4
+         222       0.00      0.00      0.00         9
+         223       0.00      0.00      0.00         5
+         224       0.00      0.00      0.00         4
+         225       0.00      0.00      0.00         4
+         226       0.00      0.00      0.00         4
+         227       0.00      0.00      0.00         4
+         228       0.00      0.00      0.00         9
+         229       0.00      0.00      0.00         9
+         230       0.00      0.00      0.00         9
+         231       0.00      0.00      0.00         4
+         232       0.00      0.00      0.00         4
+         233       0.00      0.00      0.00         4
+         234       0.00      0.00      0.00         9
+         235       0.00      0.00      0.00         4
+         236       0.00      0.00      0.00         4
+         237       0.00      0.00      0.00         5
+         238       0.00      0.00      0.00         4
+         239       0.00      0.00      0.00         9
+         240       0.00      0.00      0.00         4
+         241       0.00      0.00      0.00         4
+         242       0.00      0.00      0.00         5
+         243       0.00      0.00      0.00         9
+         244       0.00      0.00      0.00         9
+         245       0.04      1.00      0.08         4
+         246       0.00      0.00      0.00         4
+         247       0.00      0.00      0.00         4
+         248       0.08      0.50      0.14         4
+         249       0.00      0.00      0.00         5
+         250       0.00      0.00      0.00         9
+         251       0.00      0.00      0.00         5
+         252       0.00      0.00      0.00         9
+         253       0.00      0.00      0.00         5
+         254       0.00      0.00      0.00         5
+         255       0.00      0.00      0.00         4
+         256       0.00      0.00      0.00         4
+         257       0.00      0.00      0.00         4
+         258       0.00      0.00      0.00         4
+         259       0.00      0.00      0.00         4
+         260       0.00      0.00      0.00         4
+         261       0.00      0.00      0.00         9
+         262       0.00      0.00      0.00         5
+         263       0.00      0.00      0.00         5
+         264       0.00      0.00      0.00         4
+         265       0.00      0.00      0.00         4
+         266       0.00      0.00      0.00         4
+         267       0.00      0.00      0.00         4
+         268       0.00      0.00      0.00         4
+         269       0.00      0.00      0.00         4
+         270       0.00      0.00      0.00         5
+         271       0.00      0.00      0.00         9
+         272       0.00      0.00      0.00         4
+         273       0.00      0.00      0.00         4
+         274       0.00      0.00      0.00         4
+         275       0.00      0.00      0.00         9
+         276       0.00      0.00      0.00         4
+         277       0.00      0.00      0.00         5
+         278       0.00      0.00      0.00         7
+         279       0.00      0.00      0.00         9
+         280       0.00      0.00      0.00         4
+         281       0.00      0.00      0.00         5
+         282       0.00      0.00      0.00         9
+         283       0.00      0.00      0.00         4
+         284       0.00      0.00      0.00         4
+         285       0.00      0.00      0.00         4
+         286       0.00      0.00      0.00         4
+         287       0.00      0.00      0.00         9
+         288       0.00      0.00      0.00         4
+         289       0.00      0.00      0.00         4
+         290       0.00      0.00      0.00         4
+         291       0.00      0.00      0.00         5
+         292       0.00      0.00      0.00         4
+         293       0.00      0.00      0.00         9
+         294       0.00      0.00      0.00         5
+         295       0.00      0.00      0.00         5
+         296       0.00      0.00      0.00         9
+         297       0.00      0.00      0.00         4
+         298       0.00      0.00      0.00         9
+         299       0.00      0.00      0.00         9
+         300       0.00      0.00      0.00         4
+         301       0.00      0.00      0.00         5
+         302       0.00      0.00      0.00         4
+         303       0.00      0.00      0.00         4
+         304       0.00      0.00      0.00         4
+         305       0.00      0.00      0.00         5
+         306       0.00      0.00      0.00         4
+         307       0.00      0.00      0.00         5
+         308       0.00      0.00      0.00         9
+         309       0.00      0.00      0.00         9
+         310       0.00      0.00      0.00         9
+         311       0.00      0.00      0.00         5
+         312       0.00      0.00      0.00         4
+         313       0.00      0.00      0.00         9
+         314       0.00      0.00      0.00         9
+         315       0.00      0.00      0.00         4
+         316       0.00      0.00      0.00         9
+         317       0.00      0.00      0.00         4
+         318       0.00      0.00      0.00         4
+         319       0.00      0.00      0.00         4
+         320       0.00      0.00      0.00         4
+         321       0.00      0.00      0.00         4
+         322       0.00      0.00      0.00         9
+         323       0.00      0.00      0.00         4
+         324       0.00      0.00      0.00         9
+         325       0.00      0.00      0.00         4
+         326       0.00      0.00      0.00         4
+         327       0.33      0.20      0.25         5
+         328       0.00      0.00      0.00         9
+         329       0.00      0.00      0.00         9
+         330       0.00      0.00      0.00         9
+         331       0.00      0.00      0.00         4
+         332       0.00      0.00      0.00         9
+         333       0.00      0.00      0.00         9
+         334       0.00      0.00      0.00         4
+         335       0.00      0.00      0.00         4
+         336       0.00      0.00      0.00         4
+         337       0.00      0.00      0.00         4
+         338       0.00      0.00      0.00         4
+         339       0.00      0.00      0.00         4
+         340       0.00      0.00      0.00         5
+         341       0.00      0.00      0.00         9
+         342       0.00      0.00      0.00         5
+         343       0.00      0.00      0.00         5
+         344       0.00      0.00      0.00         5
+         345       0.00      0.00      0.00         9
+         346       0.00      0.00      0.00         4
+         347       0.00      0.00      0.00         4
+         348       0.00      0.00      0.00         5
+         349       0.00      0.00      0.00         4
+         350       0.00      0.00      0.00         4
+         351       0.00      0.00      0.00         9
+         352       0.00      0.00      0.00         9
+         353       0.00      0.00      0.00         9
+         354       0.00      0.00      0.00         5
+         355       0.00      0.00      0.00         4
+         356       0.00      0.00      0.00         4
+         357       0.00      0.00      0.00         4
+         358       0.00      0.00      0.00         5
+         359       0.00      0.00      0.00         5
+         360       0.00      0.00      0.00         4
+         361       0.00      0.00      0.00         4
+         362       0.00      0.00      0.00         4
+         363       0.00      0.00      0.00         4
+         364       0.00      0.00      0.00         9
+         365       0.00      0.00      0.00         4
+         366       0.00      0.00      0.00         4
+         367       0.00      0.00      0.00         9
+         368       0.00      0.00      0.00         4
+         369       0.00      0.00      0.00         9
+         370       0.00      0.00      0.00         4
+         371       0.00      0.00      0.00         4
+         372       0.00      0.00      0.00         5
+         373       0.00      0.00      0.00         9
+         374       0.00      0.00      0.00         4
+         375       0.00      0.00      0.00         9
+         376       0.00      0.00      0.00         4
+         377       0.00      0.00      0.00         9
+         378       0.00      0.00      0.00         9
+         379       0.00      0.00      0.00         5
+         380       0.00      0.00      0.00         4
+         381       0.00      0.00      0.00         9
+         382       0.00      0.00      0.00         4
+         383       0.00      0.00      0.00         4
+         384       0.00      0.00      0.00         4
+         385       0.00      0.00      0.00         4
+         386       0.00      0.00      0.00         4
+         387       0.00      0.00      0.00         4
+         388       0.00      0.00      0.00         5
+         389       0.02      0.25      0.03         4
+         390       0.00      0.00      0.00         4
+         391       0.00      0.00      0.00         9
+         392       0.00      0.00      0.00         4
+         393       0.00      0.00      0.00         4
+         394       0.00      0.00      0.00         9
+         395       0.00      0.00      0.00         5
+         396       0.00      0.00      0.00         4
+         397       0.00      0.00      0.00         4
+         398       0.00      0.00      0.00         4
+         399       0.00      0.00      0.00         4
+         400       0.00      0.00      0.00         9
+         401       0.00      0.00      0.00         9
+         402       0.00      0.00      0.00         4
+         403       0.00      0.00      0.00         4
+         404       0.00      0.00      0.00         4
+         405       0.00      0.00      0.00         4
+         406       0.00      0.00      0.00         4
+         407       0.00      0.00      0.00         4
+         408       0.00      0.00      0.00         5
+         409       0.00      0.00      0.00         4
+         410       0.00      0.00      0.00         4
+         411       0.00      0.00      0.00         4
+         412       0.00      0.00      0.00         9
+         413       0.00      0.00      0.00         4
+         414       0.00      0.00      0.00         9
+         415       0.00      0.00      0.00         5
+         416       0.00      0.00      0.00         4
+         417       0.00      0.00      0.00         5
+         418       0.00      0.00      0.00         4
+         419       0.00      0.00      0.00         5
+         420       0.00      0.00      0.00         5
+         421       0.00      0.00      0.00         9
+         422       0.00      0.00      0.00         9
+         423       0.00      0.00      0.00         5
+         424       0.00      0.00      0.00         5
+         425       0.00      0.00      0.00         4
+         426       0.00      0.00      0.00         4
+         427       0.00      0.00      0.00         5
+         428       0.00      0.00      0.00         4
+         429       0.00      0.00      0.00         4
+         430       0.00      0.00      0.00         4
+         431       0.16      0.89      0.28         9
+         432       0.00      0.00      0.00         4
+         433       0.00      0.00      0.00         4
+         434       0.00      0.00      0.00         4
+         435       0.00      0.00      0.00         4
+         436       0.00      0.00      0.00         5
+         437       0.00      0.00      0.00         5
+         438       0.00      0.00      0.00         5
+         439       0.00      0.00      0.00         9
+         440       0.00      0.00      0.00         9
+         441       0.00      0.00      0.00         8
+         442       0.00      0.00      0.00         4
+         443       0.00      0.00      0.00         5
+         444       0.00      0.00      0.00         4
+         445       0.00      0.00      0.00         4
+         446       0.00      0.00      0.00         9
+         447       0.00      0.00      0.00         4
+         448       0.00      0.00      0.00         4
+         449       0.00      0.00      0.00         4
+         450       0.00      0.00      0.00         5
+         451       0.00      0.00      0.00         4
+         452       0.09      0.11      0.10         9
+         453       0.00      0.00      0.00         9
+         454       0.00      0.00      0.00         9
+         455       0.00      0.00      0.00         5
+         456       0.00      0.00      0.00         4
+         457       0.00      0.00      0.00         9
+         458       0.00      0.00      0.00         4
+         459       0.00      0.00      0.00         4
+         460       0.00      0.00      0.00         4
+         461       0.00      0.00      0.00         4
+         462       0.00      0.00      0.00         4
+         463       0.00      0.00      0.00         4
+         464       0.00      0.00      0.00         4
+         465       0.00      0.00      0.00         9
+         466       0.00      0.00      0.00         4
+         467       0.00      0.00      0.00         4
+         468       0.00      0.00      0.00         5
+         469       0.00      0.00      0.00         4
+         470       0.00      0.00      0.00         4
+         471       0.00      0.00      0.00         4
+         472       0.00      0.00      0.00         4
+         473       0.00      0.00      0.00         4
+         474       0.00      0.00      0.00         4
+         475       0.03      0.11      0.05         9
+         476       0.00      0.00      0.00         9
+         477       0.00      0.00      0.00         4
+         478       0.00      0.00      0.00         4
+         479       0.00      0.00      0.00         4
+         480       0.00      0.00      0.00         9
+         481       0.00      0.00      0.00         9
+         482       0.00      0.00      0.00         9
+         483       0.00      0.00      0.00         9
+         484       0.00      0.00      0.00         4
+         485       0.00      0.00      0.00         4
+         486       0.00      0.00      0.00         4
+         487       0.00      0.00      0.00         4
+         488       0.00      0.00      0.00         4
+         489       0.00      0.00      0.00         4
+         490       0.00      0.00      0.00         5
+         491       0.00      0.00      0.00         5
+         492       0.00      0.00      0.00         4
+         493       0.00      0.00      0.00         4
+         494       0.00      0.00      0.00         4
+         495       0.00      0.00      0.00         4
+         496       0.00      0.00      0.00         4
+         497       0.00      0.00      0.00         4
+         498       0.00      0.00      0.00         4
+         499       0.00      0.00      0.00         4
+         500       0.00      0.00      0.00         9
+         501       0.00      0.00      0.00         9
+         502       0.00      0.00      0.00         4
+         503       0.00      0.00      0.00         4
+         504       0.00      0.00      0.00         4
+         505       0.00      0.00      0.00         4
+         506       0.00      0.00      0.00         4
+         507       0.00      0.00      0.00         9
+         508       0.00      0.00      0.00         4
+         509       0.00      0.00      0.00         5
+         510       0.00      0.00      0.00         4
+         511       0.00      0.00      0.00         4
+         512       0.00      0.00      0.00         4
+         513       0.00      0.00      0.00         5
+         514       0.00      0.00      0.00         4
+         515       0.00      0.00      0.00         4
+         516       0.00      0.00      0.00         9
+         517       0.00      0.00      0.00         4
+         518       0.00      0.00      0.00         9
+         519       0.00      0.00      0.00         9
+         520       0.00      0.00      0.00         9
+         521       0.00      0.00      0.00         4
+         522       0.00      0.00      0.00         4
+         523       0.00      0.00      0.00         9
+         524       0.00      0.00      0.00         9
+         525       0.00      0.00      0.00         4
+         526       0.00      0.00      0.00         4
+         527       0.00      0.00      0.00         4
+         528       0.00      0.00      0.00         9
+         529       0.00      0.00      0.00         9
+         530       0.00      0.00      0.00         4
+         531       0.00      0.00      0.00         4
+         532       0.05      1.00      0.09         9
+         533       0.00      0.00      0.00         4
+         534       0.00      0.00      0.00         4
+         535       0.00      0.00      0.00         5
+         536       0.00      0.00      0.00         9
+         537       0.00      0.00      0.00         9
+         538       0.00      0.00      0.00         9
+         539       0.00      0.00      0.00         5
+         540       0.00      0.00      0.00         9
+         541       0.00      0.00      0.00         9
+         542       0.00      0.00      0.00         4
+         543       0.00      0.00      0.00         9
+         544       0.00      0.00      0.00         4
+         545       1.00      0.22      0.36         9
+         546       0.00      0.00      0.00         4
+         547       0.00      0.00      0.00         4
+         548       0.00      0.00      0.00         5
+         549       0.00      0.00      0.00         4
+         550       0.00      0.00      0.00         9
+         551       0.00      0.00      0.00         5
+         552       0.00      0.00      0.00         5
+         553       0.00      0.00      0.00         4
+         554       0.00      0.00      0.00         4
+         555       0.00      0.00      0.00         9
+         556       0.00      0.00      0.00         4
+         557       0.00      0.00      0.00         9
+         558       0.00      0.00      0.00         9
+         559       0.00      0.00      0.00         4
+         560       0.00      0.00      0.00         4
+         561       0.00      0.00      0.00         4
+         562       0.00      0.00      0.00         5
+         563       0.01      0.33      0.02         9
+         564       0.00      0.00      0.00         4
+         565       0.00      0.00      0.00         4
+         566       0.00      0.00      0.00         4
+         567       0.00      0.00      0.00         4
+         568       0.00      0.00      0.00         5
+         569       0.00      0.00      0.00         9
+         570       0.11      0.78      0.19         9
+         571       0.00      0.00      0.00         4
+         572       0.00      0.00      0.00         9
+         573       0.00      0.00      0.00         4
+         574       0.00      0.00      0.00         9
+         575       0.00      0.00      0.00         4
+         576       0.00      0.00      0.00         5
+         577       0.01      1.00      0.02         9
+         578       0.00      0.00      0.00         5
+         579       0.00      0.00      0.00         4
+         580       0.00      0.00      0.00         5
+         581       0.00      0.00      0.00         4
+         582       0.00      0.00      0.00         4
+         583       0.00      0.00      0.00         4
+         584       0.01      0.11      0.02         9
+         585       0.00      0.00      0.00         5
+         586       0.00      0.00      0.00         4
+         587       0.00      0.00      0.00         4
+         588       0.00      0.00      0.00         9
+         589       0.00      0.00      0.00         4
+         590       0.04      0.25      0.06         4
+         591       0.00      0.00      0.00         9
+         592       0.00      0.00      0.00         4
+         593       0.00      0.00      0.00         5
+         594       0.00      0.00      0.00         5
+         595       0.00      0.00      0.00         4
+         596       0.00      0.00      0.00         4
+         597       0.00      0.00      0.00         9
+         598       0.00      0.00      0.00         9
+         599       0.00      0.00      0.00         4
+         600       0.00      0.00      0.00         5
+         601       1.00      0.22      0.36         9
+         602       0.00      0.00      0.00         9
+         603       0.00      0.00      0.00         4
+         604       0.00      0.00      0.00         5
+         605       0.00      0.00      0.00         4
+         606       0.00      0.00      0.00         4
+         607       0.00      0.00      0.00         4
+         608       0.00      0.00      0.00         4
+         609       0.00      0.00      0.00         4
+         610       0.00      0.00      0.00         5
+         611       0.00      0.00      0.00         4
+         612       0.00      0.00      0.00         4
+         613       0.00      0.00      0.00         4
+         614       0.00      0.00      0.00         4
+         615       0.00      0.00      0.00         4
+         616       0.00      0.00      0.00         4
+         617       0.00      0.00      0.00         4
+         618       0.00      0.00      0.00         4
+         619       0.05      0.11      0.07         9
+         620       0.00      0.00      0.00         5
+         621       0.00      0.00      0.00         9
+         622       0.00      0.00      0.00         9
+         623       0.00      0.00      0.00         4
+         624       0.00      0.00      0.00         4
+         625       0.00      0.00      0.00         9
+         626       0.00      0.00      0.00         5
+         627       0.00      0.00      0.00         4
+         628       0.00      0.00      0.00         4
+         629       0.00      0.00      0.00         4
+         630       0.00      0.00      0.00         4
+         631       0.00      0.00      0.00         9
+         632       0.00      0.00      0.00         9
+         633       0.00      0.00      0.00         9
+         634       0.00      0.00      0.00         5
+         635       0.00      0.00      0.00         4
+         636       0.00      0.00      0.00         4
+         637       0.00      0.00      0.00         9
+         638       0.00      0.00      0.00         5
+         639       0.00      0.00      0.00         4
+         640       0.00      0.00      0.00         4
+         641       0.00      0.00      0.00         5
+         642       0.00      0.00      0.00         9
+         643       0.00      0.00      0.00         4
+         644       0.00      0.00      0.00         4
+         645       0.00      0.00      0.00         4
+         646       0.00      0.00      0.00         9
+         647       0.00      0.00      0.00         4
+         648       0.00      0.00      0.00         4
+         649       0.00      0.00      0.00         5
+         650       0.00      0.00      0.00         9
+         651       0.00      0.00      0.00         4
+         652       0.00      0.00      0.00         4
+         653       0.00      0.00      0.00         9
+         654       0.00      0.00      0.00         9
+         655       0.00      0.00      0.00         4
+         656       0.00      0.00      0.00         5
+         657       0.00      0.00      0.00         4
+         658       0.00      0.00      0.00         4
+         659       0.00      0.00      0.00         4
+         660       0.00      0.00      0.00         4
+         661       0.08      0.22      0.12         9
+         662       0.00      0.00      0.00         4
+         663       0.00      0.00      0.00         4
+         664       0.00      0.00      0.00         4
+         665       0.00      0.00      0.00         9
+         666       0.00      0.00      0.00         4
+         667       0.00      0.00      0.00         4
+         668       0.00      0.00      0.00         9
+         669       0.00      0.00      0.00         5
+         670       0.00      0.00      0.00         9
+         671       0.00      0.00      0.00         4
+         672       0.00      0.00      0.00         4
+         673       0.00      0.00      0.00         4
+         674       0.00      0.00      0.00         4
+         675       0.00      0.00      0.00         9
+         676       0.00      0.00      0.00         4
+         677       0.00      0.00      0.00         9
+         678       0.00      0.00      0.00         5
+         679       0.00      0.00      0.00         4
+         680       0.00      0.00      0.00         9
+         681       0.00      0.00      0.00         4
+         682       0.00      0.00      0.00         4
+         683       0.00      0.00      0.00         9
+         684       0.00      0.00      0.00         4
+         685       0.00      0.00      0.00         4
+         686       0.00      0.00      0.00         9
+         687       0.00      0.00      0.00         4
+         688       0.00      0.00      0.00         4
+         689       0.00      0.00      0.00         5
+         690       0.00      0.00      0.00         4
+         691       0.00      0.00      0.00         4
+         692       0.00      0.00      0.00         5
+         693       0.00      0.00      0.00         4
+         694       0.00      0.00      0.00         4
+         695       0.00      0.00      0.00         4
+         696       0.00      0.00      0.00         5
+         697       0.00      0.00      0.00         9
+         698       0.00      0.00      0.00         9
+         699       0.00      0.00      0.00         9
+         700       0.00      0.00      0.00         8
+         701       0.00      0.00      0.00         4
+         702       0.00      0.00      0.00         4
+         703       0.00      0.00      0.00         4
+         704       0.00      0.00      0.00         4
+         705       0.00      0.00      0.00         9
+         706       0.00      0.00      0.00         9
+         707       0.15      0.44      0.22         9
+         708       0.00      0.00      0.00         4
+         709       0.00      0.00      0.00         4
+         710       0.00      0.00      0.00         9
+         711       0.00      0.00      0.00         9
+         712       0.00      0.00      0.00         4
+         713       0.00      0.00      0.00         5
+         714       0.00      0.00      0.00         5
+         715       0.00      0.00      0.00         9
+         716       0.00      0.00      0.00         4
+         717       0.00      0.00      0.00         4
+         718       0.00      0.00      0.00         4
+         719       0.00      0.00      0.00         4
+         720       0.00      0.00      0.00         8
+         721       0.00      0.00      0.00         4
+         722       0.00      0.00      0.00         5
+         723       0.00      0.00      0.00         4
+         724       0.00      0.00      0.00         9
+         725       0.00      0.00      0.00         4
+         726       0.00      0.00      0.00         5
+         727       0.00      0.00      0.00         4
+         728       0.00      0.00      0.00         4
+         729       0.00      0.00      0.00         5
+         730       0.00      0.00      0.00         5
+         731       0.00      0.00      0.00         9
+         732       0.00      0.00      0.00         4
+         733       0.00      0.00      0.00         9
+         734       0.00      0.00      0.00         9
+         735       0.00      0.00      0.00         4
+         736       0.00      0.00      0.00         4
+         737       0.00      0.00      0.00         4
+         738       0.00      0.00      0.00         4
+         739       0.00      0.00      0.00         4
+         740       0.00      0.00      0.00         9
+         741       0.00      0.00      0.00         9
+         742       0.00      0.00      0.00         4
+         743       0.00      0.00      0.00         9
+         744       0.00      0.00      0.00         4
+         745       0.00      0.00      0.00         4
+         746       0.00      0.00      0.00         4
+         747       0.00      0.00      0.00         4
+         748       0.00      0.00      0.00         4
+         749       0.00      0.00      0.00         5
+         750       0.00      0.00      0.00         4
+         751       0.00      0.00      0.00         4
+         752       0.00      0.00      0.00         4
+         753       0.00      0.00      0.00         4
+         754       0.00      0.00      0.00         4
+         755       0.00      0.00      0.00         4
+         756       0.00      0.00      0.00         4
+         757       0.00      0.00      0.00         4
+         758       0.10      0.11      0.11         9
+         759       0.00      0.00      0.00         4
+         760       0.00      0.00      0.00         4
+         761       0.00      0.00      0.00         4
+         762       0.00      0.00      0.00         4
+         763       0.00      0.00      0.00         4
+         764       0.00      0.00      0.00         9
+         765       0.00      0.00      0.00         9
+         766       0.00      0.00      0.00         4
+         767       0.00      0.00      0.00         4
+         768       0.00      0.00      0.00         9
+         769       0.00      0.00      0.00         4
+         770       0.00      0.00      0.00         4
+         771       0.00      0.00      0.00         9
+         772       0.00      0.00      0.00         4
+         773       0.00      0.00      0.00         4
+         774       0.00      0.00      0.00         5
+         775       0.00      0.00      0.00         5
+         776       0.00      0.00      0.00         4
+         777       0.00      0.00      0.00         9
+         778       0.00      0.00      0.00         4
+         779       0.00      0.00      0.00         5
+         780       0.00      0.00      0.00         9
+         781       0.00      0.00      0.00         4
+         782       0.00      0.00      0.00         9
+         783       0.00      0.00      0.00         9
+         784       0.00      0.00      0.00         5
+         785       0.00      0.00      0.00         4
+         786       0.00      0.00      0.00         4
+         787       0.00      0.00      0.00         5
+         788       0.00      0.00      0.00         4
+         789       0.00      0.00      0.00         5
+         790       0.00      0.00      0.00         4
+         791       0.00      0.00      0.00         4
+         792       0.00      0.00      0.00         5
+         793       0.00      0.00      0.00         4
+         794       0.00      0.00      0.00         9
+         795       0.00      0.00      0.00         9
+         796       0.00      0.00      0.00         4
+         797       0.00      0.00      0.00         4
+         798       0.00      0.00      0.00         4
+         799       0.00      0.00      0.00         4
+         800       0.00      0.00      0.00         4
+         801       0.00      0.00      0.00         9
+         802       0.00      0.00      0.00         4
+         803       0.00      0.00      0.00         5
+         804       0.00      0.00      0.00         4
+         805       0.00      0.00      0.00         4
+         806       0.00      0.00      0.00         4
+         807       0.00      0.00      0.00         4
+         808       0.00      0.00      0.00         9
+         809       0.00      0.00      0.00         5
+         810       0.00      0.00      0.00         4
+         811       0.00      0.00      0.00         4
+         812       0.00      0.00      0.00         4
+         813       0.00      0.00      0.00         4
+         814       0.00      0.00      0.00         4
+         815       0.00      0.00      0.00         4
+         816       0.00      0.00      0.00         9
+         817       0.00      0.00      0.00         4
+         818       0.00      0.00      0.00         4
+         819       0.00      0.00      0.00         4
+         820       0.00      0.00      0.00         4
+         821       0.00      0.00      0.00         5
+         822       0.00      0.00      0.00         4
+         823       0.00      0.00      0.00         9
+         824       0.00      0.00      0.00         9
+         825       0.00      0.00      0.00         4
+         826       0.00      0.00      0.00         9
+         827       0.00      0.00      0.00         4
+         828       0.00      0.00      0.00         4
+         829       0.00      0.00      0.00         9
+         830       0.00      0.00      0.00         4
+         831       0.00      0.00      0.00         4
+         832       0.00      0.00      0.00         4
+         833       0.00      0.00      0.00         4
+         834       0.00      0.00      0.00         4
+         835       0.00      0.00      0.00         4
+         836       0.00      0.00      0.00         9
+         837       0.00      0.00      0.00         4
+         838       0.00      0.00      0.00         9
+         839       0.00      0.00      0.00         9
+         840       0.00      0.00      0.00         4
+         841       0.00      0.00      0.00         7
+         842       0.12      0.22      0.16         9
+         843       0.00      0.00      0.00         4
+         844       0.00      0.00      0.00         4
+         845       0.00      0.00      0.00         4
+         846       0.00      0.00      0.00         4
+         847       0.00      0.00      0.00         9
+         848       0.00      0.00      0.00         4
+         849       0.00      0.00      0.00         4
+         850       0.00      0.00      0.00         4
+         851       0.00      0.00      0.00         4
+         852       0.00      0.00      0.00         4
+         853       0.00      0.00      0.00         9
+         854       0.00      0.00      0.00         4
+         855       0.00      0.00      0.00         9
+         856       0.00      0.00      0.00         4
+         857       0.00      0.00      0.00         4
+         858       0.00      0.00      0.00         5
+         859       0.00      0.00      0.00         4
+         860       0.00      0.00      0.00         9
+         861       0.00      0.00      0.00         4
+         862       0.00      0.00      0.00         9
+         863       0.00      0.00      0.00         4
+         864       0.00      0.00      0.00         4
+         865       0.00      0.00      0.00         4
+         866       0.00      0.00      0.00         4
+         867       0.00      0.00      0.00         4
+         868       0.00      0.00      0.00         5
+         869       0.00      0.00      0.00         5
+         870       0.00      0.00      0.00         4
+         871       0.00      0.00      0.00         4
+         872       0.00      0.00      0.00         9
+         873       0.00      0.00      0.00         4
+         874       0.00      0.00      0.00         4
+         875       0.00      0.00      0.00         4
+         876       0.00      0.00      0.00         5
+         877       0.00      0.00      0.00         9
+         878       0.00      0.00      0.00         5
+         879       0.00      0.00      0.00         9
+         880       0.00      0.00      0.00         4
+         881       0.00      0.00      0.00         4
+         882       0.00      0.00      0.00         9
+         883       0.00      0.00      0.00         9
+         884       0.00      0.00      0.00         5
+         885       0.00      0.00      0.00         4
+         886       0.00      0.00      0.00         4
+         887       0.00      0.00      0.00         4
+         888       0.00      0.00      0.00         5
+         889       0.00      0.00      0.00         4
+         890       0.00      0.00      0.00         5
+         891       0.00      0.00      0.00         4
+         892       0.00      0.00      0.00         5
+         893       0.00      0.00      0.00         4
+
+    accuracy                           0.01      4917
+   macro avg       0.00      0.01      0.00      4917
+weighted avg       0.01      0.01      0.00      4917
+
+task_train_time: {0: 14.617913090000002, 1: 7.801795211000002, 2: 8.862535360999999, 3: 10.30532719, 4: 7.740770425999997, 5: 8.344808781000005, 6: 9.924578305999987, 7: 8.797571241, 8: 8.961674215999992, 9: 9.77269450899999, 10: 8.209932495000004, 11: 9.21740776099999, 12: 7.210117737999994, 13: 8.71001269300001, 14: 9.17221309499999, 15: 10.090395142000006, 16: 8.629831934999999, 17: 8.125818371999998, 18: 8.317644206000011, 19: 7.9049378760000195, 20: 8.144382125000021, 21: 8.678450175999984, 22: 7.13119446799999, 23: 8.795635220000008, 24: 7.866942098999999, 25: 9.708442069, 26: 9.684987049, 27: 9.209098038999997, 28: 8.71386404399999, 29: 8.187378354000032, 30: 9.11002912500004, 31: 8.667829987000005, 32: 8.153338282999982, 33: 8.266302037999992, 34: 10.305533782999987, 35: 8.192264254999998, 36: 7.687725704000002, 37: 8.220186336999973, 38: 8.160430441000017, 39: 7.911680893000039, 40: 8.30500647499997, 41: 8.694883757000014, 42: 8.205116417999989, 43: 8.436903545999996}
+prediction_time: 0.00027614800001174444
+Parameters: 986894
+Task parameters: {0: 986894, 1: 986894, 2: 986894, 3: 986894, 4: 986894, 5: 986894, 6: 986894, 7: 986894, 8: 986894, 9: 986894, 10: 986894, 11: 986894, 12: 986894, 13: 986894, 14: 986894, 15: 986894, 16: 986894, 17: 986894, 18: 986894, 19: 986894, 20: 986894, 21: 986894, 22: 986894, 23: 986894, 24: 986894, 25: 986894, 26: 986894, 27: 986894, 28: 986894, 29: 986894, 30: 986894, 31: 986894, 32: 986894, 33: 986894, 34: 986894, 35: 986894, 36: 986894, 37: 986894, 38: 986894, 39: 986894, 40: 986894, 41: 986894, 42: 986894, 43: 986894}

@@ -1,0 +1,5 @@
+python ../../joint_avalanche.py -d 5 -t 1 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 > "joint_wisdm_1.txt"
+python ../../joint_avalanche.py -d 5 -t 1 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 > "joint_wisdm_2.txt"
+python ../../joint_avalanche.py -d 5 -t 1 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 > "joint_wisdm_3.txt"
+python ../../joint_avalanche.py -d 5 -t 1 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 > "joint_wisdm_4.txt"
+python ../../joint_avalanche.py -d 5 -t 1 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 > "joint_wisdm_5.txt"

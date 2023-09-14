@@ -1,0 +1,145 @@
+CLASS_ORDER: [1, 10, 9, 0, 8, 2, 7, 3, 6, 11, 5, 4]
+class_group: [(1, 10), (9, 0), (8, 2), (7, 3), (6, 11), (5, 4)]
+=====TRAINING TASK-1=====
+CREATING NEW MODELS
+Task-1	Epoch: 50/160	train_loss: 0.9967	train_accuracy: 92.9720
+Task-1	Epoch: 100/160	train_loss: 0.9943	train_accuracy: 92.9914
+Task-1	Epoch: 150/160	train_loss: 0.9936	train_accuracy: 92.9978
+	DONE TRAINING TASK-1	TIME: 21.672225858
+=====VALIDATON ON TASK-1=====
+Task-1	val_accuracy: 89.2704
+	DONE VALIDATING TASK-1
+
+=====RANDOM SELECTION FOR BUFFER=====
+exemplar_per_class: 10	num_cls: 2
+Buffer size: Counter({0: 10, 1: 10})
+
+=====TRAINING TASK-2=====
+UPDATING OLD MODELS
+	Combining buffer with current dataset
+Task-2	Epoch: 50/160	train_loss: 1.9310	train_accuracy: 95.4000
+Task-2	Epoch: 100/160	train_loss: 1.4458	train_accuracy: 97.7000
+Task-2	Epoch: 150/160	train_loss: 1.2765	train_accuracy: 98.4667
+	DONE TRAINING TASK-2	TIME: 0.534501916
+=====VALIDATON ON TASK-2=====
+Task-1	val_accuracy: 99.5708
+Task-2	val_accuracy: 0.0000
+	DONE VALIDATING TASK-2
+
+=====RANDOM SELECTION FOR BUFFER=====
+exemplar_per_class: 10	num_cls: 4
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10})
+
+=====TRAINING TASK-3=====
+UPDATING OLD MODELS
+	Combining buffer with current dataset
+Task-3	Epoch: 50/160	train_loss: 4.4290	train_accuracy: 83.1500
+Task-3	Epoch: 100/160	train_loss: 4.0095	train_accuracy: 87.8250
+Task-3	Epoch: 150/160	train_loss: 3.8692	train_accuracy: 89.3833
+	DONE TRAINING TASK-3	TIME: 0.9366784209999999
+=====VALIDATON ON TASK-3=====
+Task-1	val_accuracy: 75.9657
+Task-2	val_accuracy: 54.4747
+Task-3	val_accuracy: 0.0000
+	DONE VALIDATING TASK-3
+
+=====RANDOM SELECTION FOR BUFFER=====
+exemplar_per_class: 10	num_cls: 6
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10})
+
+=====TRAINING TASK-4=====
+UPDATING OLD MODELS
+	Combining buffer with current dataset
+Task-4	Epoch: 50/160	train_loss: 5.6984	train_accuracy: 70.4000
+Task-4	Epoch: 100/160	train_loss: 5.4801	train_accuracy: 71.8667
+Task-4	Epoch: 150/160	train_loss: 5.4073	train_accuracy: 72.3556
+	DONE TRAINING TASK-4	TIME: 1.3466786000000006
+=====VALIDATON ON TASK-4=====
+Task-1	val_accuracy: 62.6609
+Task-2	val_accuracy: 87.9377
+Task-3	val_accuracy: 6.6038
+Task-4	val_accuracy: 0.0000
+	DONE VALIDATING TASK-4
+
+=====RANDOM SELECTION FOR BUFFER=====
+exemplar_per_class: 10	num_cls: 8
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10})
+
+=====TRAINING TASK-5=====
+UPDATING OLD MODELS
+	Combining buffer with current dataset
+Task-5	Epoch: 50/160	train_loss: 5.7218	train_accuracy: 83.3750
+Task-5	Epoch: 100/160	train_loss: 5.5484	train_accuracy: 85.4375
+Task-5	Epoch: 150/160	train_loss: 5.4906	train_accuracy: 86.1250
+	DONE TRAINING TASK-5	TIME: 1.7446644010000014
+=====VALIDATON ON TASK-5=====
+Task-1	val_accuracy: 85.4077
+Task-2	val_accuracy: 84.4358
+Task-3	val_accuracy: 61.7925
+Task-4	val_accuracy: 98.0989
+Task-5	val_accuracy: 0.0000
+	DONE VALIDATING TASK-5
+
+=====RANDOM SELECTION FOR BUFFER=====
+exemplar_per_class: 10	num_cls: 10
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10})
+
+=====TRAINING TASK-6=====
+UPDATING OLD MODELS
+	Combining buffer with current dataset
+Task-6	Epoch: 50/160	train_loss: 6.3442	train_accuracy: 79.6000
+Task-6	Epoch: 100/160	train_loss: 6.2442	train_accuracy: 80.3000
+Task-6	Epoch: 150/160	train_loss: 6.2109	train_accuracy: 80.5333
+	DONE TRAINING TASK-6	TIME: 2.1606464000000045
+=====VALIDATON ON TASK-6=====
+Task-1	val_accuracy: 82.8326
+Task-2	val_accuracy: 85.9922
+Task-3	val_accuracy: 83.4906
+Task-4	val_accuracy: 97.3384
+Task-5	val_accuracy: 19.0476
+Task-6	val_accuracy: 0.0000
+	DONE VALIDATING TASK-6
+
+=====PRINTING FAA/FF=====
+FAA: 61.45023734196062
+FF: 54.24744313937348
+
+TRAINER.METRIC.ACCURACY
+0: [89.27038626609442, 99.57081545064378, 75.9656652360515, 62.66094420600859, 85.40772532188842, 82.83261802575107]
+1: [0.0, 54.474708171206224, 87.93774319066148, 84.43579766536965, 85.99221789883269]
+2: [0.0, 6.60377358490566, 61.79245283018868, 83.49056603773585]
+3: [0.0, 98.09885931558935, 97.33840304182509]
+4: [0.0, 19.047619047619047]
+5: [0.0]
+
+=====RUNNING ON TEST SET=====
+f1_micro: 51.5497
+f1_macro: 43.9202
+
+              precision    recall  f1-score   support
+
+           0       0.91      0.63      0.74       471
+           1       0.52      0.55      0.53        49
+           2       0.45      0.96      0.62        25
+           3       0.65      0.86      0.74       496
+           4       0.54      0.44      0.48        32
+           5       0.84      0.77      0.80       420
+           6       0.41      0.90      0.56        10
+           7       0.31      0.98      0.48       508
+           8       0.17      0.39      0.24        23
+           9       1.00      0.04      0.07        27
+          10       0.00      0.00      0.00       545
+          11       0.00      0.00      0.00       556
+
+    accuracy                           0.52      3162
+   macro avg       0.48      0.54      0.44      3162
+weighted avg       0.43      0.52      0.43      3162
+
+
+=====RUNNING TIME=====
+CPU time: 00:00:29	Wall time: 00:00:29
+CPU time: 29.773389767000005	Wall time: 29.164058208465576
+Parameters: 2870060
+train_time: {0: 21.672225858, 1: 0.534501916, 2: 0.9366784209999999, 3: 1.3466786000000006, 4: 1.7446644010000014, 5: 2.1606464000000045}
+prediction_time: 0.0004360980000015502
+Task parameters: {0: 2820010, 1: 2830020, 2: 2840030, 3: 2850040, 4: 2860050, 5: 2870060}

@@ -1,0 +1,1 @@
+python ../../../har_expert_trainer.py -d 1 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -use_max 1 -load_data gdumb_dsads.pkl -cud 1

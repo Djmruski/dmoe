@@ -1,0 +1,10 @@
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > dsads_max_1.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > dsads_max_2.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > dsads_max_3.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > dsads_max_4.txt
+python ../../../har_expert_trainer_deepgate.py -d 4 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > dsads_max_5.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > wisdm_max_1.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > wisdm_max_2.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > wisdm_max_3.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > wisdm_max_4.txt
+python ../../../har_expert_trainer_deepgate.py -d 6 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -cud 0 -gate_type 2 -hidden_size 50 -use_max 1 > wisdm_max_5.txt

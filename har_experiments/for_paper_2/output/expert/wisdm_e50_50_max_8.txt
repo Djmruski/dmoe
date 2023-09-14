@@ -1,0 +1,226 @@
+CLASS_ORDER: [3, 8, 17, 4, 6, 16, 15, 14, 12, 11, 9, 0, 5, 7, 13, 10, 1, 2]
+class_group: [(3, 8), (17, 4), (6, 16), (15, 14), (12, 11), (9, 0), (5, 7), (13, 10), (1, 2)]
+STEP-1	Epoch: 10/50	loss: 0.1178	step1_train_accuracy: 95.4373
+STEP-1	Epoch: 20/50	loss: 0.0863	step1_train_accuracy: 96.8948
+STEP-1	Epoch: 30/50	loss: 0.0821	step1_train_accuracy: 97.1483
+STEP-1	Epoch: 40/50	loss: 0.0391	step1_train_accuracy: 98.7959
+STEP-1	Epoch: 50/50	loss: 0.0439	step1_train_accuracy: 98.4157
+Task-1	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 810, 1: 810})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 76.9036	gate_accuracy: 100.0000
+	GATE_ACCURACY: 100.0000
+
+
+STEP-1	Epoch: 10/50	loss: 0.0922	step1_train_accuracy: 96.2182
+STEP-1	Epoch: 20/50	loss: 0.0564	step1_train_accuracy: 97.7681
+STEP-1	Epoch: 30/50	loss: 0.0646	step1_train_accuracy: 97.4582
+STEP-1	Epoch: 40/50	loss: 0.0214	step1_train_accuracy: 99.0701
+STEP-1	Epoch: 50/50	loss: 0.0134	step1_train_accuracy: 99.5040
+Task-2	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 815, 1: 815, 2: 815, 3: 815})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 70.5584	gate_accuracy: 87.8173
+	Task-1	val_accuracy: 91.5633	gate_accuracy: 90.8189
+	GATE_ACCURACY: 89.3350
+
+
+STEP-1	Epoch: 10/50	loss: 0.0748	step1_train_accuracy: 97.2806
+STEP-1	Epoch: 20/50	loss: 0.0293	step1_train_accuracy: 99.1965
+STEP-1	Epoch: 30/50	loss: 0.1089	step1_train_accuracy: 96.4771
+STEP-1	Epoch: 40/50	loss: 0.0089	step1_train_accuracy: 99.5674
+STEP-1	Epoch: 50/50	loss: 0.0217	step1_train_accuracy: 99.1965
+Task-3	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 813, 1: 813, 2: 813, 3: 813, 4: 813, 5: 813})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 38.5787	gate_accuracy: 69.2893
+	Task-1	val_accuracy: 84.1191	gate_accuracy: 90.0744
+	Task-2	val_accuracy: 68.3951	gate_accuracy: 48.1481
+	GATE_ACCURACY: 69.1348
+
+
+STEP-1	Epoch: 10/50	loss: 0.0347	step1_train_accuracy: 98.9018
+STEP-1	Epoch: 20/50	loss: 0.0135	step1_train_accuracy: 99.6339
+STEP-1	Epoch: 30/50	loss: 0.0182	step1_train_accuracy: 99.3899
+STEP-1	Epoch: 40/50	loss: 0.0078	step1_train_accuracy: 99.7559
+STEP-1	Epoch: 50/50	loss: 0.0126	step1_train_accuracy: 99.5119
+Task-4	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 866, 1: 866, 2: 866, 3: 866, 4: 866, 5: 866, 6: 866, 7: 866})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 25.8883	gate_accuracy: 52.2843
+	Task-1	val_accuracy: 73.6973	gate_accuracy: 78.4119
+	Task-2	val_accuracy: 46.6667	gate_accuracy: 56.7901
+	Task-3	val_accuracy: 73.9024	gate_accuracy: 50.0000
+	GATE_ACCURACY: 59.3672
+
+
+STEP-1	Epoch: 10/50	loss: 0.0143	step1_train_accuracy: 99.3969
+STEP-1	Epoch: 20/50	loss: 0.0021	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/50	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/50	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/50	loss: 0.0000	step1_train_accuracy: 100.0000
+Task-5	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 902, 1: 902, 2: 902, 3: 902, 4: 902, 5: 902, 6: 902, 7: 902, 8: 902, 9: 902})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 19.0355	gate_accuracy: 52.0305
+	Task-1	val_accuracy: 75.1861	gate_accuracy: 73.9454
+	Task-2	val_accuracy: 49.3827	gate_accuracy: 52.8395
+	Task-3	val_accuracy: 44.6341	gate_accuracy: 49.5122
+	Task-4	val_accuracy: 67.4699	gate_accuracy: 42.1687
+	GATE_ACCURACY: 54.0207
+
+
+STEP-1	Epoch: 10/50	loss: 0.0159	step1_train_accuracy: 99.6715
+STEP-1	Epoch: 20/50	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/50	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/50	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/50	loss: 0.0000	step1_train_accuracy: 100.0000
+Task-6	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 802, 1: 802, 2: 802, 3: 802, 4: 802, 5: 802, 6: 802, 7: 802, 8: 802, 9: 802, 10: 802, 11: 802})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 18.2741	gate_accuracy: 53.2995
+	Task-1	val_accuracy: 71.2159	gate_accuracy: 67.7419
+	Task-2	val_accuracy: 46.1728	gate_accuracy: 51.6049
+	Task-3	val_accuracy: 44.1463	gate_accuracy: 50.7317
+	Task-4	val_accuracy: 55.1807	gate_accuracy: 42.8916
+	Task-5	val_accuracy: 62.2047	gate_accuracy: 44.3570
+	GATE_ACCURACY: 51.7857
+
+
+STEP-1	Epoch: 10/50	loss: 0.1423	step1_train_accuracy: 94.4262
+STEP-1	Epoch: 20/50	loss: 0.0971	step1_train_accuracy: 95.9344
+STEP-1	Epoch: 30/50	loss: 0.0773	step1_train_accuracy: 97.1803
+STEP-1	Epoch: 40/50	loss: 0.0790	step1_train_accuracy: 97.3770
+STEP-1	Epoch: 50/50	loss: 0.0641	step1_train_accuracy: 97.7705
+Task-7	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 787, 1: 787, 2: 787, 3: 787, 4: 787, 5: 787, 6: 787, 7: 787, 8: 787, 9: 787, 10: 787, 11: 787, 12: 787, 13: 787})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 15.2284	gate_accuracy: 43.1472
+	Task-1	val_accuracy: 72.4566	gate_accuracy: 72.4566
+	Task-2	val_accuracy: 33.8272	gate_accuracy: 41.2346
+	Task-3	val_accuracy: 39.0244	gate_accuracy: 48.0488
+	Task-4	val_accuracy: 51.3253	gate_accuracy: 36.1446
+	Task-5	val_accuracy: 50.6562	gate_accuracy: 54.0682
+	Task-6	val_accuracy: 49.8688	gate_accuracy: 23.6220
+	GATE_ACCURACY: 45.6077
+
+
+STEP-1	Epoch: 10/50	loss: 0.0015	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/50	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/50	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/50	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/50	loss: 0.0000	step1_train_accuracy: 100.0000
+Task-8	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 875, 1: 875, 2: 875, 3: 875, 4: 875, 5: 875, 6: 875, 7: 875, 8: 875, 9: 875, 10: 875, 11: 875, 12: 875, 13: 875, 14: 875, 15: 875})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 14.4670	gate_accuracy: 29.1878
+	Task-1	val_accuracy: 62.5310	gate_accuracy: 60.5459
+	Task-2	val_accuracy: 40.9877	gate_accuracy: 47.4074
+	Task-3	val_accuracy: 35.3659	gate_accuracy: 46.3415
+	Task-4	val_accuracy: 48.4337	gate_accuracy: 35.9036
+	Task-5	val_accuracy: 48.2940	gate_accuracy: 51.1811
+	Task-6	val_accuracy: 19.4226	gate_accuracy: 41.9948
+	Task-7	val_accuracy: 47.2684	gate_accuracy: 3.3254
+	GATE_ACCURACY: 39.2212
+
+
+STEP-1	Epoch: 10/50	loss: 0.1203	step1_train_accuracy: 96.0569
+STEP-1	Epoch: 20/50	loss: 0.0913	step1_train_accuracy: 97.0265
+STEP-1	Epoch: 30/50	loss: 0.0607	step1_train_accuracy: 98.1254
+STEP-1	Epoch: 40/50	loss: 0.0468	step1_train_accuracy: 97.9315
+STEP-1	Epoch: 50/50	loss: 0.0349	step1_train_accuracy: 98.7718
+Task-9	STARTING STEP 2
+	GENERATING GMM SAMPLES: Counter({0: 816, 1: 816, 2: 816, 3: 816, 4: 816, 5: 816, 6: 816, 7: 816, 8: 816, 9: 816, 10: 816, 11: 816, 12: 816, 13: 816, 14: 816, 15: 816, 16: 816, 17: 816})
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 13.9594	gate_accuracy: 35.0254
+	Task-1	val_accuracy: 66.9975	gate_accuracy: 66.7494
+	Task-2	val_accuracy: 43.7037	gate_accuracy: 43.4568
+	Task-3	val_accuracy: 32.9268	gate_accuracy: 37.3171
+	Task-4	val_accuracy: 50.1205	gate_accuracy: 31.0843
+	Task-5	val_accuracy: 50.1312	gate_accuracy: 33.8583
+	Task-6	val_accuracy: 18.3727	gate_accuracy: 45.4068
+	Task-7	val_accuracy: 37.5297	gate_accuracy: 16.3895
+	Task-8	val_accuracy: 72.3514	gate_accuracy: 80.1034
+	GATE_ACCURACY: 42.9803
+
+
+
+Execution time:
+CPU time: 00:46:53	Wall time: 00:41:32
+CPU time: 2813.752486579	Wall time: 2492.8861198425293
+FAA: 67.76972550643787
+FF: 43.037330310561266
+
+TRAINER.METRIC.ACCURACY
+0: [76.90355329949239]
+1: [70.55837563451777, 91.56327543424318]
+2: [38.578680203045685, 84.11910669975185, 68.39506172839506]
+3: [25.888324873096447, 73.69727047146401, 46.666666666666664, 73.90243902439025]
+4: [19.035532994923855, 75.18610421836229, 49.382716049382715, 44.63414634146341, 67.46987951807229]
+5: [18.274111675126903, 71.21588089330024, 46.17283950617284, 44.146341463414636, 55.18072289156627, 62.20472440944882]
+6: [15.228426395939088, 72.45657568238212, 33.827160493827165, 39.02439024390244, 51.325301204819276, 50.65616797900262, 49.86876640419948]
+7: [14.467005076142131, 62.531017369727046, 40.98765432098765, 35.36585365853659, 48.433734939759034, 48.29396325459317, 19.42257217847769, 47.26840855106889]
+8: [13.959390862944163, 66.99751861042184, 43.7037037037037, 32.926829268292686, 50.12048192771085, 50.13123359580053, 18.37270341207349, 37.52969121140142, 72.3514211886305]
+
+=====RUNNING ON TEST SET=====
+CALCULATING TEST ACCURACY PER TASK
+	TASK-0	CLASSES: [0 1]	test_accuracy: 11.3852
+	TASK-1	CLASSES: [2 3]	test_accuracy: 42.0455
+	TASK-2	CLASSES: [4 5]	test_accuracy: 18.1474
+	TASK-3	CLASSES: [6 7]	test_accuracy: 22.6446
+	TASK-4	CLASSES: [8 9]	test_accuracy: 49.1339
+	TASK-5	CLASSES: [10 11]	test_accuracy: 31.4442
+	TASK-6	CLASSES: [12 13]	test_accuracy: 10.8365
+	TASK-7	CLASSES: [14 15]	test_accuracy: 32.7586
+	TASK-8	CLASSES: [16 17]	test_accuracy: 66.4286
+PREDICTION TIME: 0.0018252830000164977
+
+====================
+
+f1_score(micro): 32.12953876349362
+f1_score(macro): 30.12635587718463
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.24      0.05      0.09       265
+           1       0.28      0.18      0.22       262
+           2       0.20      0.29      0.24       263
+           3       0.33      0.55      0.41       265
+           4       0.19      0.19      0.19       264
+           5       0.24      0.17      0.20       265
+           6       0.15      0.12      0.13       265
+           7       0.59      0.31      0.41       340
+           8       0.42      0.68      0.52       347
+           9       0.14      0.26      0.18       288
+          10       0.16      0.14      0.15       264
+          11       0.52      0.48      0.50       283
+          12       0.02      0.01      0.01       263
+          13       0.19      0.21      0.20       263
+          14       0.35      0.42      0.38       345
+          15       0.21      0.22      0.22       293
+          16       0.89      0.77      0.83       297
+          17       0.57      0.54      0.55       263
+
+    accuracy                           0.32      5095
+   macro avg       0.32      0.31      0.30      5095
+weighted avg       0.33      0.32      0.31      5095
+
+Parameters: 43488

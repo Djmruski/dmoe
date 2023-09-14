@@ -1,0 +1,1918 @@
+-- >> Start of training phase << --
+
+0it [00:00, ?it/s]
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 4.6849
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.1745
+
+0it [00:00, ?it/s]
+Epoch 1 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 2.4266
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.4193
+
+0it [00:00, ?it/s]
+Epoch 2 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.8363
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.5343
+
+0it [00:00, ?it/s]
+Epoch 3 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.5704
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.5894
+
+0it [00:00, ?it/s]
+Epoch 4 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.4075
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6197
+
+0it [00:00, ?it/s]
+Epoch 5 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.2948
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6407
+
+0it [00:00, ?it/s]
+Epoch 6 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.2094
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6580
+
+0it [00:00, ?it/s]
+Epoch 7 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.1456
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6722
+
+0it [00:00, ?it/s]
+Epoch 8 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.0860
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6836
+
+0it [00:00, ?it/s]
+Epoch 9 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 1.0348
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6924
+
+0it [00:00, ?it/s]
+Epoch 10 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.9994
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6982
+
+0it [00:00, ?it/s]
+Epoch 11 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.9645
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7071
+
+0it [00:00, ?it/s]
+Epoch 12 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.9337
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7171
+
+0it [00:00, ?it/s]
+Epoch 13 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.8992
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7242
+
+0it [00:00, ?it/s]
+Epoch 14 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.8757
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7264
+
+0it [00:00, ?it/s]
+Epoch 15 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.8532
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7310
+
+0it [00:00, ?it/s]
+Epoch 16 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.8276
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7389
+
+0it [00:00, ?it/s]
+Epoch 17 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.8053
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7429
+
+0it [00:00, ?it/s]
+Epoch 18 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7890
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7476
+
+0it [00:00, ?it/s]
+Epoch 19 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7818
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7426
+
+0it [00:00, ?it/s]
+Epoch 20 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7594
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7532
+
+0it [00:00, ?it/s]
+Epoch 21 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7408
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7576
+
+0it [00:00, ?it/s]
+Epoch 22 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7288
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7598
+
+0it [00:00, ?it/s]
+Epoch 23 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7133
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7612
+
+0it [00:00, ?it/s]
+Epoch 24 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.7057
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7649
+
+0it [00:00, ?it/s]
+Epoch 25 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6883
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7701
+
+0it [00:00, ?it/s]
+Epoch 26 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6761
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7725
+
+0it [00:00, ?it/s]
+Epoch 27 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6671
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7761
+
+0it [00:00, ?it/s]
+Epoch 28 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6543
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7773
+
+0it [00:00, ?it/s]
+Epoch 29 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6517
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7756
+
+0it [00:00, ?it/s]
+Epoch 30 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6421
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7791
+
+0it [00:00, ?it/s]
+Epoch 31 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6264
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7852
+
+0it [00:00, ?it/s]
+Epoch 32 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6193
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7879
+
+0it [00:00, ?it/s]
+Epoch 33 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6089
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7934
+
+0it [00:00, ?it/s]
+Epoch 34 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.6070
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7891
+
+0it [00:00, ?it/s]
+Epoch 35 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5980
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7930
+
+0it [00:00, ?it/s]
+Epoch 36 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5936
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7903
+
+0it [00:00, ?it/s]
+Epoch 37 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5829
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7970
+
+0it [00:00, ?it/s]
+Epoch 38 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5763
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7984
+
+0it [00:00, ?it/s]
+Epoch 39 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5760
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7972
+
+0it [00:00, ?it/s]
+Epoch 40 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5673
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.7995
+
+0it [00:00, ?it/s]
+Epoch 41 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5563
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8060
+
+0it [00:00, ?it/s]
+Epoch 42 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5544
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8047
+
+0it [00:00, ?it/s]
+Epoch 43 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5466
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8065
+
+0it [00:00, ?it/s]
+Epoch 44 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5398
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8091
+
+0it [00:00, ?it/s]
+Epoch 45 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5327
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8100
+
+0it [00:00, ?it/s]
+Epoch 46 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5318
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8104
+
+0it [00:00, ?it/s]
+Epoch 47 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5259
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8134
+
+0it [00:00, ?it/s]
+Epoch 48 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5247
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8120
+
+0it [00:00, ?it/s]
+Epoch 49 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5169
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8156
+
+0it [00:00, ?it/s]
+Epoch 50 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5146
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8152
+
+0it [00:00, ?it/s]
+Epoch 51 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5099
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8124
+
+0it [00:00, ?it/s]
+Epoch 52 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5042
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8169
+
+0it [00:00, ?it/s]
+Epoch 53 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.5023
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8181
+
+0it [00:00, ?it/s]
+Epoch 54 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4995
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8193
+
+0it [00:00, ?it/s]
+Epoch 55 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4931
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8213
+
+0it [00:00, ?it/s]
+Epoch 56 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4910
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8218
+
+0it [00:00, ?it/s]
+Epoch 57 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4815
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8229
+
+0it [00:00, ?it/s]
+Epoch 58 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4855
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8227
+
+0it [00:00, ?it/s]
+Epoch 59 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4809
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8224
+
+0it [00:00, ?it/s]
+Epoch 60 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4756
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8250
+
+0it [00:00, ?it/s]
+Epoch 61 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4723
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8277
+
+0it [00:00, ?it/s]
+Epoch 62 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4723
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8254
+
+0it [00:00, ?it/s]
+Epoch 63 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4707
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8258
+
+0it [00:00, ?it/s]
+Epoch 64 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4587
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8310
+
+0it [00:00, ?it/s]
+Epoch 65 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4606
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8301
+
+0it [00:00, ?it/s]
+Epoch 66 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4612
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8299
+
+0it [00:00, ?it/s]
+Epoch 67 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4529
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8334
+
+0it [00:00, ?it/s]
+Epoch 68 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4509
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8336
+
+0it [00:00, ?it/s]
+Epoch 69 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4512
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8326
+
+0it [00:00, ?it/s]
+Epoch 70 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4481
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8326
+
+0it [00:00, ?it/s]
+Epoch 71 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4432
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8344
+
+0it [00:00, ?it/s]
+Epoch 72 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4465
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8312
+
+0it [00:00, ?it/s]
+Epoch 73 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4402
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8363
+
+0it [00:00, ?it/s]
+Epoch 74 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4367
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8371
+
+0it [00:00, ?it/s]
+Epoch 75 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4347
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8350
+
+0it [00:00, ?it/s]
+Epoch 76 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4363
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8358
+
+0it [00:00, ?it/s]
+Epoch 77 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4310
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8390
+
+0it [00:00, ?it/s]
+Epoch 78 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4289
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8392
+
+0it [00:00, ?it/s]
+Epoch 79 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4235
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8406
+
+0it [00:00, ?it/s]
+Epoch 80 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4256
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8416
+
+0it [00:00, ?it/s]
+Epoch 81 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4254
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8396
+
+0it [00:00, ?it/s]
+Epoch 82 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4205
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8407
+
+0it [00:00, ?it/s]
+Epoch 83 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4198
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8408
+
+0it [00:00, ?it/s]
+Epoch 84 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4166
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8442
+
+0it [00:00, ?it/s]
+Epoch 85 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4148
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8413
+
+0it [00:00, ?it/s]
+Epoch 86 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4116
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8444
+
+0it [00:00, ?it/s]
+Epoch 87 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4104
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8431
+
+0it [00:00, ?it/s]
+Epoch 88 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4132
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8422
+
+0it [00:00, ?it/s]
+Epoch 89 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4099
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8442
+
+0it [00:00, ?it/s]
+Epoch 90 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4086
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8446
+
+0it [00:00, ?it/s]
+Epoch 91 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4051
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8441
+
+0it [00:00, ?it/s]
+Epoch 92 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4040
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8474
+
+0it [00:00, ?it/s]
+Epoch 93 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3992
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8480
+
+0it [00:00, ?it/s]
+Epoch 94 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4031
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8435
+
+0it [00:00, ?it/s]
+Epoch 95 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.4004
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8469
+
+0it [00:00, ?it/s]
+Epoch 96 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3963
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8488
+
+0it [00:00, ?it/s]
+Epoch 97 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3944
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8488
+
+0it [00:00, ?it/s]
+Epoch 98 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3948
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8505
+
+0it [00:00, ?it/s]
+Epoch 99 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3908
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8500
+
+0it [00:00, ?it/s]
+Epoch 100 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3975
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8477
+
+0it [00:00, ?it/s]
+Epoch 101 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3920
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8492
+
+0it [00:00, ?it/s]
+Epoch 102 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3877
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8511
+
+0it [00:00, ?it/s]
+Epoch 103 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3908
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8490
+
+0it [00:00, ?it/s]
+Epoch 104 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3930
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8493
+
+0it [00:00, ?it/s]
+Epoch 105 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3891
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8500
+
+0it [00:00, ?it/s]
+Epoch 106 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3855
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8506
+
+0it [00:00, ?it/s]
+Epoch 107 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3894
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8499
+
+0it [00:00, ?it/s]
+Epoch 108 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3789
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8526
+
+0it [00:00, ?it/s]
+Epoch 109 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3786
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8523
+
+0it [00:00, ?it/s]
+Epoch 110 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3807
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8532
+
+0it [00:00, ?it/s]
+Epoch 111 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3789
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8528
+
+0it [00:00, ?it/s]
+Epoch 112 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3789
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8547
+
+0it [00:00, ?it/s]
+Epoch 113 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3788
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8516
+
+0it [00:00, ?it/s]
+Epoch 114 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3714
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8565
+
+0it [00:00, ?it/s]
+Epoch 115 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3767
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8544
+
+0it [00:00, ?it/s]
+Epoch 116 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3788
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8512
+
+0it [00:00, ?it/s]
+Epoch 117 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3697
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8564
+
+0it [00:00, ?it/s]
+Epoch 118 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3710
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8563
+
+0it [00:00, ?it/s]
+Epoch 119 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3703
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8566
+
+0it [00:00, ?it/s]
+Epoch 120 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3702
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8550
+
+0it [00:00, ?it/s]
+Epoch 121 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3662
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8585
+
+0it [00:00, ?it/s]
+Epoch 122 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3695
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8560
+
+0it [00:00, ?it/s]
+Epoch 123 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3717
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8550
+
+0it [00:00, ?it/s]
+Epoch 124 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3655
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8594
+
+0it [00:00, ?it/s]
+Epoch 125 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3632
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8578
+
+0it [00:00, ?it/s]
+Epoch 126 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3654
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8577
+
+0it [00:00, ?it/s]
+Epoch 127 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3615
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8574
+
+0it [00:00, ?it/s]
+Epoch 128 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3645
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8552
+
+0it [00:00, ?it/s]
+Epoch 129 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3616
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8566
+
+0it [00:00, ?it/s]
+Epoch 130 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3612
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8596
+
+0it [00:00, ?it/s]
+Epoch 131 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3582
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8585
+
+0it [00:00, ?it/s]
+Epoch 132 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3595
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8590
+
+0it [00:00, ?it/s]
+Epoch 133 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3570
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8607
+
+0it [00:00, ?it/s]
+Epoch 134 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3570
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8582
+
+0it [00:00, ?it/s]
+Epoch 135 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3541
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8601
+
+0it [00:00, ?it/s]
+Epoch 136 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3532
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8604
+
+0it [00:00, ?it/s]
+Epoch 137 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3555
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8612
+
+0it [00:00, ?it/s]
+Epoch 138 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3539
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8608
+
+0it [00:00, ?it/s]
+Epoch 139 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3526
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8623
+
+0it [00:00, ?it/s]
+Epoch 140 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3538
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8601
+
+0it [00:00, ?it/s]
+Epoch 141 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3534
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8595
+
+0it [00:00, ?it/s]
+Epoch 142 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3493
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8641
+
+0it [00:00, ?it/s]
+Epoch 143 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3498
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8623
+
+0it [00:00, ?it/s]
+Epoch 144 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3485
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8637
+
+0it [00:00, ?it/s]
+Epoch 145 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3464
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8624
+
+0it [00:00, ?it/s]
+Epoch 146 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3449
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8637
+
+0it [00:00, ?it/s]
+Epoch 147 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3484
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8607
+
+0it [00:00, ?it/s]
+Epoch 148 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3477
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8627
+
+0it [00:00, ?it/s]
+Epoch 149 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3469
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8624
+
+0it [00:00, ?it/s]
+Epoch 150 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3459
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8629
+
+0it [00:00, ?it/s]
+Epoch 151 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3464
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8622
+
+0it [00:00, ?it/s]
+Epoch 152 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3419
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8635
+
+0it [00:00, ?it/s]
+Epoch 153 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3404
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8648
+
+0it [00:00, ?it/s]
+Epoch 154 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3442
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8626
+
+0it [00:00, ?it/s]
+Epoch 155 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3390
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8649
+
+0it [00:00, ?it/s]
+Epoch 156 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3407
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8656
+
+0it [00:00, ?it/s]
+Epoch 157 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3402
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8638
+
+0it [00:00, ?it/s]
+Epoch 158 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3414
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8656
+
+0it [00:00, ?it/s]
+Epoch 159 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3369
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8660
+
+0it [00:00, ?it/s]
+Epoch 160 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3395
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8649
+
+0it [00:00, ?it/s]
+Epoch 161 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3387
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8657
+
+0it [00:00, ?it/s]
+Epoch 162 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3382
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8641
+
+0it [00:00, ?it/s]
+Epoch 163 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3361
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8649
+
+0it [00:00, ?it/s]
+Epoch 164 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3372
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8656
+
+0it [00:00, ?it/s]
+Epoch 165 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3371
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8654
+
+0it [00:00, ?it/s]
+Epoch 166 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3373
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8634
+
+0it [00:00, ?it/s]
+Epoch 167 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3337
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8676
+
+0it [00:00, ?it/s]
+Epoch 168 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3334
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8658
+
+0it [00:00, ?it/s]
+Epoch 169 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3361
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8647
+
+0it [00:00, ?it/s]
+Epoch 170 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3328
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8666
+
+0it [00:00, ?it/s]
+Epoch 171 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3295
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8683
+
+0it [00:00, ?it/s]
+Epoch 172 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3327
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8661
+
+0it [00:00, ?it/s]
+Epoch 173 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3345
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8660
+
+0it [00:00, ?it/s]
+Epoch 174 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3347
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8645
+
+0it [00:00, ?it/s]
+Epoch 175 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3308
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8674
+
+0it [00:00, ?it/s]
+Epoch 176 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3337
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8649
+
+0it [00:00, ?it/s]
+Epoch 177 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3317
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8656
+
+0it [00:00, ?it/s]
+Epoch 178 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3326
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8646
+
+0it [00:00, ?it/s]
+Epoch 179 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3304
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8672
+
+0it [00:00, ?it/s]
+Epoch 180 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3288
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8690
+
+0it [00:00, ?it/s]
+Epoch 181 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3294
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8678
+
+0it [00:00, ?it/s]
+Epoch 182 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3250
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8701
+
+0it [00:00, ?it/s]
+Epoch 183 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3309
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8693
+
+0it [00:00, ?it/s]
+Epoch 184 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3276
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8701
+
+0it [00:00, ?it/s]
+Epoch 185 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3279
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8671
+
+0it [00:00, ?it/s]
+Epoch 186 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3267
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8682
+
+0it [00:00, ?it/s]
+Epoch 187 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3303
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8663
+
+0it [00:00, ?it/s]
+Epoch 188 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3233
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8710
+
+0it [00:00, ?it/s]
+Epoch 189 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3260
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8710
+
+0it [00:00, ?it/s]
+Epoch 190 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3271
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8677
+
+0it [00:00, ?it/s]
+Epoch 191 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3263
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8686
+
+0it [00:00, ?it/s]
+Epoch 192 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3248
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8706
+
+0it [00:00, ?it/s]
+Epoch 193 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3208
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8720
+
+0it [00:00, ?it/s]
+Epoch 194 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3234
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8699
+
+0it [00:00, ?it/s]
+Epoch 195 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3226
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8687
+
+0it [00:00, ?it/s]
+Epoch 196 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3204
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8695
+
+0it [00:00, ?it/s]
+Epoch 197 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3221
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8713
+
+0it [00:00, ?it/s]
+Epoch 198 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3228
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8706
+
+0it [00:00, ?it/s]
+Epoch 199 ended.
+	Loss_Epoch/train_phase/train_stream/Task000 = 0.3220
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.8688
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+
+0it [00:00, ?it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Task000/Exp000 = 1.6268
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.7568
+-- >> End of eval phase << --
+	Loss_Stream/eval_phase/test_stream/Task000 = 1.6268
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.7568
+[{'Top1_Acc_Epoch/train_phase/train_stream/Task000': 0.8688109269152393, 'Loss_Epoch/train_phase/train_stream/Task000': 0.3219812934308384, 'Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000': 0.7567622534065487, 'Loss_Exp/eval_phase/test_stream/Task000/Exp000': 1.626836329113423, 'Top1_Acc_Stream/eval_phase/test_stream/Task000': 0.7567622534065487, 'Loss_Stream/eval_phase/test_stream/Task000': 1.626836329113423}]
+
+f1_micro: 0.7567622534065487
+f1_macro: 0.7334710877119804
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         4
+           1       1.00      1.00      1.00         5
+           2       0.80      1.00      0.89         4
+           3       1.00      1.00      1.00         5
+           4       1.00      1.00      1.00         4
+           5       1.00      1.00      1.00         5
+           6       1.00      1.00      1.00         4
+           7       1.00      1.00      1.00         5
+           8       1.00      1.00      1.00         9
+           9       1.00      1.00      1.00         4
+          10       0.00      0.00      0.00         4
+          11       0.00      0.00      0.00         4
+          12       0.00      0.00      0.00         4
+          13       0.00      0.00      0.00         4
+          14       0.00      0.00      0.00         4
+          15       0.00      0.00      0.00         4
+          16       0.00      0.00      0.00         4
+          17       1.00      1.00      1.00         4
+          18       1.00      1.00      1.00         5
+          19       1.00      1.00      1.00         4
+          20       0.80      0.80      0.80         5
+          21       1.00      1.00      1.00         4
+          22       0.80      1.00      0.89         4
+          23       1.00      1.00      1.00         4
+          24       0.82      1.00      0.90         9
+          25       1.00      1.00      1.00         4
+          26       1.00      1.00      1.00         9
+          27       1.00      1.00      1.00         9
+          28       0.80      1.00      0.89         4
+          29       1.00      1.00      1.00         4
+          30       1.00      1.00      1.00         4
+          31       0.80      1.00      0.89         4
+          32       1.00      1.00      1.00         9
+          33       1.00      1.00      1.00         4
+          34       1.00      1.00      1.00         9
+          35       0.80      1.00      0.89         4
+          36       0.80      1.00      0.89         4
+          37       0.75      0.75      0.75         4
+          38       1.00      0.75      0.86         4
+          39       1.00      0.75      0.86         4
+          40       0.90      1.00      0.95         9
+          41       0.73      0.89      0.80         9
+          42       1.00      1.00      1.00         9
+          43       0.89      0.89      0.89         9
+          44       0.88      0.78      0.82         9
+          45       1.00      1.00      1.00         9
+          46       1.00      1.00      1.00         5
+          47       1.00      0.89      0.94         9
+          48       1.00      1.00      1.00         5
+          49       0.75      0.67      0.71         9
+          50       1.00      1.00      1.00         4
+          51       1.00      1.00      1.00         5
+          52       1.00      0.75      0.86         4
+          53       1.00      1.00      1.00         5
+          54       1.00      1.00      1.00         4
+          55       1.00      1.00      1.00         5
+          56       1.00      1.00      1.00         4
+          57       1.00      1.00      1.00         5
+          58       1.00      1.00      1.00         9
+          59       0.00      0.00      0.00         4
+          60       0.00      0.00      0.00         4
+          61       0.00      0.00      0.00         4
+          62       0.00      0.00      0.00         4
+          63       0.00      0.00      0.00         4
+          64       0.00      0.00      0.00         4
+          65       0.00      0.00      0.00         4
+          66       1.00      1.00      1.00         4
+          67       1.00      1.00      1.00         5
+          68       1.00      1.00      1.00         4
+          69       0.71      1.00      0.83         5
+          70       0.75      0.75      0.75         4
+          71       0.75      0.75      0.75         4
+          72       1.00      1.00      1.00         4
+          73       1.00      1.00      1.00         4
+          74       0.89      0.89      0.89         9
+          75       0.75      0.67      0.71         9
+          76       1.00      1.00      1.00         9
+          77       1.00      0.75      0.86         4
+          78       1.00      1.00      1.00         4
+          79       1.00      1.00      1.00         4
+          80       1.00      0.75      0.86         4
+          81       0.82      1.00      0.90         9
+          82       0.80      1.00      0.89         4
+          83       0.90      1.00      0.95         9
+          84       1.00      1.00      1.00         4
+          85       1.00      1.00      1.00         4
+          86       0.67      1.00      0.80         4
+          87       1.00      1.00      1.00         4
+          88       1.00      1.00      1.00         4
+          89       1.00      1.00      1.00         9
+          90       1.00      0.89      0.94         9
+          91       1.00      1.00      1.00         9
+          92       1.00      1.00      1.00         9
+          93       1.00      0.89      0.94         9
+          94       1.00      0.78      0.88         9
+          95       1.00      1.00      1.00         5
+          96       1.00      0.89      0.94         9
+          97       1.00      0.80      0.89         5
+          98       1.00      0.89      0.94         9
+          99       1.00      1.00      1.00         4
+         100       1.00      0.60      0.75         5
+         101       0.50      0.75      0.60         4
+         102       1.00      0.80      0.89         5
+         103       0.67      1.00      0.80         4
+         104       1.00      1.00      1.00         5
+         105       1.00      1.00      1.00         4
+         106       1.00      1.00      1.00         5
+         107       0.80      1.00      0.89         4
+         108       1.00      1.00      1.00         4
+         109       0.00      0.00      0.00         4
+         110       0.00      0.00      0.00         4
+         111       0.00      0.00      0.00         4
+         112       0.00      0.00      0.00         4
+         113       0.00      0.00      0.00         4
+         114       0.00      0.00      0.00         4
+         115       0.00      0.00      0.00         4
+         116       1.00      0.50      0.67         4
+         117       1.00      1.00      1.00         5
+         118       1.00      0.75      0.86         4
+         119       0.75      0.60      0.67         5
+         120       1.00      1.00      1.00         4
+         121       0.80      1.00      0.89         4
+         122       1.00      1.00      1.00         4
+         123       1.00      1.00      1.00         9
+         124       1.00      1.00      1.00         4
+         125       1.00      1.00      1.00         4
+         126       1.00      1.00      1.00         9
+         127       1.00      1.00      1.00         4
+         128       1.00      1.00      1.00         4
+         129       0.75      0.75      0.75         4
+         130       1.00      1.00      1.00         4
+         131       1.00      0.50      0.67         4
+         132       0.50      0.75      0.60         4
+         133       0.90      1.00      0.95         9
+         134       0.80      1.00      0.89         4
+         135       1.00      1.00      1.00         4
+         136       0.60      0.75      0.67         4
+         137       1.00      0.50      0.67         4
+         138       1.00      1.00      1.00         4
+         139       0.78      0.78      0.78         9
+         140       0.90      1.00      0.95         9
+         141       1.00      0.89      0.94         9
+         142       0.75      0.67      0.71         9
+         143       0.90      1.00      0.95         9
+         144       1.00      1.00      1.00         5
+         145       0.89      0.89      0.89         9
+         146       1.00      1.00      1.00         5
+         147       0.64      1.00      0.78         9
+         148       1.00      0.75      0.86         4
+         149       0.67      0.80      0.73         5
+         150       0.60      0.75      0.67         4
+         151       1.00      0.80      0.89         5
+         152       1.00      0.75      0.86         4
+         153       0.71      1.00      0.83         5
+         154       0.80      1.00      0.89         4
+         155       1.00      0.80      0.89         5
+         156       1.00      1.00      1.00         4
+         157       1.00      1.00      1.00         4
+         158       0.00      0.00      0.00         4
+         159       0.00      0.00      0.00         4
+         160       0.00      0.00      0.00         4
+         161       0.12      0.75      0.21         4
+         162       0.00      0.00      0.00         4
+         163       0.00      0.00      0.00         4
+         164       0.00      0.00      0.00         4
+         165       0.33      0.25      0.29         4
+         166       1.00      1.00      1.00         5
+         167       0.58      0.78      0.67         9
+         168       0.80      0.80      0.80         5
+         169       0.80      1.00      0.89         4
+         170       0.80      1.00      0.89         4
+         171       0.20      0.25      0.22         4
+         172       0.82      1.00      0.90         9
+         173       0.75      0.75      0.75         4
+         174       0.64      1.00      0.78         9
+         175       0.50      0.50      0.50         4
+         176       1.00      0.75      0.86         4
+         177       1.00      1.00      1.00         4
+         178       1.00      1.00      1.00         4
+         179       1.00      0.50      0.67         4
+         180       0.67      0.50      0.57         4
+         181       1.00      1.00      1.00         4
+         182       0.90      1.00      0.95         9
+         183       1.00      0.75      0.86         4
+         184       0.75      0.75      0.75         4
+         185       1.00      1.00      1.00         4
+         186       1.00      1.00      1.00         4
+         187       1.00      0.50      0.67         4
+         188       0.89      0.89      0.89         9
+         189       0.90      1.00      0.95         9
+         190       1.00      1.00      1.00         9
+         191       0.50      0.44      0.47         9
+         192       0.78      0.78      0.78         9
+         193       1.00      0.89      0.94         9
+         194       0.71      1.00      0.83         5
+         195       0.89      0.89      0.89         9
+         196       0.83      1.00      0.91         5
+         197       1.00      0.89      0.94         9
+         198       1.00      1.00      1.00         4
+         199       1.00      0.80      0.89         5
+         200       0.50      0.25      0.33         4
+         201       0.83      1.00      0.91         5
+         202       1.00      0.25      0.40         4
+         203       0.67      0.40      0.50         5
+         204       0.50      0.75      0.60         4
+         205       0.80      0.80      0.80         5
+         206       1.00      0.75      0.86         4
+         207       1.00      1.00      1.00         4
+         208       0.00      0.00      0.00         4
+         209       0.00      0.00      0.00         4
+         210       0.00      0.00      0.00         4
+         211       0.00      0.00      0.00         4
+         212       0.00      0.00      0.00         4
+         213       0.07      0.25      0.11         4
+         214       0.00      0.00      0.00         4
+         215       0.80      1.00      0.89         4
+         216       0.83      1.00      0.91         5
+         217       0.89      0.89      0.89         9
+         218       0.62      1.00      0.77         5
+         219       1.00      1.00      1.00         4
+         220       0.78      0.78      0.78         9
+         221       0.67      1.00      0.80         4
+         222       0.90      1.00      0.95         9
+         223       1.00      0.75      0.86         4
+         224       0.67      0.89      0.76         9
+         225       0.80      1.00      0.89         4
+         226       1.00      0.50      0.67         4
+         227       1.00      0.75      0.86         4
+         228       1.00      1.00      1.00         4
+         229       0.67      1.00      0.80         4
+         230       0.67      0.50      0.57         4
+         231       0.33      0.25      0.29         4
+         232       0.62      0.56      0.59         9
+         233       0.80      1.00      0.89         4
+         234       0.80      1.00      0.89         4
+         235       0.40      0.50      0.44         4
+         236       1.00      1.00      1.00         4
+         237       1.00      1.00      1.00         4
+         238       1.00      0.89      0.94         9
+         239       1.00      1.00      1.00         9
+         240       1.00      1.00      1.00         9
+         241       0.60      0.33      0.43         9
+         242       0.60      1.00      0.75         9
+         243       1.00      0.89      0.94         9
+         244       1.00      0.60      0.75         5
+         245       1.00      0.89      0.94         9
+         246       0.71      1.00      0.83         5
+         247       0.88      0.78      0.82         9
+         248       1.00      1.00      1.00         4
+         249       0.83      1.00      0.91         5
+         250       0.80      1.00      0.89         4
+         251       1.00      1.00      1.00         5
+         252       0.75      0.75      0.75         4
+         253       1.00      0.40      0.57         5
+         254       1.00      0.50      0.67         4
+         255       0.80      0.80      0.80         5
+         256       1.00      1.00      1.00         4
+         257       0.75      0.75      0.75         4
+         258       0.00      0.00      0.00         4
+         259       0.00      0.00      0.00         4
+         260       0.00      0.00      0.00         4
+         261       0.00      0.00      0.00         4
+         262       0.08      0.25      0.12         4
+         263       0.00      0.00      0.00         4
+         264       0.00      0.00      0.00         4
+         265       1.00      0.75      0.86         4
+         266       0.50      0.60      0.55         5
+         267       0.80      1.00      0.89         4
+         268       0.75      0.60      0.67         5
+         269       1.00      0.50      0.67         4
+         270       1.00      1.00      1.00         9
+         271       0.50      0.25      0.33         4
+         272       1.00      1.00      1.00         9
+         273       0.50      0.50      0.50         4
+         274       0.71      0.56      0.63         9
+         275       1.00      0.75      0.86         4
+         276       0.80      1.00      0.89         4
+         277       0.60      0.75      0.67         4
+         278       1.00      0.75      0.86         4
+         279       1.00      1.00      1.00         4
+         280       0.57      1.00      0.73         4
+         281       1.00      1.00      1.00         4
+         282       1.00      1.00      1.00         4
+         283       1.00      1.00      1.00         4
+         284       0.67      1.00      0.80         4
+         285       1.00      1.00      1.00         4
+         286       1.00      1.00      1.00         4
+         287       0.80      1.00      0.89         4
+         288       0.82      1.00      0.90         9
+         289       1.00      1.00      1.00         9
+         290       1.00      1.00      1.00         9
+         291       0.89      0.89      0.89         9
+         292       1.00      0.89      0.94         9
+         293       0.56      1.00      0.71         5
+         294       1.00      0.78      0.88         9
+         295       1.00      0.60      0.75         5
+         296       1.00      0.67      0.80         9
+         297       0.80      1.00      0.89         4
+         298       0.80      0.80      0.80         5
+         299       1.00      1.00      1.00         4
+         300       1.00      1.00      1.00         5
+         301       1.00      0.75      0.86         4
+         302       1.00      1.00      1.00         5
+         303       1.00      0.75      0.86         4
+         304       1.00      1.00      1.00         5
+         305       1.00      1.00      1.00         4
+         306       1.00      0.75      0.86         4
+         307       0.00      0.00      0.00         4
+         308       0.00      0.00      0.00         4
+         309       0.00      0.00      0.00         4
+         310       0.00      0.00      0.00         4
+         311       0.00      0.00      0.00         4
+         312       0.00      0.00      0.00         4
+         313       0.00      0.00      0.00         4
+         314       0.80      1.00      0.89         4
+         315       1.00      0.60      0.75         5
+         316       0.89      0.89      0.89         9
+         317       0.50      0.40      0.44         5
+         318       1.00      1.00      1.00         4
+         319       1.00      1.00      1.00         9
+         320       0.80      1.00      0.89         4
+         321       1.00      0.75      0.86         4
+         322       1.00      0.89      0.94         9
+         323       1.00      0.89      0.94         9
+         324       1.00      0.89      0.94         9
+         325       0.80      1.00      0.89         4
+         326       0.75      0.75      0.75         4
+         327       1.00      0.75      0.86         4
+         328       0.67      0.50      0.57         4
+         329       1.00      0.50      0.67         4
+         330       1.00      1.00      1.00         4
+         331       0.75      0.75      0.75         4
+         332       1.00      0.75      0.86         4
+         333       0.75      0.75      0.75         4
+         334       0.80      1.00      0.89         4
+         335       0.80      1.00      0.89         4
+         336       1.00      0.75      0.86         4
+         337       1.00      0.89      0.94         9
+         338       1.00      0.78      0.88         9
+         339       1.00      1.00      1.00         9
+         340       1.00      0.78      0.88         9
+         341       1.00      1.00      1.00         9
+         342       0.82      1.00      0.90         9
+         343       0.80      0.80      0.80         5
+         344       1.00      1.00      1.00         9
+         345       1.00      1.00      1.00         5
+         346       0.82      1.00      0.90         9
+         347       0.80      1.00      0.89         4
+         348       1.00      1.00      1.00         5
+         349       0.90      1.00      0.95         9
+         350       0.62      1.00      0.77         5
+         351       1.00      0.50      0.67         4
+         352       0.83      1.00      0.91         5
+         353       1.00      1.00      1.00         4
+         354       1.00      0.80      0.89         5
+         355       0.75      0.75      0.75         4
+         356       1.00      0.75      0.86         4
+         357       0.00      0.00      0.00         4
+         358       0.00      0.00      0.00         4
+         359       0.00      0.00      0.00         4
+         360       0.00      0.00      0.00         4
+         361       0.00      0.00      0.00         4
+         362       0.00      0.00      0.00         4
+         363       0.00      0.00      0.00         4
+         364       0.50      1.00      0.67         4
+         365       0.67      0.40      0.50         5
+         366       1.00      0.89      0.94         9
+         367       1.00      0.60      0.75         5
+         368       1.00      0.75      0.86         4
+         369       1.00      1.00      1.00         4
+         370       0.50      0.50      0.50         4
+         371       1.00      0.80      0.89         5
+         372       1.00      1.00      1.00         4
+         373       0.71      0.56      0.63         9
+         374       0.80      1.00      0.89         4
+         375       1.00      0.75      0.86         4
+         376       0.50      0.50      0.50         4
+         377       1.00      1.00      1.00         4
+         378       0.50      0.25      0.33         4
+         379       1.00      1.00      1.00         4
+         380       1.00      1.00      1.00         4
+         381       1.00      0.89      0.94         9
+         382       1.00      1.00      1.00         4
+         383       0.67      1.00      0.80         4
+         384       0.80      1.00      0.89         4
+         385       0.80      1.00      0.89         4
+         386       0.75      0.75      0.75         4
+         387       0.80      0.89      0.84         9
+         388       0.89      0.89      0.89         9
+         389       1.00      1.00      1.00         9
+         390       0.89      0.89      0.89         9
+         391       0.89      0.89      0.89         9
+         392       0.90      1.00      0.95         9
+         393       1.00      0.60      0.75         5
+         394       0.88      0.78      0.82         9
+         395       1.00      1.00      1.00         5
+         396       0.90      1.00      0.95         9
+         397       0.67      1.00      0.80         4
+         398       0.80      0.80      0.80         5
+         399       1.00      0.75      0.86         8
+         400       1.00      0.80      0.89         5
+         401       1.00      1.00      1.00         4
+         402       1.00      0.80      0.89         5
+         403       1.00      0.75      0.86         4
+         404       1.00      0.80      0.89         5
+         405       0.67      0.50      0.57         4
+         406       0.80      1.00      0.89         4
+         407       0.00      0.00      0.00         4
+         408       0.00      0.00      0.00         4
+         409       0.07      0.25      0.11         4
+         410       0.00      0.00      0.00         4
+         411       0.00      0.00      0.00         4
+         412       0.00      0.00      0.00         4
+         413       0.00      0.00      0.00         4
+         414       1.00      0.75      0.86         4
+         415       1.00      0.60      0.75         5
+         416       0.80      0.44      0.57         9
+         417       0.67      0.80      0.73         5
+         418       0.60      0.75      0.67         4
+         419       1.00      1.00      1.00         4
+         420       0.33      0.25      0.29         4
+         421       0.89      0.89      0.89         9
+         422       0.50      0.50      0.50         4
+         423       0.89      0.89      0.89         9
+         424       0.83      0.83      0.83         6
+         425       1.00      1.00      1.00         4
+         426       0.67      0.50      0.57         4
+         427       0.50      0.50      0.50         4
+         428       0.67      0.50      0.57         4
+         429       1.00      0.75      0.86         4
+         430       1.00      0.25      0.40         4
+         431       0.88      0.78      0.82         9
+         432       1.00      1.00      1.00         4
+         433       0.67      0.50      0.57         4
+         434       0.60      0.75      0.67         4
+         435       0.80      1.00      0.89         4
+         436       1.00      1.00      1.00         4
+         437       0.86      0.67      0.75         9
+         438       0.82      1.00      0.90         9
+         439       1.00      0.78      0.88         9
+         440       0.55      0.67      0.60         9
+         441       0.82      1.00      0.90         9
+         442       0.60      0.60      0.60         5
+         443       1.00      1.00      1.00         9
+         444       1.00      1.00      1.00         5
+         445       0.80      0.89      0.84         9
+         446       1.00      0.75      0.86         4
+         447       1.00      0.40      0.57         5
+         448       0.73      0.89      0.80         9
+         449       0.80      0.80      0.80         5
+         450       1.00      1.00      1.00         4
+         451       0.83      1.00      0.91         5
+         452       0.50      0.75      0.60         4
+         453       1.00      1.00      1.00         4
+         454       1.00      1.00      1.00         4
+         455       0.00      0.00      0.00         4
+         456       0.00      0.00      0.00         4
+         457       0.00      0.00      0.00         4
+         458       0.00      0.00      0.00         4
+         459       0.00      0.00      0.00         4
+         460       0.00      0.00      0.00         4
+         461       0.00      0.00      0.00         4
+         462       0.50      0.75      0.60         4
+         463       0.44      0.80      0.57         5
+         464       0.57      1.00      0.73         4
+         465       0.71      1.00      0.83         5
+         466       1.00      0.75      0.86         4
+         467       1.00      0.75      0.86         4
+         468       1.00      0.75      0.86         4
+         469       0.80      1.00      0.89         4
+         470       1.00      1.00      1.00         4
+         471       1.00      0.78      0.88         9
+         472       0.67      0.40      0.50         5
+         473       1.00      0.75      0.86         4
+         474       1.00      1.00      1.00         4
+         475       0.80      1.00      0.89         4
+         476       1.00      0.75      0.86         4
+         477       0.80      1.00      0.89         4
+         478       0.80      1.00      0.89         4
+         479       1.00      0.25      0.40         4
+         480       1.00      1.00      1.00         4
+         481       0.75      0.75      0.75         4
+         482       0.50      0.50      0.50         4
+         483       0.50      0.25      0.33         4
+         484       0.67      1.00      0.80         4
+         485       0.88      0.78      0.82         9
+         486       0.90      1.00      0.95         9
+         487       0.90      1.00      0.95         9
+         488       0.75      1.00      0.86         9
+         489       0.57      0.44      0.50         9
+         490       1.00      0.78      0.88         9
+         491       1.00      0.60      0.75         5
+         492       1.00      1.00      1.00         9
+         493       1.00      1.00      1.00         5
+         494       1.00      0.89      0.94         9
+         495       0.80      1.00      0.89         4
+         496       1.00      0.80      0.89         5
+         497       1.00      1.00      1.00         8
+         498       1.00      0.80      0.89         5
+         499       1.00      1.00      1.00         4
+         500       1.00      0.80      0.89         5
+         501       0.50      0.75      0.60         4
+         502       1.00      1.00      1.00         5
+         503       1.00      0.75      0.86         4
+         504       1.00      1.00      1.00         4
+         505       0.00      0.00      0.00         4
+         506       0.14      0.25      0.18         4
+         507       0.00      0.00      0.00         4
+         508       0.00      0.00      0.00         4
+         509       0.00      0.00      0.00         4
+         510       0.00      0.00      0.00         4
+         511       0.00      0.00      0.00         4
+         512       1.00      1.00      1.00         4
+         513       0.71      1.00      0.83         5
+         514       0.89      0.89      0.89         9
+         515       1.00      0.60      0.75         5
+         516       1.00      0.75      0.86         4
+         517       1.00      1.00      1.00         4
+         518       0.75      0.75      0.75         4
+         519       1.00      0.75      0.86         4
+         520       0.33      0.25      0.29         4
+         521       0.90      1.00      0.95         9
+         522       0.82      1.00      0.90         9
+         523       0.82      1.00      0.90         9
+         524       0.67      1.00      0.80         4
+         525       0.57      1.00      0.73         4
+         526       0.80      1.00      0.89         4
+         527       0.67      0.50      0.57         4
+         528       0.80      1.00      0.89         4
+         529       1.00      0.89      0.94         9
+         530       1.00      1.00      1.00         4
+         531       1.00      0.50      0.67         4
+         532       0.67      0.50      0.57         4
+         533       0.75      0.75      0.75         4
+         534       1.00      0.25      0.40         4
+         535       0.67      0.44      0.53         9
+         536       1.00      0.89      0.94         9
+         537       1.00      1.00      1.00         9
+         538       0.67      0.89      0.76         9
+         539       1.00      0.89      0.94         9
+         540       0.89      0.89      0.89         9
+         541       0.50      0.40      0.44         5
+         542       0.73      0.89      0.80         9
+         543       1.00      1.00      1.00         5
+         544       0.90      1.00      0.95         9
+         545       1.00      0.75      0.86         4
+         546       1.00      1.00      1.00         5
+         547       1.00      0.75      0.86         4
+         548       1.00      1.00      1.00         5
+         549       0.75      0.75      0.75         4
+         550       1.00      1.00      1.00         5
+         551       0.40      0.50      0.44         4
+         552       1.00      0.80      0.89         5
+         553       1.00      1.00      1.00         9
+         554       0.75      0.75      0.75         4
+         555       0.00      0.00      0.00         4
+         556       0.00      0.00      0.00         4
+         557       0.00      0.00      0.00         4
+         558       0.00      0.00      0.00         4
+         559       0.00      0.00      0.00         4
+         560       0.00      0.00      0.00         4
+         561       0.00      0.00      0.00         4
+         562       1.00      0.50      0.67         4
+         563       0.20      0.20      0.20         5
+         564       1.00      0.75      0.86         4
+         565       0.83      1.00      0.91         5
+         566       1.00      1.00      1.00         4
+         567       0.60      0.75      0.67         4
+         568       0.30      0.75      0.43         4
+         569       0.80      1.00      0.89         4
+         570       1.00      1.00      1.00         4
+         571       1.00      1.00      1.00         9
+         572       0.75      0.86      0.80         7
+         573       1.00      0.75      0.86         4
+         574       1.00      0.75      0.86         4
+         575       0.33      0.25      0.29         4
+         576       0.80      1.00      0.89         4
+         577       1.00      1.00      1.00         4
+         578       0.60      0.75      0.67         4
+         579       1.00      1.00      1.00         9
+         580       0.67      1.00      0.80         4
+         581       0.67      1.00      0.80         4
+         582       0.67      0.50      0.57         4
+         583       0.75      0.75      0.75         4
+         584       0.00      0.00      0.00         4
+         585       0.75      1.00      0.86         9
+         586       0.89      0.89      0.89         9
+         587       1.00      0.89      0.94         9
+         588       1.00      0.67      0.80         9
+         589       1.00      0.89      0.94         9
+         590       1.00      0.89      0.94         9
+         591       1.00      1.00      1.00         5
+         592       1.00      1.00      1.00         9
+         593       1.00      1.00      1.00         5
+         594       1.00      1.00      1.00         9
+         595       0.67      1.00      0.80         4
+         596       0.83      1.00      0.91         5
+         597       0.60      0.75      0.67         4
+         598       1.00      0.60      0.75         5
+         599       0.60      0.75      0.67         4
+         600       0.75      0.60      0.67         5
+         601       1.00      1.00      1.00         4
+         602       1.00      1.00      1.00         5
+         603       1.00      0.78      0.88         9
+         604       1.00      1.00      1.00         5
+         605       0.00      0.00      0.00         9
+         606       0.00      0.00      0.00         9
+         607       0.00      0.00      0.00         9
+         608       0.00      0.00      0.00         9
+         609       0.00      0.00      0.00         9
+         610       0.00      0.00      0.00         9
+         611       0.00      0.00      0.00         9
+         612       0.75      0.75      0.75         4
+         613       1.00      0.60      0.75         5
+         614       1.00      1.00      1.00         4
+         615       0.71      1.00      0.83         5
+         616       1.00      0.50      0.67         4
+         617       1.00      0.50      0.67         4
+         618       0.75      0.75      0.75         4
+         619       0.83      0.71      0.77         7
+         620       1.00      1.00      1.00         4
+         621       1.00      0.89      0.94         9
+         622       0.67      0.50      0.57         4
+         623       1.00      1.00      1.00         4
+         624       0.80      1.00      0.89         4
+         625       1.00      0.75      0.86         4
+         626       1.00      0.50      0.67         4
+         627       0.90      1.00      0.95         9
+         628       1.00      0.75      0.86         4
+         629       1.00      1.00      1.00         9
+         630       1.00      0.75      0.86         4
+         631       1.00      1.00      1.00         4
+         632       1.00      0.75      0.86         4
+         633       0.67      1.00      0.80         4
+         634       1.00      1.00      1.00         4
+         635       0.67      0.44      0.53         9
+         636       1.00      0.89      0.94         9
+         637       0.75      0.67      0.71         9
+         638       1.00      0.78      0.88         9
+         639       0.41      0.78      0.54         9
+         640       0.75      1.00      0.86         9
+         641       1.00      1.00      1.00         5
+         642       1.00      0.89      0.94         9
+         643       0.60      0.60      0.60         5
+         644       0.78      0.78      0.78         9
+         645       0.80      1.00      0.89         4
+         646       0.80      0.80      0.80         5
+         647       0.75      0.75      0.75         4
+         648       0.80      0.80      0.80         5
+         649       1.00      0.50      0.67         4
+         650       0.43      0.60      0.50         5
+         651       1.00      1.00      1.00         4
+         652       0.71      1.00      0.83         5
+         653       1.00      1.00      1.00         9
+         654       1.00      1.00      1.00         4
+         655       0.00      0.00      0.00         9
+         656       0.00      0.00      0.00         9
+         657       0.00      0.00      0.00         9
+         658       0.00      0.00      0.00         9
+         659       0.00      0.00      0.00         9
+         660       0.00      0.00      0.00         9
+         661       0.00      0.00      0.00         9
+         662       1.00      1.00      1.00         5
+         663       1.00      1.00      1.00         4
+         664       1.00      0.80      0.89         5
+         665       1.00      0.75      0.86         4
+         666       0.75      0.75      0.75         4
+         667       1.00      1.00      1.00         4
+         668       0.67      0.50      0.57         4
+         669       1.00      1.00      1.00         4
+         670       0.90      1.00      0.95         9
+         671       0.50      1.00      0.67         4
+         672       1.00      1.00      1.00         4
+         673       0.80      1.00      0.89         4
+         674       1.00      1.00      1.00         4
+         675       1.00      1.00      1.00         4
+         676       1.00      1.00      1.00         9
+         677       1.00      1.00      1.00         4
+         678       0.75      1.00      0.86         9
+         679       1.00      1.00      1.00         4
+         680       1.00      1.00      1.00         4
+         681       1.00      1.00      1.00         4
+         682       1.00      1.00      1.00         4
+         683       0.67      1.00      0.80         4
+         684       0.64      0.78      0.70         9
+         685       1.00      0.78      0.88         9
+         686       0.67      0.67      0.67         9
+         687       1.00      0.78      0.88         9
+         688       0.56      0.56      0.56         9
+         689       1.00      0.89      0.94         9
+         690       0.83      1.00      0.91         5
+         691       0.75      0.33      0.46         9
+         692       0.75      0.60      0.67         5
+         693       1.00      0.89      0.94         9
+         694       1.00      1.00      1.00         4
+         695       0.80      0.80      0.80         5
+         696       1.00      0.50      0.67         4
+         697       0.80      0.80      0.80         5
+         698       1.00      1.00      1.00         4
+         699       1.00      1.00      1.00         5
+         700       1.00      1.00      1.00         4
+         701       0.75      0.60      0.67         5
+         702       0.90      1.00      0.95         9
+         703       1.00      1.00      1.00         4
+         704       0.00      0.00      0.00         9
+         705       0.00      0.00      0.00         9
+         706       0.00      0.00      0.00         9
+         707       0.00      0.00      0.00         9
+         708       0.00      0.00      0.00         9
+         709       0.00      0.00      0.00         9
+         710       0.00      0.00      0.00         9
+         711       0.80      1.00      0.89         4
+         712       1.00      1.00      1.00         5
+         713       0.67      0.57      0.62         7
+         714       0.80      0.80      0.80         5
+         715       1.00      1.00      1.00         4
+         716       1.00      0.75      0.86         4
+         717       1.00      1.00      1.00         4
+         718       1.00      0.75      0.86         4
+         719       1.00      1.00      1.00         4
+         720       1.00      1.00      1.00         9
+         721       0.60      0.75      0.67         4
+         722       1.00      1.00      1.00         4
+         723       1.00      0.75      0.86         4
+         724       1.00      0.75      0.86         4
+         725       0.67      1.00      0.80         4
+         726       0.80      1.00      0.89         4
+         727       1.00      0.50      0.67         4
+         728       1.00      0.78      0.88         9
+         729       1.00      1.00      1.00         4
+         730       1.00      1.00      1.00         4
+         731       1.00      0.75      0.86         4
+         732       1.00      1.00      1.00         4
+         733       1.00      1.00      1.00         4
+         734       0.90      1.00      0.95         9
+         735       0.80      0.89      0.84         9
+         736       1.00      0.67      0.80         9
+         737       0.73      0.89      0.80         9
+         738       0.73      0.89      0.80         9
+         739       1.00      0.67      0.80         9
+         740       1.00      1.00      1.00         5
+         741       0.57      0.89      0.70         9
+         742       0.75      0.60      0.67         5
+         743       0.82      1.00      0.90         9
+         744       0.43      0.75      0.55         4
+         745       0.62      1.00      0.77         5
+         746       1.00      0.50      0.67         4
+         747       1.00      1.00      1.00         5
+         748       1.00      0.75      0.86         4
+         749       1.00      1.00      1.00         5
+         750       0.57      1.00      0.73         4
+         751       1.00      1.00      1.00         5
+         752       1.00      1.00      1.00         4
+         753       1.00      0.75      0.86         4
+         754       0.06      0.25      0.10         4
+         755       0.00      0.00      0.00         4
+         756       0.00      0.00      0.00         4
+         757       0.00      0.00      0.00         4
+         758       0.00      0.00      0.00         4
+         759       0.00      0.00      0.00         4
+         760       0.00      0.00      0.00         4
+         761       0.80      1.00      0.89         4
+         762       1.00      1.00      1.00         5
+         763       0.40      0.40      0.40         5
+         764       0.50      0.80      0.62         5
+         765       1.00      1.00      1.00         4
+         766       1.00      0.89      0.94         9
+         767       0.20      0.25      0.22         4
+         768       0.90      1.00      0.95         9
+         769       1.00      0.75      0.86         4
+         770       0.75      0.67      0.71         9
+         771       1.00      0.75      0.86         4
+         772       1.00      1.00      1.00         4
+         773       0.80      1.00      0.89         4
+         774       1.00      1.00      1.00         4
+         775       1.00      0.75      0.86         4
+         776       1.00      0.75      0.86         4
+         777       0.60      0.75      0.67         4
+         778       1.00      0.75      0.86         4
+         779       0.75      0.75      0.75         4
+         780       1.00      1.00      1.00         4
+         781       0.67      0.50      0.57         4
+         782       1.00      1.00      1.00         4
+         783       1.00      0.75      0.86         4
+         784       1.00      1.00      1.00         9
+         785       1.00      1.00      1.00         9
+         786       1.00      1.00      1.00         9
+         787       0.88      0.78      0.82         9
+         788       0.89      0.89      0.89         9
+         789       1.00      1.00      1.00         9
+         790       0.80      0.80      0.80         5
+         791       1.00      0.89      0.94         9
+         792       1.00      0.80      0.89         5
+         793       0.89      0.89      0.89         9
+         794       0.75      0.75      0.75         4
+         795       1.00      1.00      1.00         5
+         796       1.00      0.75      0.86         4
+         797       1.00      1.00      1.00         5
+         798       1.00      1.00      1.00         4
+         799       1.00      1.00      1.00         5
+         800       0.80      1.00      0.89         4
+         801       0.75      0.60      0.67         5
+         802       0.80      1.00      0.89         4
+         803       1.00      0.75      0.86         4
+         804       0.00      0.00      0.00         4
+         805       0.00      0.00      0.00         4
+         806       0.00      0.00      0.00         4
+         807       0.00      0.00      0.00         4
+         808       0.00      0.00      0.00         4
+         809       0.00      0.00      0.00         4
+         810       0.00      0.00      0.00         4
+         811       1.00      1.00      1.00         4
+         812       0.83      1.00      0.91         5
+         813       0.88      0.78      0.82         9
+         814       0.80      0.80      0.80         5
+         815       0.75      0.75      0.75         4
+         816       0.82      1.00      0.90         9
+         817       1.00      0.75      0.86         4
+         818       0.73      1.00      0.84         8
+         819       1.00      1.00      1.00         4
+         820       0.90      1.00      0.95         9
+         821       1.00      1.00      1.00         9
+         822       0.57      1.00      0.73         4
+         823       1.00      1.00      1.00         4
+         824       1.00      1.00      1.00         4
+         825       0.60      0.75      0.67         4
+         826       1.00      1.00      1.00         4
+         827       1.00      1.00      1.00         4
+         828       1.00      1.00      1.00         4
+         829       1.00      1.00      1.00         4
+         830       1.00      1.00      1.00         4
+         831       1.00      1.00      1.00         4
+         832       1.00      1.00      1.00         4
+         833       1.00      1.00      1.00         4
+         834       1.00      1.00      1.00         9
+         835       0.90      1.00      0.95         9
+         836       1.00      0.89      0.94         9
+         837       0.89      0.89      0.89         9
+         838       0.75      1.00      0.86         9
+         839       1.00      0.89      0.94         9
+         840       1.00      0.60      0.75         5
+         841       0.90      1.00      0.95         9
+         842       1.00      1.00      1.00         5
+         843       0.75      1.00      0.86         9
+         844       1.00      0.75      0.86         4
+         845       0.60      0.60      0.60         5
+         846       0.56      1.00      0.71         5
+         847       1.00      0.80      0.89         5
+         848       1.00      1.00      1.00         4
+         849       0.83      1.00      0.91         5
+         850       1.00      1.00      1.00         4
+         851       0.80      0.80      0.80         5
+         852       0.75      0.75      0.75         4
+         853       1.00      0.75      0.86         4
+         854       0.00      0.00      0.00         4
+         855       0.07      0.25      0.11         4
+         856       0.00      0.00      0.00         4
+         857       0.00      0.00      0.00         4
+         858       0.00      0.00      0.00         4
+         859       0.00      0.00      0.00         4
+         860       0.00      0.00      0.00         4
+         861       0.67      0.50      0.57         4
+         862       1.00      0.80      0.89         5
+         863       0.80      0.89      0.84         9
+         864       1.00      0.80      0.89         5
+         865       0.80      1.00      0.89         4
+         866       1.00      1.00      1.00         4
+         867       0.80      1.00      0.89         4
+         868       1.00      0.89      0.94         9
+         869       0.80      1.00      0.89         4
+         870       0.86      0.67      0.75         9
+         871       1.00      0.89      0.94         9
+         872       1.00      1.00      1.00         4
+         873       1.00      0.75      0.86         4
+         874       1.00      0.75      0.86         4
+         875       1.00      0.75      0.86         4
+         876       0.80      1.00      0.89         4
+         877       1.00      1.00      1.00         4
+         878       0.75      0.75      0.75         4
+         879       1.00      1.00      1.00         4
+         880       1.00      1.00      1.00         4
+         881       1.00      0.75      0.86         4
+         882       0.67      1.00      0.80         4
+         883       0.80      1.00      0.89         4
+         884       0.90      1.00      0.95         9
+         885       1.00      0.89      0.94         9
+         886       0.89      0.89      0.89         9
+         887       0.78      0.78      0.78         9
+         888       1.00      1.00      1.00         9
+         889       0.73      0.89      0.80         9
+         890       0.67      0.80      0.73         5
+         891       0.88      0.78      0.82         9
+         892       0.83      1.00      0.91         5
+         893       0.88      0.78      0.82         9
+
+    accuracy                           0.76      4917
+   macro avg       0.75      0.74      0.73      4917
+weighted avg       0.77      0.76      0.75      4917
+
+Parameters: 986894

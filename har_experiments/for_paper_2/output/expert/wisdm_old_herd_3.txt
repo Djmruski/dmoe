@@ -1,0 +1,388 @@
+CLASS_ORDER: [11, 8, 13, 14, 16, 4, 7, 15, 3, 9, 1, 2, 5, 12, 6, 0, 17, 10]
+class_group: [(11, 8), (13, 14), (16, 4), (7, 15), (3, 9), (1, 2), (5, 12), (6, 0), (17, 10)]
+STEP-1	Epoch: 10/200	loss: 0.1548	step1_train_accuracy: 93.4066
+STEP-1	Epoch: 20/200	loss: 0.1293	step1_train_accuracy: 94.5701
+STEP-1	Epoch: 30/200	loss: 0.0712	step1_train_accuracy: 97.4790
+STEP-1	Epoch: 40/200	loss: 0.0627	step1_train_accuracy: 97.6083
+STEP-1	Epoch: 50/200	loss: 0.0451	step1_train_accuracy: 98.1900
+STEP-1	Epoch: 60/200	loss: 0.0468	step1_train_accuracy: 98.3193
+STEP-1	Epoch: 70/200	loss: 0.0732	step1_train_accuracy: 96.8972
+STEP-1	Epoch: 80/200	loss: 0.0651	step1_train_accuracy: 97.6729
+STEP-1	Epoch: 90/200	loss: 0.0385	step1_train_accuracy: 98.2547
+STEP-1	Epoch: 100/200	loss: 0.0242	step1_train_accuracy: 99.0950
+STEP-1	Epoch: 110/200	loss: 0.0650	step1_train_accuracy: 97.8668
+STEP-1	Epoch: 120/200	loss: 0.0383	step1_train_accuracy: 98.5133
+STEP-1	Epoch: 130/200	loss: 0.0268	step1_train_accuracy: 98.9011
+STEP-1	Epoch: 140/200	loss: 0.0277	step1_train_accuracy: 98.9011
+STEP-1	Epoch: 150/200	loss: 0.0348	step1_train_accuracy: 98.7718
+STEP-1	Epoch: 160/200	loss: 0.0293	step1_train_accuracy: 99.0304
+STEP-1	Epoch: 170/200	loss: 0.0288	step1_train_accuracy: 99.2243
+STEP-1	Epoch: 180/200	loss: 0.0155	step1_train_accuracy: 99.4829
+STEP-1	Epoch: 190/200	loss: 0.0193	step1_train_accuracy: 99.2243
+STEP-1	Epoch: 200/200	loss: 0.0353	step1_train_accuracy: 98.5133
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10})
+
+Task-1	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 88.6305	gate_accuracy: 100.0000
+	GATE_ACCURACY: 100.0000
+
+
+STEP-1	Epoch: 10/200	loss: 0.2019	step1_train_accuracy: 91.5621
+STEP-1	Epoch: 20/200	loss: 0.1367	step1_train_accuracy: 94.6978
+STEP-1	Epoch: 30/200	loss: 0.0892	step1_train_accuracy: 96.7503
+STEP-1	Epoch: 40/200	loss: 0.0750	step1_train_accuracy: 97.2634
+STEP-1	Epoch: 50/200	loss: 0.0889	step1_train_accuracy: 96.4652
+STEP-1	Epoch: 60/200	loss: 0.0567	step1_train_accuracy: 97.7765
+STEP-1	Epoch: 70/200	loss: 0.0677	step1_train_accuracy: 97.4344
+STEP-1	Epoch: 80/200	loss: 0.0723	step1_train_accuracy: 97.0353
+STEP-1	Epoch: 90/200	loss: 0.0323	step1_train_accuracy: 98.8597
+STEP-1	Epoch: 100/200	loss: 0.0338	step1_train_accuracy: 98.3466
+STEP-1	Epoch: 110/200	loss: 0.0150	step1_train_accuracy: 99.4869
+STEP-1	Epoch: 120/200	loss: 0.0164	step1_train_accuracy: 99.3158
+STEP-1	Epoch: 130/200	loss: 0.0181	step1_train_accuracy: 99.2018
+STEP-1	Epoch: 140/200	loss: 0.0175	step1_train_accuracy: 99.3158
+STEP-1	Epoch: 150/200	loss: 0.0110	step1_train_accuracy: 99.6009
+STEP-1	Epoch: 160/200	loss: 0.0095	step1_train_accuracy: 99.7719
+STEP-1	Epoch: 170/200	loss: 0.0150	step1_train_accuracy: 99.4869
+STEP-1	Epoch: 180/200	loss: 0.0144	step1_train_accuracy: 99.4869
+STEP-1	Epoch: 190/200	loss: 0.0100	step1_train_accuracy: 99.7719
+STEP-1	Epoch: 200/200	loss: 0.0068	step1_train_accuracy: 99.6579
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10})
+
+Task-2	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 79.0698	gate_accuracy: 91.2145
+	Task-1	val_accuracy: 75.5708	gate_accuracy: 84.0183
+	GATE_ACCURACY: 87.3939
+
+
+STEP-1	Epoch: 10/200	loss: 0.0723	step1_train_accuracy: 97.4800
+STEP-1	Epoch: 20/200	loss: 0.0393	step1_train_accuracy: 98.4020
+STEP-1	Epoch: 30/200	loss: 0.0322	step1_train_accuracy: 98.8937
+STEP-1	Epoch: 40/200	loss: 0.0807	step1_train_accuracy: 97.8488
+STEP-1	Epoch: 50/200	loss: 0.0209	step1_train_accuracy: 98.9551
+STEP-1	Epoch: 60/200	loss: 0.0277	step1_train_accuracy: 98.9551
+STEP-1	Epoch: 70/200	loss: 0.0129	step1_train_accuracy: 99.5698
+STEP-1	Epoch: 80/200	loss: 0.0164	step1_train_accuracy: 99.3854
+STEP-1	Epoch: 90/200	loss: 0.0191	step1_train_accuracy: 99.0781
+STEP-1	Epoch: 100/200	loss: 0.0080	step1_train_accuracy: 99.6927
+STEP-1	Epoch: 110/200	loss: 0.0118	step1_train_accuracy: 99.5083
+STEP-1	Epoch: 120/200	loss: 0.0267	step1_train_accuracy: 98.9551
+STEP-1	Epoch: 130/200	loss: 0.0073	step1_train_accuracy: 99.8156
+STEP-1	Epoch: 140/200	loss: 0.0173	step1_train_accuracy: 99.3854
+STEP-1	Epoch: 150/200	loss: 0.0066	step1_train_accuracy: 99.8156
+STEP-1	Epoch: 160/200	loss: 0.0054	step1_train_accuracy: 99.7541
+STEP-1	Epoch: 170/200	loss: 0.0011	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0016	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0002	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0018	step1_train_accuracy: 99.9385
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10})
+
+Task-3	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 27.6486	gate_accuracy: 70.5426
+	Task-1	val_accuracy: 63.6986	gate_accuracy: 85.8447
+	Task-2	val_accuracy: 59.4595	gate_accuracy: 40.5405
+	GATE_ACCURACY: 66.0714
+
+
+STEP-1	Epoch: 10/200	loss: 0.0974	step1_train_accuracy: 96.0710
+STEP-1	Epoch: 20/200	loss: 0.0782	step1_train_accuracy: 96.8314
+STEP-1	Epoch: 30/200	loss: 0.0509	step1_train_accuracy: 97.5919
+STEP-1	Epoch: 40/200	loss: 0.0481	step1_train_accuracy: 97.9087
+STEP-1	Epoch: 50/200	loss: 0.0577	step1_train_accuracy: 97.9721
+STEP-1	Epoch: 60/200	loss: 0.0424	step1_train_accuracy: 98.1622
+STEP-1	Epoch: 70/200	loss: 0.0266	step1_train_accuracy: 98.8593
+STEP-1	Epoch: 80/200	loss: 0.0731	step1_train_accuracy: 97.5285
+STEP-1	Epoch: 90/200	loss: 0.0238	step1_train_accuracy: 98.9861
+STEP-1	Epoch: 100/200	loss: 0.0204	step1_train_accuracy: 99.1762
+STEP-1	Epoch: 110/200	loss: 0.0169	step1_train_accuracy: 99.2395
+STEP-1	Epoch: 120/200	loss: 0.0215	step1_train_accuracy: 99.2395
+STEP-1	Epoch: 130/200	loss: 0.0224	step1_train_accuracy: 99.3029
+STEP-1	Epoch: 140/200	loss: 0.0220	step1_train_accuracy: 99.3029
+STEP-1	Epoch: 150/200	loss: 0.0106	step1_train_accuracy: 99.6198
+STEP-1	Epoch: 160/200	loss: 0.0175	step1_train_accuracy: 99.3029
+STEP-1	Epoch: 170/200	loss: 0.0077	step1_train_accuracy: 99.6831
+STEP-1	Epoch: 180/200	loss: 0.0070	step1_train_accuracy: 99.7465
+STEP-1	Epoch: 190/200	loss: 0.0068	step1_train_accuracy: 99.6831
+STEP-1	Epoch: 200/200	loss: 0.0108	step1_train_accuracy: 99.4297
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10})
+
+Task-4	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 15.2455	gate_accuracy: 64.3411
+	Task-1	val_accuracy: 64.3836	gate_accuracy: 84.4749
+	Task-2	val_accuracy: 34.8894	gate_accuracy: 43.4889
+	Task-3	val_accuracy: 59.2405	gate_accuracy: 23.2911
+	GATE_ACCURACY: 54.5790
+
+
+STEP-1	Epoch: 10/200	loss: 0.1094	step1_train_accuracy: 95.2443
+STEP-1	Epoch: 20/200	loss: 0.0582	step1_train_accuracy: 97.5896
+STEP-1	Epoch: 30/200	loss: 0.0611	step1_train_accuracy: 97.9153
+STEP-1	Epoch: 40/200	loss: 0.0210	step1_train_accuracy: 99.1531
+STEP-1	Epoch: 50/200	loss: 0.0369	step1_train_accuracy: 98.5668
+STEP-1	Epoch: 60/200	loss: 0.0286	step1_train_accuracy: 98.6971
+STEP-1	Epoch: 70/200	loss: 0.0136	step1_train_accuracy: 99.5440
+STEP-1	Epoch: 80/200	loss: 0.0107	step1_train_accuracy: 99.5440
+STEP-1	Epoch: 90/200	loss: 0.0057	step1_train_accuracy: 99.8046
+STEP-1	Epoch: 100/200	loss: 0.0103	step1_train_accuracy: 99.8046
+STEP-1	Epoch: 110/200	loss: 0.0002	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0000	step1_train_accuracy: 100.0000
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10})
+
+Task-5	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 15.7623	gate_accuracy: 52.1964
+	Task-1	val_accuracy: 60.2740	gate_accuracy: 85.8447
+	Task-2	val_accuracy: 29.7297	gate_accuracy: 34.8894
+	Task-3	val_accuracy: 33.6709	gate_accuracy: 23.7975
+	Task-4	val_accuracy: 47.9167	gate_accuracy: 3.3854
+	GATE_ACCURACY: 41.1238
+
+
+STEP-1	Epoch: 10/200	loss: 0.1083	step1_train_accuracy: 96.6963
+STEP-1	Epoch: 20/200	loss: 0.0733	step1_train_accuracy: 97.5222
+STEP-1	Epoch: 30/200	loss: 0.0619	step1_train_accuracy: 97.9670
+STEP-1	Epoch: 40/200	loss: 0.0505	step1_train_accuracy: 98.2846
+STEP-1	Epoch: 50/200	loss: 0.0544	step1_train_accuracy: 98.4752
+STEP-1	Epoch: 60/200	loss: 0.0265	step1_train_accuracy: 99.1105
+STEP-1	Epoch: 70/200	loss: 0.0372	step1_train_accuracy: 98.9199
+STEP-1	Epoch: 80/200	loss: 0.0099	step1_train_accuracy: 99.7459
+STEP-1	Epoch: 90/200	loss: 0.0154	step1_train_accuracy: 99.3647
+STEP-1	Epoch: 100/200	loss: 0.0038	step1_train_accuracy: 99.8729
+STEP-1	Epoch: 110/200	loss: 0.0005	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0190	step1_train_accuracy: 99.3011
+STEP-1	Epoch: 130/200	loss: 0.0045	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0000	step1_train_accuracy: 100.0000
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10})
+
+Task-6	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 22.7390	gate_accuracy: 54.7804
+	Task-1	val_accuracy: 48.8584	gate_accuracy: 77.3973
+	Task-2	val_accuracy: 30.9582	gate_accuracy: 31.4496
+	Task-3	val_accuracy: 35.1899	gate_accuracy: 23.0380
+	Task-4	val_accuracy: 23.6979	gate_accuracy: 4.1667
+	Task-5	val_accuracy: 80.7107	gate_accuracy: 63.9594
+	GATE_ACCURACY: 43.1601
+
+
+STEP-1	Epoch: 10/200	loss: 0.0021	step1_train_accuracy: 99.9397
+STEP-1	Epoch: 20/200	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0000	step1_train_accuracy: 100.0000
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10})
+
+Task-7	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 17.8295	gate_accuracy: 55.2972
+	Task-1	val_accuracy: 49.5434	gate_accuracy: 78.0822
+	Task-2	val_accuracy: 34.6437	gate_accuracy: 29.9754
+	Task-3	val_accuracy: 31.3924	gate_accuracy: 25.0633
+	Task-4	val_accuracy: 34.8958	gate_accuracy: 6.5104
+	Task-5	val_accuracy: 71.8274	gate_accuracy: 71.8274
+	Task-6	val_accuracy: 33.2530	gate_accuracy: 4.5783
+	GATE_ACCURACY: 39.1489
+
+
+STEP-1	Epoch: 10/200	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 20/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 30/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 40/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 50/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 60/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 70/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 80/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 90/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 100/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0000	step1_train_accuracy: 100.0000
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10, 15: 10})
+
+Task-8	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 14.2119	gate_accuracy: 52.1964
+	Task-1	val_accuracy: 48.6301	gate_accuracy: 77.6256
+	Task-2	val_accuracy: 36.6093	gate_accuracy: 30.2211
+	Task-3	val_accuracy: 30.3797	gate_accuracy: 27.0886
+	Task-4	val_accuracy: 30.2083	gate_accuracy: 5.7292
+	Task-5	val_accuracy: 63.1980	gate_accuracy: 61.6751
+	Task-6	val_accuracy: 26.7470	gate_accuracy: 5.7831
+	Task-7	val_accuracy: 44.6078	gate_accuracy: 16.1765
+	GATE_ACCURACY: 34.9133
+
+
+STEP-1	Epoch: 10/200	loss: 0.0254	step1_train_accuracy: 99.1453
+STEP-1	Epoch: 20/200	loss: 0.0085	step1_train_accuracy: 99.6947
+STEP-1	Epoch: 30/200	loss: 0.0152	step1_train_accuracy: 99.3895
+STEP-1	Epoch: 40/200	loss: 0.0067	step1_train_accuracy: 99.7558
+STEP-1	Epoch: 50/200	loss: 0.0017	step1_train_accuracy: 99.8779
+STEP-1	Epoch: 60/200	loss: 0.0025	step1_train_accuracy: 99.9389
+STEP-1	Epoch: 70/200	loss: 0.0016	step1_train_accuracy: 99.9389
+STEP-1	Epoch: 80/200	loss: 0.0012	step1_train_accuracy: 99.8779
+STEP-1	Epoch: 90/200	loss: 0.0048	step1_train_accuracy: 99.8168
+STEP-1	Epoch: 100/200	loss: 0.0001	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 110/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 120/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 130/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 140/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 150/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 160/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 170/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 180/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 190/200	loss: 0.0000	step1_train_accuracy: 100.0000
+STEP-1	Epoch: 200/200	loss: 0.0000	step1_train_accuracy: 100.0000
+
+=====HERDING SELECTION FOR BUFFER=====
+Buffer size: Counter({0: 10, 1: 10, 2: 10, 3: 10, 4: 10, 5: 10, 6: 10, 7: 10, 8: 10, 9: 10, 10: 10, 11: 10, 12: 10, 13: 10, 14: 10, 15: 10, 16: 10, 17: 10})
+
+Task-9	STARTING STEP 2
+FINISH STEP 2
+
+VALIDATING MODEL
+	Task-0	val_accuracy: 11.8863	gate_accuracy: 53.7468
+	Task-1	val_accuracy: 46.3470	gate_accuracy: 72.6027
+	Task-2	val_accuracy: 38.5749	gate_accuracy: 35.8722
+	Task-3	val_accuracy: 20.5063	gate_accuracy: 27.0886
+	Task-4	val_accuracy: 26.5625	gate_accuracy: 2.6042
+	Task-5	val_accuracy: 70.8122	gate_accuracy: 57.1066
+	Task-6	val_accuracy: 25.7831	gate_accuracy: 6.5060
+	Task-7	val_accuracy: 40.6863	gate_accuracy: 27.6961
+	Task-8	val_accuracy: 22.2494	gate_accuracy: 0.9780
+	GATE_ACCURACY: 31.8394
+
+
+
+Execution time:
+CPU time: 00:04:58	Wall time: 00:04:54
+CPU time: 298.193477682	Wall time: 294.54684686660767
+FAA: 56.84875594488903
+FF: 39.23115350043861
+
+TRAINER.METRIC.ACCURACY
+0: [88.63049095607235]
+1: [79.06976744186046, 75.57077625570776]
+2: [27.648578811369507, 63.6986301369863, 59.45945945945946]
+3: [15.245478036175712, 64.38356164383562, 34.88943488943489, 59.24050632911393]
+4: [15.762273901808785, 60.273972602739725, 29.72972972972973, 33.67088607594937, 47.91666666666667]
+5: [22.739018087855296, 48.858447488584474, 30.95823095823096, 35.189873417721515, 23.697916666666664, 80.71065989847716]
+6: [17.829457364341085, 49.54337899543379, 34.64373464373464, 31.39240506329114, 34.89583333333333, 71.8274111675127, 33.25301204819277]
+7: [14.21188630490956, 48.63013698630137, 36.60933660933661, 30.37974683544304, 30.208333333333332, 63.1979695431472, 26.746987951807228, 44.6078431372549]
+8: [11.886304909560723, 46.34703196347032, 38.57493857493858, 20.506329113924053, 26.5625, 70.81218274111674, 25.783132530120483, 40.68627450980392, 22.249388753056234]
+
+=====RUNNING ON TEST SET=====
+CALCULATING TEST ACCURACY PER TASK
+	TASK-0	CLASSES: [0 1]	test_accuracy: 9.1912
+	TASK-1	CLASSES: [2 3]	test_accuracy: 37.2699
+	TASK-2	CLASSES: [4 5]	test_accuracy: 30.0578
+	TASK-3	CLASSES: [6 7]	test_accuracy: 4.0385
+	TASK-4	CLASSES: [8 9]	test_accuracy: 8.2218
+	TASK-5	CLASSES: [10 11]	test_accuracy: 55.3232
+	TASK-6	CLASSES: [12 13]	test_accuracy: 22.0280
+	TASK-7	CLASSES: [14 15]	test_accuracy: 43.3010
+	TASK-8	CLASSES: [16 17]	test_accuracy: 16.9847
+PREDICTION TIME: 0.0017622649999680107
+
+====================
+
+f1_score(micro): 25.37282941777324
+f1_score(macro): 24.228136800688205
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.42      0.08      0.13       274
+           1       0.26      0.10      0.15       270
+           2       0.39      0.44      0.41       328
+           3       0.32      0.31      0.32       324
+           4       0.13      0.16      0.14       245
+           5       0.39      0.42      0.41       274
+           6       0.03      0.02      0.02       271
+           7       0.15      0.06      0.09       249
+           8       0.15      0.13      0.14       277
+           9       0.02      0.03      0.02       246
+          10       0.73      0.65      0.69       280
+          11       0.41      0.45      0.43       246
+          12       0.02      0.01      0.01       245
+          13       0.48      0.38      0.42       327
+          14       0.13      0.39      0.19       249
+          15       0.40      0.47      0.43       266
+          16       0.22      0.18      0.20       248
+          17       0.15      0.16      0.16       276
+
+    accuracy                           0.25      4895
+   macro avg       0.27      0.25      0.24      4895
+weighted avg       0.28      0.25      0.25      4895
+
+Parameters: 78174
