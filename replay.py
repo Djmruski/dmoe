@@ -7,7 +7,6 @@ import torchvision.models as models
 
 from base import BaseDataset, Extractor, get_data
 from collections import Counter
-from herding import herding_selection
 from scipy.spatial.distance import cdist
 from torch.utils.data import Dataset, ConcatDataset, DataLoader
 from torchvision import datasets
@@ -76,37 +75,6 @@ class HerdingReplay(Replay):
         x_extended = self.buffer["x"] + dataset["trn"]["x"]
         y_extended = self.buffer["y"] + dataset["trn"]["y"]
         return x_extended, y_extended
-
-    def _sample_buffer(self, item_per_class, classes, dataset):
-        """
-        Use herding to select item_per_class from the given classes in the dataset.
-
-        item_per_class: a list of the number of items per class
-        classes: a list of class (to get the index)
-        dataset: a dictionary containing the training dataset or the combination of the buffer and the training dataset
-            dataset{
-                "x": [],
-                "y": []
-            }
-        """
-        buffer_x, buffer_y = [], []
-        x_array = torch.stack(dataset["x"]).cpu().numpy()
-        y_array = np.array(dataset["y"])
-        for m, cls_ in zip(item_per_class, classes):
-            cls_idx = np.where(cls_ == y_array)
-            temp_x = [dataset["x"][i] for i in cls_idx[0]] # np.where() returns a tuple?
-            cls_x = x_array[cls_idx]
-            cls_y = y_array[cls_idx]
-
-            herd_idx = herding_selection(cls_x, m)
-            selected_x = [temp_x[i] for i in herd_idx]
-            selected_y = cls_y[:m]
-
-            buffer_x.extend(selected_x)
-            buffer_y.extend(selected_y)
-
-        self.buffer["x"] = buffer_x
-        self.buffer["y"] = buffer_y
 
 class RandomReplay(Replay):
     def __init__(self, mem_size=3000, extractor=None):

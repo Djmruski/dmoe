@@ -13,6 +13,7 @@ import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
 import torchvision.models as models
 
+from itertools import zip_longest
 from collections import Counter
 from torch.utils.data import DataLoader, TensorDataset
 from torchvision.models.feature_extraction import create_feature_extractor
@@ -1028,13 +1029,13 @@ if __name__ == "__main__":
     use_max = args.use_max
     
     # The path for each dataset should be redirected to local configuration
-    path = ["/home/fr27/Documents/pyscript/har/DSADS/pamap.mat", 
-            "/home/fr27/Documents/pyscript/har/DSADS/dsads.mat", 
-            "/home/fr27/Documents/pyscript/har/HAPT", 
-            "/home/fr27/Documents/pyscript/wisdm/dataset/arff_files/phone/accel/all.csv", 
-            "/home/fr27/Documents/pyscript/har/DSADS/dsads.mat",
-            "/home/fr27/Documents/pyscript/har/DSADS/dsads.mat",
-            "/home/fr27/Documents/pyscript/wisdm/dataset/arff_files/phone/accel/all.csv", ]
+    path = ["/home/arw27/CS4099/dmoe/har/DSADS/pamap.mat", 
+            "/home/arw27/CS4099/dmoe/har/DSADS/dsads.mat", 
+            "/home/arw27/CS4099/dmoe/har/HAPT", 
+            "/home/arw27/CS4099/dmoe/wisdm/dataset/arff_files/phone/accel/all.csv", 
+            "/home/arw27/CS4099/dmoe/har/DSADS/dsads.mat",
+            "/home/arw27/CS4099/dmoe/har/DSADS/dsads.mat",
+            "/home/arw27/CS4099/dmoe/wisdm/dataset/arff_files/phone/accel/all.csv", ]
     kind = ["pamap", "dsads", "hapt", "wisdm", "flex", "flex2", "wisdmflex"]
     num_classes = [12, 19, 12, 18, 152, 95, 894]
     in_features = [243, 405, 561, 91, 405, 405, 91]    
