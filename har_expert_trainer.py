@@ -232,7 +232,8 @@ class Trainer:
         """additional standard properties"""
         self.criterion = nn.CrossEntropyLoss()
         # self.device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-        self.device = 'cuda:0' if device == 0 else 'cuda:1'
+        # self.device = 'cuda:0' if device == 0 else 'cuda:1'
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         # self.hidden_size = 91 if (kind == 'wisdm' or kind == 'wisdmflex') else int(1000 // (len(self.data) - 1))
         self.hidden_size = int(1000 // (len(self.data) - 1)) if hidden_size == 0 else hidden_size
         # if kind == 'wisdm':
