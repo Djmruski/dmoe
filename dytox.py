@@ -9,12 +9,12 @@ from expert import Expert
 
 class DyTox(nn.module):
     
-    def __init__(self, num_classes, dim=405, B=32, N=9, C=45, embed_dim=78):
+    def __init__(self, num_classes, dim=405, B=32, C=45, embed_dim=78):
         super.__init__()
 
         self.dim = dim
         self.B = B
-        self.N = N
+        self.N = dim / C
         self.C = C
         self.embed_dim = embed_dim
         self.num_classes_per_task = [num_classes]
