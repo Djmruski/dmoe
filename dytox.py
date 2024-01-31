@@ -12,15 +12,13 @@ class DyTox(nn.module):
     def __init__(self, num_classes, dim=405, B=32, N=9, C=45, embed_dim=78):
         super.__init__()
 
-        # param
-
         self.dim = dim
         self.B = B
         self.N = N
         self.C = C
         self.embed_dim = embed_dim
         self.num_classes_per_task = [num_classes]
-        
+
         # tab
 
         self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, dim))])
@@ -29,6 +27,7 @@ class DyTox(nn.module):
         # clf
 
         in_dim = (self.N+1) * self.embed_dim
+        # TODO: why +1???
         out_dim = self.num_classes_per_task[-1] + 1
         self.experts = nn.ModuleList([Expert(input_size=in_dim, output_size=out_dim)])
 
@@ -49,6 +48,7 @@ class DyTox(nn.module):
         # clf
 
         in_dim = (self.N+1) * self.embed_dim
+        # TODO: why +1???
         out_dim = self.num_classes_per_task[-1] + 1
         self.experts.append(Expert(input_size=in_dim, output_size=out_dim))
 
