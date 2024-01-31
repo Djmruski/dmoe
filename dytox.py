@@ -4,7 +4,7 @@ import torch.nn as nn
 from timm.models.layers import trunc_normal_
 
 from attention import Attention
-from new_expert import Expert
+from expert import Expert
 
 
 class DyTox(nn.module):
