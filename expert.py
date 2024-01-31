@@ -15,7 +15,6 @@ class Expert(nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(in_features=input_size, out_features=hidden_size)
         self.fc2 = nn.Linear(in_features=hidden_size, out_features=output_size)
-        self.mapper = nn.Linear(in_features=output_size, out_features=projected_output_size, bias=False)
         self.batchnorm = nn.InstanceNorm1d(num_features=hidden_size)
 
         torch.nn.init.xavier_uniform_(self.fc1.weight)
@@ -23,20 +22,4 @@ class Expert(nn.Module):
 
     def forward(self, x):
         out = F.relu(self.batchnorm(self.fc1(x)))
-        out = self.mapper(self.fc2(out))
-        return out
-
-class BiasLayer(torch.nn.Module):
-    """
-    The bias layer adapted from BiC.
-    It will be added to the end of expert classification layers.
-    It has only two parameters: alpha and beta
-    """
-    
-    def __init__(self):
-        super(BiasLayer, self).__init__()
-        self.alpha = torch.nn.Parameter(torch.ones(1), requires_grad=False)
-        self.beta = torch.nn.Parameter(torch.zeros(1), requires_grad=False)
-
-    def forward(self, x):
-        return self.alpha * x + self.beta        
+        return self.fc2(out)
