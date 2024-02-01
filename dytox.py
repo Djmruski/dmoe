@@ -7,28 +7,28 @@ from attention import Attention
 from expert import Expert
 
 
-class DyTox(nn.module):
+class DyTox(nn.Module):
     
     def __init__(self, num_classes, dim=405, B=32, C=45, embed_dim=78):
-        super.__init__()
+        super().__init__()
 
         self.dim = dim
         self.B = B
-        self.N = dim / C
+        self.N = dim // C
         self.C = C
         self.embed_dim = embed_dim
         self.num_classes_per_task = [num_classes]
 
         # tab
 
-        self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, dim))])
+        self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, C))])
         self.task_attn = Attention(self.C, self.embed_dim)
 
         # clf
-
+        
         in_dim = (self.N+1) * self.embed_dim
         # TODO: why +1???
-        out_dim = self.num_classes_per_task[-1] + 1
+        out_dim = self.num_classes_per_task[-1]
         self.experts = nn.ModuleList([Expert(input_size=in_dim, output_size=out_dim)])
 
 
@@ -49,7 +49,7 @@ class DyTox(nn.module):
 
         in_dim = (self.N+1) * self.embed_dim
         # TODO: why +1???
-        out_dim = self.num_classes_per_task[-1] + 1
+        out_dim = self.num_classes_per_task[-1]
         self.experts.append(Expert(input_size=in_dim, output_size=out_dim))
 
 
@@ -59,7 +59,7 @@ class DyTox(nn.module):
 
         for task_token in self.task_tokens:
             # expand so there is a token for every batch
-            task_token = task_token.unsqueeze(1).expand(B, -1, -1)
+            task_token = task_token.expand(B, -1, -1)
             # forward through task attention block
             token_embed = self.task_attn(torch.cat((task_token, x), dim=1))
             # flatten vector for classifier
