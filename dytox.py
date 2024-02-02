@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 from timm.models.layers import trunc_normal_
 
+
 from attention import Attention
 from expert import Expert
 
@@ -50,6 +51,25 @@ class DyTox(nn.Module):
         out_dim = self.num_classes_per_task[-1]
         self.experts.append(Expert(input_size=in_dim, output_size=out_dim))
 
+    def freeze(self):
+        # freeze old tokens
+        for task_token in self.task_tokens[:-1]:
+            task_token.requires_grad = False
+
+        # freeze old heads
+        for expert in self.experts[:-1]:
+            for param in expert.parameters():
+                param.requires_grad = False
+
+    def unfreeze(self):
+        # unfreeze old tokens
+        for task_token in self.task_tokens[:-1]:
+            task_token.requires_grad = True
+
+        # unfreeze old heads
+        for expert in self.experts[:-1]:
+            for param in expert.parameters():
+                param.requires_grad = True
 
     def forward_features(self, x):
         B, _, _ = x.shape
