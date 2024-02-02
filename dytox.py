@@ -25,9 +25,8 @@ class DyTox(nn.Module):
         self.task_attn = Attention(self.C, self.embed_dim)
 
         # clf
-        
+
         in_dim = (self.N+1) * self.embed_dim
-        # TODO: why +1???
         out_dim = self.num_classes_per_task[-1]
         self.experts = nn.ModuleList([Expert(input_size=in_dim, output_size=out_dim)])
 
@@ -48,7 +47,6 @@ class DyTox(nn.Module):
         # clf
 
         in_dim = (self.N+1) * self.embed_dim
-        # TODO: why +1???
         out_dim = self.num_classes_per_task[-1]
         self.experts.append(Expert(input_size=in_dim, output_size=out_dim))
 
@@ -75,6 +73,9 @@ class DyTox(nn.Module):
         # iterate through each clf
         for i, expert in enumerate(self.experts):
             logits.append(expert(token_embeds[i]))
+
+        # concatenating the logits from all tasks
+        logits = torch.cat(logits, dim=1)
 
         return logits
 
