@@ -4,6 +4,20 @@ from torch.nn import functional as F
 
 
 class Classifier(nn.Module):
+    r"""The classifier head of the DyTox model. Takes the logits produced by all experts and
+    determines the final output.
+
+    Args:
+        embed_dim (int): The dimension of the token embeddings.
+        nb_total_classes (int): The number of total classes in the model.
+        nb_base_classes (int): The initial number of classes before expansion.
+        increment (int): The number of classes being added in each expansion.
+        nb_tasks (int): The number of tokens, or TABs, or CLFs.
+        bias (bool): TODO: Fill out description
+        complete (bool): TODO: Fill out description
+        cosine (bool): TODO: Fill out description
+        norm (bool): TODO: Fill out description
+    """
     def __init__(
             self, embed_dim, nb_total_classes, nb_base_classes, increment,
             nb_tasks, bias=True, complete=True, cosine=False, norm=True
