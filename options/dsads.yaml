@@ -1,0 +1,12 @@
+data_set: dsads
+data_path: /home/arw27/CS4099/dmoe/har/DSADS/dsads.mat
+
+batch_size: 32
+
+features: 405
+patches: 9
+embed_dim: 45
+
+num_classes: 19
+base_increment: 3
+increment: 2
