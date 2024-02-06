@@ -1049,7 +1049,7 @@ if __name__ == "__main__":
         else:
             data, taskcla, clsorder = pickle.load(open(load_data, 'rb'))['data']
     else:
-        data, taskcla, clsorder = base_har.get_data(path[d], kind=kind[d], save_path=save_path)
+        data, taskcla, clsorder = base_har.get_data(path[d], data_set=kind[d], save_path=save_path)
 
     cls2idx = {v: k for k, v in enumerate(clsorder)}    # NOT NEEDED FOR CURRENT TRAIN/VAL/TEST DATASET/LOADER, ALREADY MAPPED. NEEDED FOR EXTERNAL DATASET FOR TESTING
 
