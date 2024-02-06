@@ -114,9 +114,7 @@ def make_dsads(path):
     agents = dsads_df.iloc[:, 407].unique()
     test_agent = np.random.choice(agents, 2, replace=False)
     train_agent = np.setdiff1d(agents, test_agent)
-    # print(train_agent, test_agent)
     train_set, test_set = make(dsads_df, user_col=407, exclude=test_agent.tolist(), drop=405)
-    # print(len(train_set["targets"]), len(test_set["targets"]))
     return train_set, test_set
 
 def make_pamap(path):
@@ -295,19 +293,10 @@ class BaseDataset(Dataset):
         
         return x, y
 
-def get_data(
-    train_path,
-    test_path=None,
-    val_path=None,
-    num_tasks=5, 
-    classes_in_first_task=None, 
-    validation=0.2, 
-    shuffle_classes=True, 
-    k=2, 
-    dummy=False,
-    seed=None,
-    kind='pamap',
-    save_path=None,):
+def get_data(data_set, train_path, num_classes, base_increment, increment, test_path=None,
+             val_path=None, validation=0.2, shuffle_classes=True, k=2, dummy=False,
+             seed=None, save_path=None
+    ):
     """
     train_path: the path to .mat train file
     test_path: the path to .mat test file
@@ -346,61 +335,34 @@ def get_data(
     data = {}
     taskcla = []
 
-    # trainset = torch_dataset(root=data_path, train=True, download=True, transform=transform)
-    # testset = torch_dataset(root=data_path, train=False, download=True, transform=transform)
+    match data_set:
+        case 'dsads':
+            trainset, testset = make_dsads(train_path)
+        case 'pamap':
+            trainset, testset = make_pamap(train_path)
+        case 'hapt':
+            trainset, testset = make_hapt(train_path, totensor=True)
+        case 'wisdm':
+            trainset, testset = make_wisdm(train_path)
+        case 'flex':
+            trainset, testset = make_flexible4a(train_path, typ='dsads')
+        case 'flex2':
+            trainset, testset = make_flexible4b(train_path, save_path)
+        case 'wisdmflex':
+            trainset, testset = make_flexible4a(train_path, typ='wisdm')
 
-    if kind == 'dsads':
-        trainset, testset = make_dsads(train_path)
-        classes_in_first_task = 3
-        num_tasks = 9
-        k = 2
-    elif kind == 'pamap':
-        trainset, testset = make_pamap(train_path)
-        num_tasks = 6
-    elif kind == 'hapt':
-        num_tasks = 6
-        trainset, testset = make_hapt(train_path, totensor=True)
-    elif kind == 'wisdm':
-        num_tasks = 9
-        trainset, testset = make_wisdm(train_path)
-    elif kind == 'flex':
-        trainset, testset = make_flexible4a(train_path, typ='dsads')
-        classes_in_first_task = 12
-        k = 10
-    elif kind == 'flex2':
-        trainset, testset = make_flexible4b(train_path, save_path)
-        classes_in_first_task = 14
-        k = 10
-    elif kind == 'wisdmflex':
-        trainset, testset = make_flexible4a(train_path, typ='wisdm')
-        classes_in_first_task = 34
-        k = 20        
-
-    num_classes = len(np.unique(trainset["targets"]))
-    class_order = list(range(num_classes))    
+    class_order = list(range(num_classes))
     
     if shuffle_classes:
         if seed:
             np.random.seed(seed)
         np.random.shuffle(class_order)
-    print("CLASS_ORDER:", class_order)
 
-    if classes_in_first_task is None:
-        # Divide evenly the number of classes for each task
-        cpertask = np.array([num_classes // num_tasks] * num_tasks)
-        for i in range(num_classes % num_tasks):
-            cpertask[i] += 1
-    else:
-        # Allocate the rest of the classes based on k
-        remaining_classes = num_classes - classes_in_first_task
-        cresttask = remaining_classes // k
-        cpertask = np.array([classes_in_first_task] + [remaining_classes // cresttask] * cresttask)
-        for i in range(remaining_classes % k):
-            cpertask[i + 1] += 1
-        num_tasks = len(cpertask)    
+    # Allocate the rest of the classes based on k
+    num_tasks = ((num_classes - base_increment) // increment) + 1
+    cls_per_task = np.array([base_increment] + [increment] * (num_tasks - 1))
 
-    cpertask_cumsum = np.cumsum(cpertask)
-    init_class = np.concatenate(([0], cpertask_cumsum[:-1]))
+    cls_per_task_cumsum = np.cumsum(cls_per_task)
 
     total_task = num_tasks
     for tt in range(total_task):
@@ -415,11 +377,10 @@ def get_data(
     for i, (this_input, this_label) in enumerate(trainset["data"]):
         this_label = int(this_label)
         mapped_label = class_order.index(this_label)
-        this_task = (mapped_label >= cpertask_cumsum).sum()
+        this_task = (mapped_label >= cls_per_task_cumsum).sum()
 
         data[this_task]['trn']['x'].append(this_input)
         data[this_task]['trn']['y'].append(mapped_label)
-        # data[this_task]['trn']['y'].append(mapped_label - init_class[this_task])
 
         if dummy and i >= 500:
             break
@@ -428,28 +389,15 @@ def get_data(
     for i, (this_input, this_label) in enumerate(testset["data"]):
         this_label = int(this_label)
         mapped_label = class_order.index(this_label)
-        this_task = (mapped_label >= cpertask_cumsum).sum()
+        this_task = (mapped_label >= cls_per_task_cumsum).sum()
 
         data[this_task]['tst']['x'].append(this_input)        
         data[this_task]['tst']['y'].append(mapped_label)
-        # data[this_task]['tst']['y'].append(mapped_label - init_class[this_task])
 
         if dummy and i >= 100:
             break
 
-    # Populate validation if required
-    if val_path:
-        # if there's a special validation set, i.e. ImageNet
-        for i, (this_input, this_label) in enumerate(valset["data"]):
-            this_label = int(this_label)
-            mapped_label = class_order.index(this_label)
-            this_task = (mapped_label >= cpertask_cumsum).sum()
-
-            data[this_task]['val']['x'].append(this_input)
-            data[this_task]['val']['y'].append(mapped_label)
-            # data[this_task]['val']['y'].append(mapped_label - init_class[this_task])       
-
-    elif validation > 0.0:
+    if validation > 0.0:
         for tt in data.keys():
             pop_idx = [i for i in range(len(data[tt]["trn"]["x"]))]
             val_idx = random.sample(pop_idx, int(np.round(len(pop_idx) * validation)))
@@ -473,13 +421,11 @@ def get_data(
         n += data[t]['ncla']
     data['ncla'] = n
 
-    class_group = list(grouper(class_order, cpertask[0], cpertask=cpertask[1])) if classes_in_first_task is None else list(grouper(class_order, cpertask.tolist()))
+    class_group = list(grouper(class_order, cls_per_task[0], cpertask=cls_per_task[1])) if base_increment is None else list(grouper(class_order, cls_per_task.tolist()))
     print(f"class_group: {class_group}")
     ordered = {class_order.index(c): k for k in range(len(class_group)) for c in class_group[k]}
     
     for tt in range(total_task):
-        # better to have a uniform numpy, i.e. transform the tensor in wisdm to numpy
-        # if kind == 'wisdm':
         data[tt]['trn']['x'] = torch.stack(data[tt]['trn']['x']).numpy().astype(np.float32)
         data[tt]['tst']['x'] = torch.stack(data[tt]['tst']['x']).numpy().astype(np.float32)
         data[tt]['val']['x'] = torch.stack(data[tt]['val']['x']).numpy().astype(np.float32)       
@@ -487,14 +433,6 @@ def get_data(
         data[tt]['trn']['y'] = np.array(data[tt]['trn']['y'], dtype=np.int32)
         data[tt]['tst']['y'] = np.array(data[tt]['tst']['y'], dtype=np.int32)
         data[tt]['val']['y'] = np.array(data[tt]['val']['y'], dtype=np.int32)
-        # else:
-        #     data[tt]['trn']['x'] = np.array(data[tt]['trn']['x'], dtype=np.float32)
-        #     data[tt]['tst']['x'] = np.array(data[tt]['tst']['x'], dtype=np.float32)
-        #     data[tt]['val']['x'] = np.array(data[tt]['val']['x'], dtype=np.float32)        
-
-        #     data[tt]['trn']['y'] = np.array(data[tt]['trn']['y'], dtype=np.int32)
-        #     data[tt]['tst']['y'] = np.array(data[tt]['tst']['y'], dtype=np.int32)
-        #     data[tt]['val']['y'] = np.array(data[tt]['val']['y'], dtype=np.int32)
 
         data[tt]['ordered'] = ordered
 
@@ -515,9 +453,3 @@ def grouper(iterable, n, cpertask=2, fillvalue=None):
             start = n + (cpertask * i)
             group.append(tuple(iterable[start:start+2]))
         return group     
-
-if __name__ == '__main__':
-    path = ['/Users/fahrurrozirahman/Documents/elquinto/har/DSADS/pamap.mat', '/Users/fahrurrozirahman/Documents/elquinto/har/DSADS/dsads.mat']
-    kind = ['pamap', 'dsads']
-    d = 0
-    data, taskcla, class_order = get_data(path[d], kind=kind[d])
