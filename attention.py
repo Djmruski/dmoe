@@ -15,8 +15,6 @@ class Attention(nn.Module):
         self.q = nn.Linear(self.dim, self.dim)
         self.k = nn.Linear(self.dim, self.dim)
         self.v = nn.Linear(self.dim, self.dim)
-        self.proj = nn.Linear(self.dim, self.embed_dim)
-
 
     def forward(self, x):
         B, N, C = x.shape
@@ -30,9 +28,7 @@ class Attention(nn.Module):
         attn_logits = q @ k.transpose(-2, -1)
         attn_logits = attn_logits / math.sqrt(self.dim)
         attention = attn_logits.softmax(dim=-1)
-        
         values = (attention @ v).transpose(1, 2).reshape(B, N, C)
-        values = self.proj(x)
 
         return values
 

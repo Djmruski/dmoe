@@ -10,24 +10,25 @@ from expert import Expert
 
 class DyTox(nn.Module):
     
-    def __init__(self, num_classes, dim=405, B=32, C=45, embed_dim=78):
+    def __init__(self, num_classes, features=405, batch_size=32, patch_size=45, embed_dim=768):
         super().__init__()
 
-        self.dim = dim
-        self.B = B
-        self.N = dim // C
-        self.C = C
+        self.features = features
+        self.batch_size = batch_size
+        self.num_patches = features // patch_size
+        self.patch_size = patch_size
         self.embed_dim = embed_dim
         self.num_classes_per_task = [num_classes]
 
         # tab
 
-        self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, C))])
-        self.task_attn = Attention(self.C, self.embed_dim)
+        self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, patch_size))])
+        self.task_attn = Attention(self.patch_size, self.embed_dim)
+        self.proj = nn.Linear(self.patch_size * (self.num_patches + 1), self.embed_dim)
 
         # clf
 
-        in_dim = (self.N+1) * self.embed_dim
+        in_dim = self.embed_dim
         out_dim = self.num_classes_per_task[-1]
         self.experts = nn.ModuleList([Expert(input_size=in_dim, output_size=out_dim)])
 
@@ -47,11 +48,11 @@ class DyTox(nn.Module):
 
         # clf
 
-        in_dim = (self.N+1) * self.embed_dim
+        in_dim = self.embed_dim
         out_dim = self.num_classes_per_task[-1]
         self.experts.append(Expert(input_size=in_dim, output_size=out_dim))
 
-    def freeze(self):
+    def freeze_old_params(self):
         # freeze old tokens
         for task_token in self.task_tokens[:-1]:
             task_token.requires_grad = False
@@ -61,7 +62,7 @@ class DyTox(nn.Module):
             for param in expert.parameters():
                 param.requires_grad = False
 
-    def unfreeze(self):
+    def unfreeze_old_params(self):
         # unfreeze old tokens
         for task_token in self.task_tokens[:-1]:
             task_token.requires_grad = True
@@ -82,6 +83,7 @@ class DyTox(nn.Module):
             token_embed = self.task_attn(torch.cat((task_token, x), dim=1))
             # flatten vector for classifier
             token_embed = torch.flatten(token_embed, -2, -1)
+            token_embed = self.proj(token_embed)
             token_embeds.append(token_embed)
 
         return token_embeds
