@@ -768,7 +768,7 @@ class Trainer:
             self.model.unfreeze_all()
 
             print(f"VALIDATING MODEL")
-            if not just_expert and val_loaders:                
+            if not just_expert and val_loaders:
                 self.model.eval()
                 val_loss_ = []
                 all_y, all_preds, all_gate, all_gate_preds = [], [], [], []

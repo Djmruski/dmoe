@@ -1,22 +1,14 @@
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pickle
+import random
 import scipy.io
 import torch
-import copy
-import numpy as np
-import torchvision.models as models
-import random
 
-from collections import Counter
-from itertools import zip_longest
+from sklearn.cluster import KMeans
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.cluster import KMeans
-from torch.utils.data import Dataset, ConcatDataset, DataLoader
-from torchvision import datasets, transforms
-from torchvision.models.feature_extraction import create_feature_extractor
+from torch.utils.data import Dataset
 
 def split_df(df, user_col, exclude=[]):
     inside = df[~df.iloc[:, user_col].isin(exclude)]
@@ -352,16 +344,15 @@ def get_data(data_set, train_path, num_classes, base_increment, increment, test_
             trainset, testset = make_flexible4a(train_path, typ='wisdm')
 
     class_order = list(range(num_classes))
-    
+
     if shuffle_classes:
         if seed:
             np.random.seed(seed)
         np.random.shuffle(class_order)
 
-    # Allocate the rest of the classes based on k
+    # Allocate the rest of the classes based on the increment
     num_tasks = ((num_classes - base_increment) // increment) + 1
     cls_per_task = np.array([base_increment] + [increment] * (num_tasks - 1))
-
     cls_per_task_cumsum = np.cumsum(cls_per_task)
 
     total_task = num_tasks
@@ -371,7 +362,6 @@ def get_data(data_set, train_path, num_classes, base_increment, increment, test_
         data[tt]['trn'] = {'x': [], 'y': []}
         data[tt]['val'] = {'x': [], 'y': []}
         data[tt]['tst'] = {'x': [], 'y': []}
-        # data[tt]['nclass'] = cpertask[tt]
 
     # Populate the train set
     for i, (this_input, this_label) in enumerate(trainset["data"]):
@@ -412,8 +402,6 @@ def get_data(data_set, train_path, num_classes, base_increment, increment, test_
     for tt in range(total_task):
         data[tt]["classes"] = np.unique(data[tt]["trn"]["y"])
         data[tt]['ncla'] = len(np.unique(data[tt]['trn']['y']))
-        # print(f"data[{tt}]['classes']: {data[tt]['classes']}")
-        # print(f"data[{tt}]['ncla']: {data[tt]['ncla']}")
 
     n = 0
     for t in data.keys():
@@ -424,7 +412,7 @@ def get_data(data_set, train_path, num_classes, base_increment, increment, test_
     class_group = list(grouper(class_order, cls_per_task[0], cpertask=cls_per_task[1])) if base_increment is None else list(grouper(class_order, cls_per_task.tolist()))
     print(f"class_group: {class_group}")
     ordered = {class_order.index(c): k for k in range(len(class_group)) for c in class_group[k]}
-    
+
     for tt in range(total_task):
         data[tt]['trn']['x'] = torch.stack(data[tt]['trn']['x']).numpy().astype(np.float32)
         data[tt]['tst']['x'] = torch.stack(data[tt]['tst']['x']).numpy().astype(np.float32)
@@ -452,4 +440,4 @@ def grouper(iterable, n, cpertask=2, fillvalue=None):
         for i in range(remaining // cpertask):
             start = n + (cpertask * i)
             group.append(tuple(iterable[start:start+2]))
-        return group     
+        return group
