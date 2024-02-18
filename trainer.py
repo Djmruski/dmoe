@@ -30,6 +30,7 @@ class Trainer:
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     def train_loop(self):
+        logger = Logger(list_subsets=['train', 'test'])
         val_loaders = []
 
         for task_id in range(0, len(self.task_cla)):
@@ -42,8 +43,8 @@ class Trainer:
                 self.model.freeze_old_params()
 
             # dataloader for training and validation data
-            train_dataloader = DataLoader(BaseDataset(self.data[task_id]['trn']), batch_size=self.args.batch_size, shuffle=True)
-            val_dataloader = DataLoader(BaseDataset(self.data[task_id]['val']), batch_size=self.args.batch_size, shuffle=True)
+            train_dataloader = DataLoader(BaseDataset(self.data[task_id]['trn']), batch_size=self.args.batch_size, shuffle=True, drop_last=True)
+            val_dataloader = DataLoader(BaseDataset(self.data[task_id]['val']), batch_size=self.args.batch_size, shuffle=True, drop_last=True)
             val_loaders.append(val_dataloader)
 
             train_loss = []
@@ -51,21 +52,11 @@ class Trainer:
 
             for epoch in range(self.n_epochs):
                 metric_logger = MetricLogger(delimiter="  ")
-                metric_logger.add_meter('lr', SmoothedValue(window_size=1, fmt='{value:.6f}'))
-                header = 'Task: [{}] Epoch: [{}]'.format(task_id, epoch)
-                log_msg = [
-                    header,
-                    '[{0}/{1}]',
-                    'eta: {eta}',
-                    '{meters}',
-                    'time: {time}',
-                    'data: {data}'
-                ]
 
                 start_time = time.time()
                 end = time.time()
-                iter_time = SmoothedValue(fmt='{avg:.4f}')
-                data_time = SmoothedValue(fmt='{avg:.4f}')
+                iter_time = SmoothedValue()
+                data_time = SmoothedValue()
 
                 ypreds, ytrue = [], []
                 # set training mode
@@ -78,50 +69,68 @@ class Trainer:
                 for batch_index, (x, y) in enumerate(train_dataloader):
                     data_time.update(time.time() - end)
 
+                    header = 'Task: [{}] Epoch: [{}]'.format(task_id, epoch)
+                    log_msg = [
+                        header,
+                        '[{0}/{1}]',
+                        'eta: {eta}',
+                        '{meters}',
+                        'time: {time}',
+                        'data: {data}'
+                    ]
+
                     x = x.to(self.device)
                     y = y.type(torch.LongTensor).to(self.device)
-                    outputs = self.model(x)
+                    output = self.model(x)
 
-                    loss = self.criterion(outputs, y)
-                    loss.backward()
-                    self.optimiser.step()
+                    loss = self.criterion(output, y)
 
-                    acc1, acc5 = accuracy(outputs, y, topk=(1, min(5, outputs.shape[1])))
+                    acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
 
                     # Log Metrics
                 
                     metric_logger.update(loss=loss.item())
-                    metric_logger.meters['acc1'].update(acc1.item(), n=self.batch_size)
-                    metric_logger.meters['acc5'].update(acc5.item(), n=self.batch_size)
+                    metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
+                    metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
 
                     iter_time.update(time.time() - end)
 
                     # Print Metrics
 
-                    eta_seconds = iter_time.global_avg * (len(val_loader) - batch_index)
+                    if torch.cuda.is_available():
+                        log_msg.append('max mem: {memory:.0f}')
+                    log_msg = metric_logger.delimiter.join(log_msg)
+                    eta_seconds = iter_time.global_avg * (len(train_dataloader) - batch_index)
                     eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
                     MB = 1024.0 * 1024.0
 
-                    if torch.cuda.is_available():
-                        print(log_msg.format(
-                            batch_index, len(train_dataloader), eta=eta_string,
-                            meters=str(self),
-                            time=str(iter_time), data=str(data_time),
-                            memory=torch.cuda.max_memory_allocated() / MB)
-                        )
-                    else:
-                        print(log_msg.format(
-                            batch_index, len(train_dataloader), eta=eta_string,
-                            meters=str(self),
-                            time=str(iter_time), data=str(data_time))
-                        )
+                    if (batch_index == 0):
+                        # print("TARGETS", y)
+                        # print("PREDS", output)
+                        if torch.cuda.is_available():
+                            print(log_msg.format(
+                                batch_index, len(train_dataloader), eta=eta_string,
+                                meters=str(metric_logger),
+                                time=str(iter_time), data=str(data_time),
+                                memory=torch.cuda.max_memory_allocated() / MB)
+                            )
+                        else:
+                            print(log_msg.format(
+                                batch_index, len(train_dataloader), eta=eta_string,
+                                meters=str(metric_logger),
+                                time=str(iter_time), data=str(data_time))
+                            )
 
+                    loss.backward()
+                    self.optimiser.step()
                     # zero gradients for new batch 
                     self.optimiser.zero_grad()
 
             # Validating Model
 
-            self.evaluate(val_loaders)
+            self.evaluate(val_loaders, logger)
+        torch.save(self.model, 'models/dytox.pth')
+
 
     @torch.no_grad()
     def evaluate(self, val_loaders, logger):
@@ -137,17 +146,9 @@ class Trainer:
         lenient metric than Top-1, as it allows for a correct prediction to be anywhere in the top 5 
         ranked predictions made by the model.
         """
+        criterion = nn.CrossEntropyLoss()
 
         metric_logger = MetricLogger(delimiter="  ")
-        header = 'Test:'
-        log_msg = [
-            header,
-            '[{0}/{1}]',
-            'eta: {eta}',
-            '{meters}',
-            'time: {time}',
-            'data: {data}'
-        ]
 
         for task_id, val_loader in enumerate(val_loaders):
             start_time = time.time()
@@ -156,27 +157,52 @@ class Trainer:
             data_time = SmoothedValue(fmt='{avg:.4f}')
 
             for batch_index, (x, y) in enumerate(val_loader):
+                header = 'Test:'
+                log_msg = [
+                    header,
+                    '[{0}/{1}]',
+                    'eta: {eta}',
+                    '{meters}',
+                    'time: {time}',
+                    'data: {data}'
+                ]
+
                 data_time.update(time.time() - end)
 
                 x = x.to(self.device)
                 y = y.type(torch.LongTensor).to(self.device)
-                outputs = self.model(x)
+                output = self.model(x)
 
-                loss = self.criterion(outputs, y)
-                acc1, acc5 = accuracy(outputs, y, topk=(1, min(5, output.shape[1])))
+                print("TARGETS", y)
+                print("PREDS", output)
+
+                loss = criterion(output, y)
+
+                # print(loss)
+                acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
 
                 # Log Metrics
                 
                 metric_logger.update(loss=loss.item())
-                metric_logger.meters['acc1'].update(acc1.item(), n=self.batch_size)
-                metric_logger.meters['acc5'].update(acc5.item(), n=self.batch_size)
+                metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
+                metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
 
-                logger.add([outputs.cpu().argmax(dim=1), y.cpu(), task_id], subset='test')
+                # Convert task_id to a tensor and expand its dimensions to match predictions and targets
+                # Assuming task_id is a scalar, use torch.full to create a tensor of the same shape as predictions
+                # filled with the task_id value
+                predictions = output.cpu().argmax(dim=1)
+                targets = y.cpu()
+                task_ids = torch.full_like(predictions, fill_value=task_id)
+
+                logger.add([predictions, targets, task_ids], subset='test')
                 
                 iter_time.update(time.time() - end)
 
                 # Print Metrics
 
+                if torch.cuda.is_available():
+                    log_msg.append('max mem: {memory:.0f}')
+                log_msg = metric_logger.delimiter.join(log_msg)
                 eta_seconds = iter_time.global_avg * (len(val_loader) - batch_index)
                 eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
                 MB = 1024.0 * 1024.0
@@ -184,14 +210,14 @@ class Trainer:
                 if torch.cuda.is_available():
                     print(log_msg.format(
                         batch_index, len(val_loader), eta=eta_string,
-                        meters=str(self),
+                        meters=str(metric_logger),
                         time=str(iter_time), data=str(data_time),
                         memory=torch.cuda.max_memory_allocated() / MB)
                     )
                 else:
                     print(log_msg.format(
                         batch_index, len(val_loader), eta=eta_string,
-                        meters=str(self),
+                        meters=str(metric_logger),
                         time=str(iter_time), data=str(data_time))
                     )
                 
@@ -211,7 +237,7 @@ def update_dytox(model, task_id, args):
                       args.patch_size, args.embed_dim)
     else:
         print(f'Expanding model')
-        model.add_model(args.increment)
+        model.expand_model(args.increment)
 
     return model
 
@@ -224,17 +250,20 @@ class SmoothedValue(object):
     window or the global series average.
     """
 
-    def __init__(self, window_size=20):
+    def __init__(self, window_size=20, fmt=None):
+        if fmt is None:
+            fmt = "{median:.4f} ({global_avg:.4f})"
         self.deque = deque(maxlen=window_size)
         self.series = []
         self.total = 0.0
         self.count = 0
+        self.fmt = fmt
 
-    def update(self, value):
+    def update(self, value, n=1):
         self.deque.append(value)
         self.series.append(value)
-        self.count += 1
-        self.total += value
+        self.count += n
+        self.total += value * n
 
     @property
     def median(self):
@@ -247,8 +276,24 @@ class SmoothedValue(object):
         return d.mean().item()
 
     @property
+    def max(self):
+        return max(self.deque)
+    
+    @property
+    def value(self):
+        return self.deque[-1]
+
+    @property
     def global_avg(self):
         return self.total / self.count
+    
+    def __str__(self):
+        return self.fmt.format(
+            median=self.median,
+            avg=self.avg,
+            global_avg=self.global_avg,
+            max=self.max,
+            value=self.value)
 
 
 class MetricLogger(object):
