@@ -2,6 +2,8 @@
 # -e 50 -sch 50 -exemplar_per_class 10 -gmm 1 -hidden_size 50 
 # -save_path 'trial/dsads_e50_50_1.pkl' > 'trial/dsads_e50_50_1.txt'
 
+# python /home/arw27/CS4099/dmoe/main.py --options options/dsads.yaml
+
 data_set: dsads
 data_path: /home/arw27/CS4099/dmoe/har/DSADS/dsads.mat
 
