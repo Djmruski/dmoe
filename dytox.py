@@ -7,6 +7,8 @@ from timm.models.layers import trunc_normal_
 from attention import Attention
 from expert import Expert
 
+# TODO: save embeddings and feed through clfs after training
+
 
 class DyTox(nn.Module):
     
@@ -102,5 +104,6 @@ class DyTox(nn.Module):
         return logits
 
     def forward(self, x):
+        x = x.reshape(self.batch_size, self.num_patches, self.patch_size)
         token_embeds = self.forward_features(x)
         return self.forward_classifier(token_embeds)
