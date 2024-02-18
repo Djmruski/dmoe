@@ -12,6 +12,7 @@ from torch.utils.data import DataLoader
 
 from base_har import BaseDataset
 from dytox import DyTox
+from logger import SmoothedValue, MetricLogger
 
 
 class Trainer:
@@ -29,7 +30,7 @@ class Trainer:
         self.logger = Logger(list_subsets=['train', 'test'])
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    def train_loop(self):
+    def train(self):
         logger = Logger(list_subsets=['train', 'test'])
         val_loaders = []
 
@@ -47,93 +48,61 @@ class Trainer:
             val_dataloader = DataLoader(BaseDataset(self.data[task_id]['val']), batch_size=self.args.batch_size, shuffle=True, drop_last=True)
             val_loaders.append(val_dataloader)
 
-            train_loss = []
-            train_acc = []
-
             for epoch in range(self.n_epochs):
-                metric_logger = MetricLogger(delimiter="  ")
-
-                start_time = time.time()
-                end = time.time()
-                iter_time = SmoothedValue()
-                data_time = SmoothedValue()
-
-                ypreds, ytrue = [], []
-                # set training mode
-                self.model.train()
-
-                running_train_loss = [] # store train_loss per epoch
-                dataset_len = 0
-                pred_correct = 0.0
-
-                for batch_index, (x, y) in enumerate(train_dataloader):
-                    data_time.update(time.time() - end)
-
-                    header = 'Task: [{}] Epoch: [{}]'.format(task_id, epoch)
-                    log_msg = [
-                        header,
-                        '[{0}/{1}]',
-                        'eta: {eta}',
-                        '{meters}',
-                        'time: {time}',
-                        'data: {data}'
-                    ]
-
-                    x = x.to(self.device)
-                    y = y.type(torch.LongTensor).to(self.device)
-                    output = self.model(x)
-
-                    loss = self.criterion(output, y)
-
-                    acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
-
-                    # Log Metrics
-                
-                    metric_logger.update(loss=loss.item())
-                    metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
-                    metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
-
-                    iter_time.update(time.time() - end)
-
-                    # Print Metrics
-
-                    if torch.cuda.is_available():
-                        log_msg.append('max mem: {memory:.0f}')
-                    log_msg = metric_logger.delimiter.join(log_msg)
-                    eta_seconds = iter_time.global_avg * (len(train_dataloader) - batch_index)
-                    eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
-                    MB = 1024.0 * 1024.0
-
-                    if (batch_index == 0):
-                        # print("TARGETS", y)
-                        # print("PREDS", output)
-                        if torch.cuda.is_available():
-                            print(log_msg.format(
-                                batch_index, len(train_dataloader), eta=eta_string,
-                                meters=str(metric_logger),
-                                time=str(iter_time), data=str(data_time),
-                                memory=torch.cuda.max_memory_allocated() / MB)
-                            )
-                        else:
-                            print(log_msg.format(
-                                batch_index, len(train_dataloader), eta=eta_string,
-                                meters=str(metric_logger),
-                                time=str(iter_time), data=str(data_time))
-                            )
-
-                    loss.backward()
-                    self.optimiser.step()
-                    # zero gradients for new batch 
-                    self.optimiser.zero_grad()
-
-            # Validating Model
+                self.train_one_epoch(task_id, epoch, train_dataloader)
 
             self.evaluate(val_loaders, logger)
+
+        # Save Model
+
         torch.save(self.model, 'models/dytox.pth')
 
 
+    def train_one_epoch(self, task_id, epoch, data_loader):
+        metric_logger = MetricLogger(delimiter="  ")
+
+        start_time = time.time()
+        end = time.time()
+        iter_time = SmoothedValue()
+        data_time = SmoothedValue()
+
+        ypreds, ytrue = [], []
+        # set training mode
+        self.model.train()
+
+        running_train_loss = [] # store train_loss per epoch
+        dataset_len = 0
+        pred_correct = 0.0
+
+        for batch_index, (x, y) in enumerate(data_loader):
+            data_time.update(time.time() - end)
+
+            x = x.to(self.device)
+            y = y.type(torch.LongTensor).to(self.device)
+            output = self.model(x)
+
+            loss = self.criterion(output, y)
+            acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
+
+            # Log Metrics
+        
+            metric_logger.update(loss=loss.item())
+            metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
+            metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
+
+            iter_time.update(time.time() - end)
+
+            # Print Metrics
+            header = 'Task: [{}] Epoch: [{}]'.format(task_id, epoch)
+            metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
+
+            loss.backward()
+            self.optimiser.step()
+            self.optimiser.zero_grad()  # zero gradients for new batch 
+
+
     @torch.no_grad()
-    def evaluate(self, val_loaders, logger):
+    def evaluate(self, data_loader, logger):
         """
         Top-1 accuracy is the standard accuracy metric, indicating the percentage of times the model's 
         highest-confidence prediction (i.e., the top prediction) matches the true label of the input. 
@@ -150,35 +119,20 @@ class Trainer:
 
         metric_logger = MetricLogger(delimiter="  ")
 
-        for task_id, val_loader in enumerate(val_loaders):
+        for task_id, val_loader in enumerate(data_loader):
             start_time = time.time()
             end = time.time()
             iter_time = SmoothedValue(fmt='{avg:.4f}')
             data_time = SmoothedValue(fmt='{avg:.4f}')
 
             for batch_index, (x, y) in enumerate(val_loader):
-                header = 'Test:'
-                log_msg = [
-                    header,
-                    '[{0}/{1}]',
-                    'eta: {eta}',
-                    '{meters}',
-                    'time: {time}',
-                    'data: {data}'
-                ]
-
                 data_time.update(time.time() - end)
 
                 x = x.to(self.device)
                 y = y.type(torch.LongTensor).to(self.device)
                 output = self.model(x)
 
-                print("TARGETS", y)
-                print("PREDS", output)
-
                 loss = criterion(output, y)
-
-                # print(loss)
                 acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
 
                 # Log Metrics
@@ -193,41 +147,20 @@ class Trainer:
                 predictions = output.cpu().argmax(dim=1)
                 targets = y.cpu()
                 task_ids = torch.full_like(predictions, fill_value=task_id)
-
                 logger.add([predictions, targets, task_ids], subset='test')
                 
                 iter_time.update(time.time() - end)
 
                 # Print Metrics
+                header = 'Test:'
+                metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
 
-                if torch.cuda.is_available():
-                    log_msg.append('max mem: {memory:.0f}')
-                log_msg = metric_logger.delimiter.join(log_msg)
-                eta_seconds = iter_time.global_avg * (len(val_loader) - batch_index)
-                eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
-                MB = 1024.0 * 1024.0
-
-                if torch.cuda.is_available():
-                    print(log_msg.format(
-                        batch_index, len(val_loader), eta=eta_string,
-                        meters=str(metric_logger),
-                        time=str(iter_time), data=str(data_time),
-                        memory=torch.cuda.max_memory_allocated() / MB)
-                    )
-                else:
-                    print(log_msg.format(
-                        batch_index, len(val_loader), eta=eta_string,
-                        meters=str(metric_logger),
-                        time=str(iter_time), data=str(data_time))
-                    )
-                
                 end = time.time()
 
             total_time = time.time() - start_time
             total_time_str = str(datetime.timedelta(seconds=int(total_time)))
             print('{} Total time: {} ({:.4f} s / it)'.format(
             header, total_time_str, total_time / len(val_loader)))
-
 
 
 def update_dytox(model, task_id, args):
@@ -240,92 +173,3 @@ def update_dytox(model, task_id, args):
         model.expand_model(args.increment)
 
     return model
-
-# From NVIDIA Deep Learning Examples for Tensor Cores
-# https://github.com/NVIDIA/DeepLearningExamples/blob/master/PyTorch/Segmentation/MaskRCNN/pytorch/maskrcnn_benchmark/utils/metric_logger.py
-# Accessed 15-02-2024
-
-class SmoothedValue(object):
-    """Track a series of values and provide access to smoothed values over a
-    window or the global series average.
-    """
-
-    def __init__(self, window_size=20, fmt=None):
-        if fmt is None:
-            fmt = "{median:.4f} ({global_avg:.4f})"
-        self.deque = deque(maxlen=window_size)
-        self.series = []
-        self.total = 0.0
-        self.count = 0
-        self.fmt = fmt
-
-    def update(self, value, n=1):
-        self.deque.append(value)
-        self.series.append(value)
-        self.count += n
-        self.total += value * n
-
-    @property
-    def median(self):
-        d = torch.tensor(list(self.deque))
-        return d.median().item()
-
-    @property
-    def avg(self):
-        d = torch.tensor(list(self.deque))
-        return d.mean().item()
-
-    @property
-    def max(self):
-        return max(self.deque)
-    
-    @property
-    def value(self):
-        return self.deque[-1]
-
-    @property
-    def global_avg(self):
-        return self.total / self.count
-    
-    def __str__(self):
-        return self.fmt.format(
-            median=self.median,
-            avg=self.avg,
-            global_avg=self.global_avg,
-            max=self.max,
-            value=self.value)
-
-
-class MetricLogger(object):
-    def __init__(self, delimiter="\t"):
-        self.meters = defaultdict(SmoothedValue)
-        self.delimiter = delimiter
-
-    def update(self, **kwargs):
-        for k, v in kwargs.items():
-            if isinstance(v, torch.Tensor):
-                v = v.item()
-            assert isinstance(v, (float, int))
-            self.meters[k].update(v)
-
-    def __getattr__(self, attr):
-        if attr in self.meters:
-            return self.meters[attr]
-        if attr in self.__dict__:
-            return self.__dict__[attr]
-        raise AttributeError("'{}' object has no attribute '{}'".format(
-                    type(self).__name__, attr))
-
-    def __str__(self):
-        loss_str = []
-        for name, meter in self.meters.items():
-            loss_str.append(
-                "{}: {:.4f} ({:.4f})".format(name, meter.median, meter.global_avg)
-            )
-        return self.delimiter.join(loss_str)
-
-    def get_dict(self):
-        loss_dict = {}
-        for name, meter in self.meters.items():
-            loss_dict[name] = "{:.4f} ({:.4f})".format(meter.median, meter.global_avg)
-        return loss_dict

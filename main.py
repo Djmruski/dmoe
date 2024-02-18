@@ -51,7 +51,7 @@ def main(args):
     walltime_start, processtime_start = time.time(), time.process_time()
 
     trainer = Trainer(data, task_cla, class_order, args)
-    trainer.train_loop()
+    trainer.train()
 
     walltime_end, processtime_end = time.time(), time.process_time()
     elapsed_walltime = walltime_end - walltime_start
