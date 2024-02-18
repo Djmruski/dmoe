@@ -1,10 +1,6 @@
 import math
-import numpy as np
-import torch
 import torch.nn as nn
 
-
-# Make multi-head with self.heads = 1
 class Attention(nn.Module):
     def __init__(self, dim, embed_dim, num_heads=1):
         super().__init__()
@@ -31,14 +27,3 @@ class Attention(nn.Module):
         values = (attention @ v).transpose(1, 2).reshape(B, N, C)
 
         return values
-
-# batch_size = 32
-# dim = [1, 405]
-# dim_alt = [9, 45]
-
-# x = torch.randn(batch_size, dim_alt[0], dim_alt[1])
-# task_token = torch.randn(batch_size, 1, dim_alt[1])
-# xx = torch.cat((task_token, x), dim=1)
-# attn = Attention(45, 78)
-# token_embed = attn(xx)
-# token_embed = torch.flatten(token_embed, -2, -1)
