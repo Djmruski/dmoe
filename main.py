@@ -60,13 +60,6 @@ def main(args):
     print(f"CPU time: {time.strftime('%H:%M:%S', time.gmtime(elapsed_processtime))}\tWall time: {time.strftime('%H:%M:%S', time.gmtime(elapsed_walltime))}")
     print(f"CPU time: {elapsed_processtime}\tWall time: {elapsed_walltime}")
 
-    # num_classes = 2
-    # model = DyTox(num_classes, dim=405, B=32, C=45, embed_dim=78)
-
-    # x = torch.randn(32, 9, 45)
-    # logits = model(x)
-    # print(logits.shape)
-
 
 if "__main__" in __name__:
     parser = get_args_parser()
