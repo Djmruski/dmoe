@@ -103,7 +103,10 @@ class DyTox(nn.Module):
 
         return logits
 
-    def forward(self, x):
+    def forward(self, x, save):
         x = x.reshape(self.batch_size, self.num_patches, self.patch_size)
         token_embeds = self.forward_features(x)
+        if save:
+            print('SAVING TOKEN EMBEDDINGS FOR TASK {}'.format(len(token_embeds) - 1))
+            torch.save(token_embeds[-1], 'models/embeddings/e{}.pth'.format(len(token_embeds) - 1))
         return self.forward_classifier(token_embeds)
