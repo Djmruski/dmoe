@@ -12,6 +12,7 @@ from torch.utils.data import DataLoader
 from base_har import BaseDataset
 from dytox import DyTox
 from logger import SmoothedValue, MetricLogger
+from rehearsal import Rehearsal
 
 
 class Trainer:
@@ -23,6 +24,7 @@ class Trainer:
         self.args = args
 
         self.model = None
+        self.rehearsal = Rehearsal()
         self.criterion = nn.CrossEntropyLoss()
         self.optimiser = None
 
@@ -38,8 +40,14 @@ class Trainer:
             self.model = update_dytox(self.model, task_id, self.args)
             self.model.to(self.device)
 
+            task_data = self.data[task_id]['trn']
+
+            # For the first task, the optimiser must be initialised
+            # Rehearsal data is not required
             if task_id == 0:
                 self.optimiser = AdamW(self.model.parameters(), lr = 0.01)
+            # For following tasks, old tokens and experts must be frozen
+            # Rehearsal data must be added to the data loader
             else:
                 self.model.freeze_old_params()
 
