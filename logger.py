@@ -112,8 +112,6 @@ class MetricLogger(object):
         MB = 1024.0 * 1024.0
 
         if (batch_index == 0):
-            # print("TARGETS", y)
-            # print("PREDS", output)
             if torch.cuda.is_available():
                 print(log_msg.format(
                     batch_index, num_batches, eta=eta_string,
