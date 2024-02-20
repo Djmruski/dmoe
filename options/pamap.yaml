@@ -1,0 +1,30 @@
+# USAGE: python /home/arw27/CS4099/dmoe/main.py --options options/pamap.yaml
+
+# Data
+
+data_set: pamap
+data_path: /home/arw27/CS4099/dmoe/har/DSADS/pamap.mat
+
+features: 243
+patch_size: 27
+
+num_classes: 12
+base_increment: 2
+increment: 2
+
+# Training
+
+batch_size: 64
+n_epochs: 200
+
+# Optimiser
+
+optimiser: SGD
+learning_rate: 0.01
+weight_decay: 0.0001
+momentum: 0.9
+
+# Saving
+
+save_model: true
+save_dir: saves

@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 class Rehearsal:
 
@@ -69,6 +70,9 @@ class Rehearsal:
         """
         Saves the class means and covariances to the specified save path using numpy's npz format.
         """
+        # Ensure the directory exists
+        os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+
         np.savez(
             self.save_path,
             class_means = self.class_means,
@@ -79,7 +83,7 @@ class Rehearsal:
     def load(self):
         """
         Loads class means and covariances from the specified save path into the Rehearsal object.
-        """
+        """        
         data = np.load(self.save_path)
         self.class_means = data['class_means']
         self.class_covariances = data['class_covariances']

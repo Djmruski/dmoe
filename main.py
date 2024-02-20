@@ -1,11 +1,9 @@
 
 import argparse
 import time
-import torch
 import yaml
 
 from base_har import get_data
-from dytox import DyTox
 from trainer import Trainer
 
 def get_args_parser():
@@ -14,14 +12,18 @@ def get_args_parser():
     parser.add_argument('--options',        default=[], nargs='*')
     parser.add_argument('--data-set',       default = 'dsads')
     parser.add_argument('--data-path',      default = '/home/arw27/CS4099/dmoe/har/DSADS/dsads.mat')
-    parser.add_argument('--batch-size',     default = 32)
-    parser.add_argument('--n-epochs',       default = 20)
     parser.add_argument('--features',       default = 405)
     parser.add_argument('--patch-size',     default = 45)
     parser.add_argument('--embed-dim',      default = 768)
     parser.add_argument('--num-classes',    default = 19)
     parser.add_argument('--base-increment', default = 3)
     parser.add_argument('--increment',      default = 2)
+    parser.add_argument('--batch-size',     default = 32)
+    parser.add_argument('--n-epochs',       default = 20)
+    parser.add_argument('--optimiser',      default = 'SGD', choices = ['SGD', 'Adam', 'AdamW'])
+    parser.add_argument('--learning-rate',  default = 0.01)
+    parser.add_argument('--weight-decay',   default = 0.0001)
+    parser.add_argument('--momentum',       default = 0)
     parser.add_argument('--save-model',     default = False)
     parser.add_argument('--save-dir',       default = 'saves')
 
