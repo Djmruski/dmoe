@@ -4,6 +4,6 @@ har_experiments/
 heatmaps/
 wandb/
 wisdm/
-models/embeddings/
+saves
 test_log.txt
 embedding_tests.txt

@@ -1,6 +1,7 @@
 import datetime
 import pickle
 import time
+import numpy as np
 import torch
 
 from continuum.metrics import Logger
@@ -24,7 +25,7 @@ class Trainer:
         self.args = args
 
         self.model = None
-        self.rehearsal = Rehearsal()
+        self.rehearsal = Rehearsal(args.data_set, args.save_dir)
         self.criterion = nn.CrossEntropyLoss()
         self.optimiser = None
 
@@ -40,16 +41,23 @@ class Trainer:
             self.model = update_dytox(self.model, task_id, self.args)
             self.model.to(self.device)
 
-            task_data = self.data[task_id]['trn']
-
             # For the first task, the optimiser must be initialised
             # Rehearsal data is not required
             if task_id == 0:
                 self.optimiser = AdamW(self.model.parameters(), lr = 0.01)
+                self.rehearsal.add_task(self.data[task_id]['trn'])
             # For following tasks, old tokens and experts must be frozen
             # Rehearsal data must be added to the data loader
             else:
                 self.model.freeze_old_params()
+                task_data, task_labels = self.data[task_id]['trn']['x'], self.data[task_id]['trn']['y']
+                rehearsal_data, rehearsal_labels = self.rehearsal.generate_data(50)
+                augmented_data = np.concatenate([task_data, rehearsal_data])
+                augmented_labels = np.concatenate([task_labels, rehearsal_labels])
+
+                self.rehearsal.add_task(self.data[task_id]['trn'])
+
+                self.data[task_id]['trn']['x'], self.data[task_id]['trn']['y'] = augmented_data, augmented_labels
 
             # dataloader for training and validation data
             train_dataloader = DataLoader(BaseDataset(self.data[task_id]['trn']), batch_size=self.args.batch_size, shuffle=True, drop_last=True)
@@ -62,8 +70,9 @@ class Trainer:
             self.evaluate(task_id, val_loaders, logger)
 
         # Save Model
-
-        torch.save(self.model, 'models/dytox.pth')
+        if self.args.save_model:
+            self.rehearsal.save()
+            torch.save(self.model, '/'.join([self.args.save_dir, 'dytox.pth']))
 
 
     def train_one_epoch(self, task_id, epoch, data_loader):
@@ -83,13 +92,18 @@ class Trainer:
             x = x.to(self.device)
             y = y.type(torch.LongTensor).to(self.device)
 
-            output = self.model(x, False)
+            # print(y)
+
+            output = self.model(x)
+
+            # print("TARGETS", y)
+            # print("PREDS", output)
 
             loss = self.criterion(output, y)
             acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
 
             # Log Metrics
-        
+
             metric_logger.update(loss=loss.item())
             metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
             metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
@@ -103,6 +117,7 @@ class Trainer:
             loss.backward()
             self.optimiser.step()
             self.optimiser.zero_grad()  # zero gradients for new batch 
+
         total_time = time.time() - start_time
         total_time_str = str(datetime.timedelta(seconds=int(total_time)))
         print('{} Total time: {} ({:.4f} s / it)'.format(
@@ -123,7 +138,6 @@ class Trainer:
         lenient metric than Top-1, as it allows for a correct prediction to be anywhere in the top 5 
         ranked predictions made by the model.
         """
-        save = False
         metric_logger = MetricLogger(delimiter="  ")
 
         for task_id, val_loader in enumerate(data_loader):

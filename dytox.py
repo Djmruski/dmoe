@@ -1,13 +1,11 @@
 import copy
 import torch
 import torch.nn as nn
-from timm.models.layers import trunc_normal_
 
+from timm.models.layers import trunc_normal_
 
 from attention import Attention
 from expert import Expert
-
-# TODO: save embeddings and feed through clfs after training
 
 
 class DyTox(nn.Module):
@@ -103,10 +101,7 @@ class DyTox(nn.Module):
 
         return logits
 
-    def forward(self, x, save):
+    def forward(self, x):
         x = x.reshape(self.batch_size, self.num_patches, self.patch_size)
         token_embeds = self.forward_features(x)
-        if save:
-            print('SAVING TOKEN EMBEDDINGS FOR TASK {}'.format(len(token_embeds) - 1))
-            torch.save(token_embeds[-1], 'models/embeddings/e{}.pth'.format(len(token_embeds) - 1))
         return self.forward_classifier(token_embeds)
