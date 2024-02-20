@@ -91,19 +91,12 @@ class Trainer:
 
             x = x.to(self.device)
             y = y.type(torch.LongTensor).to(self.device)
-
-            # print(y)
-
             output = self.model(x)
-
-            # print("TARGETS", y)
-            # print("PREDS", output)
 
             loss = self.criterion(output, y)
             acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
 
             # Log Metrics
-
             metric_logger.update(loss=loss.item())
             metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
             metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
@@ -147,21 +140,16 @@ class Trainer:
             data_time = SmoothedValue(fmt='{avg:.4f}')
 
             for batch_index, (x, y) in enumerate(val_loader):
-                # if current_task_id == task_id and batch_index == len(val_loader) - 1:
-                #     with open('models/embeddings/e{}_preds.pkl'.format(task_id), 'wb') as file:
-                #         pickle.dump(y, file)
-                #     save = True
                 data_time.update(time.time() - end)
 
                 x = x.to(self.device)
                 y = y.type(torch.LongTensor).to(self.device)
-                output = self.model(x, save)
+                output = self.model(x)
 
                 loss = self.criterion(output, y)
                 acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
 
                 # Log Metrics
-
                 metric_logger.update(loss=loss.item())
                 metric_logger.meters['acc1'].update(acc1.item(), n=x.shape[0])
                 metric_logger.meters['acc5'].update(acc5.item(), n=x.shape[0])
@@ -177,7 +165,6 @@ class Trainer:
                 iter_time.update(time.time() - end)
 
                 # Print Metrics
-
                 header = 'Test:'
                 metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
 
