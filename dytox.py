@@ -10,20 +10,20 @@ from expert import Expert
 
 class DyTox(nn.Module):
 
-    def __init__(self, num_classes, features=405, batch_size=32, patch_size=45, embed_dim=768):
+    def __init__(self, num_classes, features, embed_dim, patch_size):
         super().__init__()
 
         self.features = features
-        self.batch_size = batch_size
-        self.num_patches = features // patch_size
+        self.num_patches = embed_dim // patch_size
         self.patch_size = patch_size
         self.embed_dim = embed_dim
         self.num_classes_per_task = [num_classes]
 
         # task attention block
         self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, patch_size))])
+        self.tab_projs = nn.ModuleList([nn.Linear(self.features, self.embed_dim)])
         self.task_attn = Attention(self.patch_size, self.embed_dim)
-        self.proj = nn.Linear(self.patch_size * (self.num_patches + 1), self.embed_dim)
+        self.clf_proj = nn.Linear(self.patch_size * (self.num_patches + 1), self.embed_dim)
 
         # classifier block
         in_dim = self.embed_dim
@@ -44,6 +44,7 @@ class DyTox(nn.Module):
         new_task_token = copy.deepcopy(self.task_tokens[-1])
         trunc_normal_(new_task_token, std=.02)
         self.task_tokens.append(new_task_token)
+        self.tab_projs.append(nn.Linear(self.features, self.embed_dim))
 
         # classifier block
         in_dim = self.embed_dim
@@ -52,6 +53,11 @@ class DyTox(nn.Module):
 
 
     def freeze_old_params(self):
+        # freeze old tab projection layers
+        for tab_proj in self.tab_projs[:-1]:
+            for param in tab_proj.parameters():
+                param.requires_grad = False
+            
         # freeze old tokens
         for task_token in self.task_tokens[:-1]:
             task_token.requires_grad = False
@@ -63,17 +69,19 @@ class DyTox(nn.Module):
 
 
     def forward_features(self, x):
-        B, _, _ = x.shape
+        B, _ = x.shape
         token_embeds = []
 
-        for task_token in self.task_tokens:
+        for index, task_token in enumerate(self.task_tokens):
+            tab_proj = self.tab_projs[index]
+            xx = tab_proj(x).reshape(B, self.num_patches, self.patch_size)
             # expand so there is a token for every batch
             task_token = task_token.expand(B, -1, -1)
             # forward through task attention block
-            token_embed = self.task_attn(torch.cat((task_token, x), dim=1))
+            token_embed = self.task_attn(torch.cat((task_token, xx), dim=1))
             # flatten vector for classifier
             token_embed = torch.flatten(token_embed, -2, -1)
-            token_embed = self.proj(token_embed)
+            token_embed = self.clf_proj(token_embed)
             token_embeds.append(token_embed)
 
         return token_embeds
@@ -92,6 +100,5 @@ class DyTox(nn.Module):
 
 
     def forward(self, x):
-        x = x.reshape(self.batch_size, self.num_patches, self.patch_size)
         token_embeds = self.forward_features(x)
         return self.forward_classifier(token_embeds)
