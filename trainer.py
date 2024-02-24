@@ -4,6 +4,7 @@ import numpy as np
 import torch
 
 from continuum.metrics import Logger
+from sklearn.metrics import classification_report, f1_score
 from timm.utils import accuracy
 from torch import nn
 from torch import optim
@@ -42,20 +43,21 @@ class Trainer:
         self.args = args
 
         print(f'Creating DyTox')
-        self.model = DyTox(args.base_increment, args.features, args.batch_size, 
-                      args.patch_size, args.embed_dim)
+        self.model = DyTox(args.base_increment, args.features, args.embed_dim, args.patch_size)
         self.rehearsal = Rehearsal(args.data_set, args.save_dir)
         self.criterion = nn.CrossEntropyLoss()
 
         optimisers = {
-            'SGD': optim.SGD,
-            'Adam': optim.Adam,
-            'AdamW': optim.AdamW
+            'SGD': optim.SGD(self.model.parameters(), lr=args.learning_rate, 
+                                                    momentum=args.momentum, 
+                                                    weight_decay=args.weight_decay),
+            'Adam': optim.Adam(self.model.parameters(), lr=args.learning_rate,
+                                                    weight_decay=args.weight_decay),
+            'AdamW': optim.AdamW(self.model.parameters(), lr=args.learning_rate,
+                                                    weight_decay=args.weight_decay)
         }
 
-        self.optimiser = optimisers[args.optimiser](self.model.parameters(), lr=args.learning_rate, 
-                                                    momentum=args.momentum, 
-                                                    weight_decay=args.weight_decay)
+        self.optimiser = optimisers[args.optimiser]
 
         self.logger = Logger(list_subsets=['train', 'test'])
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -91,18 +93,24 @@ class Trainer:
 
             self.model.to(self.device)
 
+            # print(len(self.data[task_id]['val']['y']))
+
             # Prepare data loaders
             train_dataloader = DataLoader(BaseDataset(self.data[task_id]['trn']), 
-                                          batch_size=self.args.batch_size, 
-                                          shuffle=True, drop_last=True)
+                                          batch_size=self.args.batch_size, shuffle=True)
             val_dataloader = DataLoader(BaseDataset(self.data[task_id]['val']), 
-                                        batch_size=self.args.batch_size, 
-                                        shuffle=True, drop_last=True)
+                                        batch_size=self.args.batch_size, shuffle=True)
             val_loaders.append(val_dataloader)
 
             for epoch in range(self.n_epochs):
                 self.train_one_epoch(task_id, epoch, train_dataloader)
-            self.evaluate(val_loaders, logger)
+            all_true, all_preds = self.evaluate(val_loaders, logger)
+        
+        print("\n====================\n")
+        print(f"f1_score(micro): {100 * f1_score(all_true, all_preds, average='micro', zero_division=1)}")
+        print(f"f1_score(macro): {100 * f1_score(all_true, all_preds, average='macro', zero_division=1)}")
+        print(f"Classification report:\n{classification_report(all_true, all_preds, zero_division=1)}")
+
 
         # Save model and rehearsal data if specified
         if self.args.save_model:
@@ -172,7 +180,10 @@ class Trainer:
         metric_logger = MetricLogger(delimiter="  ")
         self.model.eval()  # Set the model to evaluation mode
 
+        all_preds, all_true = [], []
         for task_id, val_loader in enumerate(data_loader):
+            ypreds, ytrue = [], []
+
             start_time = time.time()
             end = time.time()
             iter_time = SmoothedValue(fmt='{avg:.4f}')
@@ -196,10 +207,14 @@ class Trainer:
                 # Convert task_id to a tensor and expand its dimensions to match predictions and 
                 # targets. Assuming task_id is a scalar, use torch.full to create a tensor of the 
                 # same shape as predictions filled with the task_id value
-                predictions = output.cpu().argmax(dim=1)
-                targets = y.cpu()
+                predictions = output.detach().cpu().argmax(dim=1)
+                targets = y.detach().cpu()
                 task_ids = torch.full_like(predictions, task_id)
                 logger.add([predictions, targets, task_ids], subset='test')
+                ypreds.extend(predictions)
+                ytrue.extend(targets)
+                all_preds.extend(predictions)
+                all_true.extend(targets)
 
                 iter_time.update(time.time() - end)
 
@@ -213,3 +228,5 @@ class Trainer:
             total_time_str = str(datetime.timedelta(seconds=int(total_time)))
             print('{} Total time: {} ({:.4f} s / it)'.format(header, total_time_str, 
                                                              total_time / len(val_loader)))
+        
+        return all_true, all_preds
