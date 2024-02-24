@@ -2,10 +2,10 @@
 
 # Data
 
-data_set: pamap
-data_path: /home/arw27/CS4099/dmoe/har/DSADS/pamap.mat
+data_set: hapt
+data_path: /home/arw27/CS4099/dmoe/har/HAPT
 
-features: 243
+features: 561
 embed_dim: 768
 patch_size: 64
 
@@ -15,7 +15,7 @@ increment: 2
 
 # Training
 
-batch_size: 64
+batch_size: 32
 n_epochs: 500
 
 # Optimiser
@@ -27,5 +27,5 @@ momentum: 0.9
 
 # Saving
 
-save_model: true
+save_model: false
 save_dir: saves
