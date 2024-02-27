@@ -1,4 +1,4 @@
-# USAGE: python /home/arw27/CS4099/dmoe/main.py --options options/dsads.yaml
+# USAGE: python /home/arw27/CS4099/dmoe/main.py --options options/wisdm.yaml
 
 # Data
 
@@ -16,7 +16,7 @@ increment: 2
 # Training
 
 batch_size: 32
-n_epochs: 200
+n_epochs: 500
 
 # Optimiser
 
