@@ -1,5 +1,0 @@
-python ../har_expert_trainer.py -d 3 -lr 0.0001 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 -model_path "expert/wisdm.pth" > "expert/wisdm_1.txt"
-python ../har_expert_trainer.py -d 3 -lr 0.0001 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/wisdm_2.txt"
-python ../har_expert_trainer.py -d 3 -lr 0.0001 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/wisdm_3.txt"
-python ../har_expert_trainer.py -d 3 -lr 0.0001 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/wisdm_4.txt"
-python ../har_expert_trainer.py -d 3 -lr 0.0001 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/wisdm_5.txt"

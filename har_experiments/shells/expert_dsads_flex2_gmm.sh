@@ -1,5 +1,0 @@
-python ../har_expert_trainer.py -d 5 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 -save_path "expert/4flexible-b/dsads_1.pkl" > "expert/4flexible-b/dsads_1.txt"
-python ../har_expert_trainer.py -d 5 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 -save_path "expert/4flexible-b/dsads_2.pkl" > "expert/4flexible-b/dsads_2.txt"
-python ../har_expert_trainer.py -d 5 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 -save_path "expert/4flexible-b/dsads_3.pkl" > "expert/4flexible-b/dsads_3.txt"
-python ../har_expert_trainer.py -d 5 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 -save_path "expert/4flexible-b/dsads_4.pkl" > "expert/4flexible-b/dsads_4.txt"
-python ../har_expert_trainer.py -d 5 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 -save_path "expert/4flexible-b/dsads_5.pkl" > "expert/4flexible-b/dsads_5.txt"

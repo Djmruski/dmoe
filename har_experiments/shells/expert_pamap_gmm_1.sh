@@ -1,5 +1,0 @@
-python ../har_expert_trainer.py -d 0 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/gmm-max-20/pamap_6.txt"
-python ../har_expert_trainer.py -d 0 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/gmm-max-20/pamap_7.txt"
-python ../har_expert_trainer.py -d 0 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/gmm-max-20/pamap_8.txt"
-python ../har_expert_trainer.py -d 0 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/gmm-max-20/pamap_9.txt"
-python ../har_expert_trainer.py -d 0 -lr 0.01 -wd 1e-4 -mom 0 -b 20 -e 200 -sch 50 -exemplar_per_class 10 -gmm 1 > "expert/gmm-max-20/pamap_10.txt"

@@ -3,7 +3,7 @@
 # Data
 
 data_set: wisdm
-data_path: /home/arw27/CS4099/dmoe/wisdm/dataset/arff_files/phone/accel/all.csv
+data_path: /home/arw27/CS4099/dmoe/har/WISDM/dataset/arff_files/phone/accel/all.csv
 
 features: 91
 embed_dim: 768
