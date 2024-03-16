@@ -17,13 +17,15 @@ increment: 20
 
 batch_size: 128
 n_epochs: 500
+
 early_stopping: true
 patience: 50
 min_delta: 0
 restore_best_weights: true
 
 # Rehearsal 
-rehearsal_samples: 10
+rehearsal: GaussianMixtureModel
+rehearsal_samples_per_class: 50
 
 # Optimiser
 

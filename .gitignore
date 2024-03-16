@@ -4,6 +4,5 @@ heatmaps/
 wandb/
 wisdm/
 saves
-test_log.txt
-embedding_tests.txt
 evaluate.sh
+*.txt

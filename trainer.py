@@ -3,6 +3,8 @@ import time
 import numpy as np
 import torch
 
+import rehearsal
+
 from continuum.metrics import Logger
 from sklearn.metrics import classification_report, f1_score
 from timm.utils import accuracy
@@ -14,7 +16,6 @@ from base_har import BaseDataset
 from earlystopping import EarlyStopping
 from dytox import DyTox
 from logger import SmoothedValue, MetricLogger
-from rehearsal import Rehearsal
 
 
 class Trainer:
@@ -46,11 +47,11 @@ class Trainer:
         self.min_delta = args.min_delta
         self.restore_best_weights = args.restore_best_weights
         self.args = args
-        self.rehearsal_samples = args.rehearsal_samples
 
         print(f'Creating DyTox')
         self.model = DyTox(args.base_increment, args.features, args.embed_dim, args.patch_size)
-        self.rehearsal = Rehearsal(args.data_set, args.save_dir)
+        rehearsal_class_ = getattr(rehearsal, args.rehearsal)
+        self.rehearsal = rehearsal_class_(args.data_set, args.rehearsal_samples_per_class, path=args.save_dir)
         self.criterion = nn.CrossEntropyLoss()
 
         optimisers = {
@@ -106,7 +107,7 @@ class Trainer:
                 # Generate and integrate rehearsal data
                 task_data = self.data[task_id]['trn']['x']
                 task_labels = self.data[task_id]['trn']['y']
-                rehearsal_data, rehearsal_labels = self.rehearsal.generate_data(self.rehearsal_samples)
+                rehearsal_data, rehearsal_labels = self.rehearsal.generate_rehearsal_data()
                 augmented_data = np.concatenate([task_data, rehearsal_data])
                 augmented_labels = np.concatenate([task_labels, rehearsal_labels])
 
