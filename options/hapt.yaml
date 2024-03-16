@@ -1,9 +1,9 @@
-# USAGE: python /home/arw27/CS4099/dmoe/main.py --options options/hapt.yaml
+# USAGE: python main.py --options options/hapt.yaml
 
 # Data
 
 data_set: hapt
-data_path: /home/arw27/CS4099/dmoe/har/HAPT
+data_path: /home/arw27/CS4099/dytox-har/har/HAPT
 
 features: 561
 embed_dim: 768
@@ -27,5 +27,5 @@ momentum: 0.9
 
 # Saving
 
-save_model: false
+save_model: true
 save_dir: saves

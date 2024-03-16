@@ -285,9 +285,8 @@ class BaseDataset(Dataset):
         
         return x, y
 
-def get_data(data_set, train_path, num_classes, base_increment, increment, test_path=None,
-             val_path=None, validation=0.2, shuffle_classes=True, k=2, dummy=False,
-             seed=None, save_path=None
+def get_data(data_set, train_path, num_classes, base_increment, increment, validation=0.2,
+             shuffle_classes=True, dummy=False, seed=None, save_path=None
     ):
     """
     train_path: the path to .mat train file
@@ -336,12 +335,12 @@ def get_data(data_set, train_path, num_classes, base_increment, increment, test_
             trainset, testset = make_hapt(train_path, totensor=True)
         case 'wisdm':
             trainset, testset = make_wisdm(train_path)
-        case 'flex':
+        case 'dsads_flex':
             trainset, testset = make_flexible4a(train_path, typ='dsads')
+        case 'wisdm_flex':
+            trainset, testset = make_flexible4a(train_path, typ='wisdm')
         case 'flex2':
             trainset, testset = make_flexible4b(train_path, save_path)
-        case 'wisdmflex':
-            trainset, testset = make_flexible4a(train_path, typ='wisdm')
 
     class_order = list(range(num_classes))
 

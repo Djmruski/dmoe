@@ -1,22 +1,29 @@
-# USAGE: python main.py --options options/wisdm.yaml
+# USAGE: python main.py --options options/wisdm_flex.yaml
 
 # Data
 
-data_set: wisdm
+data_set: wisdm_flex
 data_path: /home/arw27/CS4099/dytox-har/har/WISDM/dataset/arff_files/phone/accel/all.csv
 
 features: 91
 embed_dim: 768
 patch_size: 48
 
-num_classes: 18
-base_increment: 2
-increment: 2
+num_classes: 894
+base_increment: 34
+increment: 20
 
 # Training
 
-batch_size: 32
+batch_size: 128
 n_epochs: 500
+early_stopping: true
+patience: 50
+min_delta: 0
+restore_best_weights: true
+
+# Rehearsal 
+rehearsal_samples: 10
 
 # Optimiser
 

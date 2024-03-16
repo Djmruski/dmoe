@@ -1,26 +1,25 @@
-# USAGE: python main.py --options options/dsads.yaml
+# USAGE: python main.py --options options/dsads_flex.yaml
 
 # Data
 
-data_set: dsads
+data_set: dsads_flex
 data_path: /home/arw27/CS4099/dytox-har/har/DSADS/dsads.mat
 
 features: 405
 embed_dim: 768
 patch_size: 64
 
-num_classes: 19
-base_increment: 3
-increment: 2
+num_classes: 152
+base_increment: 12
+increment: 10
 
 # Training
 
 batch_size: 32
 n_epochs: 500
-early_stopping: true
-patience: 50
-min_delta: 0
-restore_best_weights: true
+
+# Rehearsal 
+rehearsal_samples: 20
 
 # Optimiser
 

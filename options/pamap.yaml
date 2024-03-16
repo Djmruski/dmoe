@@ -1,9 +1,9 @@
-# USAGE: python /home/arw27/CS4099/dmoe/main.py --options options/pamap.yaml
+# USAGE: python main.py --options options/pamap.yaml
 
 # Data
 
 data_set: pamap
-data_path: /home/arw27/CS4099/dmoe/har/DSADS/pamap.mat
+data_path: /home/arw27/CS4099/dytox-har/har/DSADS/pamap.mat
 
 features: 243
 embed_dim: 768
