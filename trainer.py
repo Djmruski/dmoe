@@ -11,6 +11,7 @@ from torch import optim
 from torch.utils.data import DataLoader
 
 from base_har import BaseDataset
+from earlystopping import EarlyStopping
 from dytox import DyTox
 from logger import SmoothedValue, MetricLogger
 from rehearsal import Rehearsal
@@ -40,7 +41,12 @@ class Trainer:
         self.task_cla = task_cla
         self.class_order = class_order
         self.n_epochs = args.n_epochs
+        self.early_stop = args.early_stopping
+        self.patience = args.patience
+        self.min_delta = args.min_delta
+        self.restore_best_weights = args.restore_best_weights
         self.args = args
+        self.rehearsal_samples = args.rehearsal_samples
 
         print(f'Creating DyTox')
         self.model = DyTox(args.base_increment, args.features, args.embed_dim, args.patch_size)
@@ -62,6 +68,20 @@ class Trainer:
         self.logger = Logger(list_subsets=['train', 'test'])
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
+        """logging properties"""
+        self.test_confusion_matrix = {} # format: {'true': [], 'preds': [], 'labels': [], 0: {'true': [], 'preds': [], 'labels': []}}
+        # self.train_accuracy = {}        # format: {0: 0.5, 1: 0.5, ...}
+        # self.train_loss = {}            # format: {0: 0.5}, 1: 0.5, ...}
+        # self.val_accuracy = {}          # format: {0: 0.5, 1: 0.5, ...}
+        # self.val_loss = {}              # format: {0: {expert: 0.5, gate: 0.5}, 1: {expert: 0.5, gate: 0.5}, ...}
+        # self.expert_train_time = {}
+        # self.expert_train_time_wall = {} 
+        # self.gate_train_time = {}
+        # self.gate_train_time_wall = {}
+        # self.prediction_time = None     # format: floating nano seconds
+        # self.prediction_time_wall = None
+        # self.task_params = {}
+
 
     def train(self):
         """
@@ -72,6 +92,10 @@ class Trainer:
         val_loaders = []
 
         for task_id in range(len(self.task_cla)):
+
+            early_stopping = EarlyStopping(self.patience, self.min_delta, 
+                                           self.restore_best_weights) if self.early_stop else None
+
             if task_id == 0:
                 self.rehearsal.add_task(self.data[task_id]['trn'])
             else:   # For all subsequent tasks
@@ -82,7 +106,7 @@ class Trainer:
                 # Generate and integrate rehearsal data
                 task_data = self.data[task_id]['trn']['x']
                 task_labels = self.data[task_id]['trn']['y']
-                rehearsal_data, rehearsal_labels = self.rehearsal.generate_data(50)
+                rehearsal_data, rehearsal_labels = self.rehearsal.generate_data(self.rehearsal_samples)
                 augmented_data = np.concatenate([task_data, rehearsal_data])
                 augmented_labels = np.concatenate([task_labels, rehearsal_labels])
 
@@ -103,22 +127,24 @@ class Trainer:
             val_loaders.append(val_dataloader)
 
             for epoch in range(self.n_epochs):
-                self.train_one_epoch(task_id, epoch, train_dataloader)
+                self.train_one_epoch(task_id, epoch, train_dataloader, early_stopping)
+                if self.early_stop and early_stopping.stop:
+                    print(f"Early stopping: exit epoch {epoch+1}.")
+                    break
+
             all_true, all_preds = self.evaluate(val_loaders, logger)
         
+        self.test_confusion_matrix['true'] = all_true
+        self.test_confusion_matrix['preds'] = all_preds
+        self.test_confusion_matrix['labels'] = sorted(np.unique(all_true))
+
         print("\n====================\n")
         print(f"f1_score(micro): {100 * f1_score(all_true, all_preds, average='micro', zero_division=1)}")
         print(f"f1_score(macro): {100 * f1_score(all_true, all_preds, average='macro', zero_division=1)}")
         print(f"Classification report:\n{classification_report(all_true, all_preds, zero_division=1)}")
 
 
-        # Save model and rehearsal data if specified
-        if self.args.save_model:
-            self.rehearsal.save()
-            torch.save(self.model, '/'.join([self.args.save_dir, self.args.data_set, 'dytox.pth']))
-
-
-    def train_one_epoch(self, task_id, epoch, data_loader):
+    def train_one_epoch(self, task_id, epoch, data_loader, early_stopping):
         """
         Trains the model for one epoch on a given task's training data.
         
@@ -165,6 +191,9 @@ class Trainer:
         total_time_str = str(datetime.timedelta(seconds=int(total_time)))
         print('{} Total time: {} ({:.4f} s / it)'.format(
             header, total_time_str, total_time / len(data_loader)))
+        
+        if self.early_stop:
+            early_stopping(loss, self.model)
 
 
     @torch.no_grad()
