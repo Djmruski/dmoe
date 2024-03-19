@@ -82,9 +82,25 @@ def main(args):
         trainer.rehearsal.save()
         torch.save(trainer.model, '/'.join([args.save_dir, args.data_set, 'dytox.pth']))
         to_save = {
-            'test_confusion_matrix': trainer.test_confusion_matrix,
             'data': {'data': data, 'taskcla': task_cla, 'clsorder': class_order},
+            'test_confusion_matrix': trainer.test_confusion_matrix,
+            'train_accuracy': trainer.train_accuracy,
+            'train_loss': trainer.train_loss,
+            'val_accuracy': trainer.val_accuracy,
+            'val_loss': trainer.val_loss,
             'total_parameters': total_parameters,
+            'train_time': trainer.train_time,
+            'prediction_time': trainer.prediction_time,
+            'rehearsal_task_creation_time': trainer.rehearsal.task_creation_time,
+            'rehearsal_class_creation_time': trainer.rehearsal.class_creation_time,
+            'rehearsal_task_build_time': trainer.rehearsal.task_build_time,
+            'rehearsal_class_build_time': trainer.rehearsal.class_build_time,
+            'train_time_wall': trainer.train_time_wall,
+            'prediction_time_wall': trainer.prediction_time_wall,
+            'rehearsal_task_creation_time_wall': trainer.rehearsal.task_creation_time_wall,
+            'rehearsal_class_creation_time_wall': trainer.rehearsal.class_creation_time_wall,
+            'rehearsal_task_build_time_wall': trainer.rehearsal.task_build_time_wall,
+            'rehearsal_class_build_time_wall': trainer.rehearsal.class_build_time_wall
         }
         pickle.dump(to_save, open('/'.join([args.save_dir, args.data_set, 'results.pkl']), 'wb'))
 

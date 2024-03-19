@@ -8,8 +8,7 @@ import rehearsal
 from continuum.metrics import Logger
 from sklearn.metrics import classification_report, f1_score
 from timm.utils import accuracy
-from torch import nn
-from torch import optim
+from torch import nn, optim
 from torch.utils.data import DataLoader
 
 from base_har import BaseDataset
@@ -51,7 +50,8 @@ class Trainer:
         print(f'Creating DyTox')
         self.model = DyTox(args.base_increment, args.features, args.embed_dim, args.patch_size)
         rehearsal_class_ = getattr(rehearsal, args.rehearsal)
-        self.rehearsal = rehearsal_class_(args.data_set, args.rehearsal_samples_per_class, path=args.save_dir)
+        self.rehearsal = rehearsal_class_(args.data_set, args.rehearsal_samples_per_class, 
+                                          path=args.save_dir)
         self.criterion = nn.CrossEntropyLoss()
 
         optimisers = {
@@ -70,19 +70,15 @@ class Trainer:
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
         """logging properties"""
-        self.test_confusion_matrix = {} # format: {'true': [], 'preds': [], 'labels': [], 0: {'true': [], 'preds': [], 'labels': []}}
-        # self.train_accuracy = {}        # format: {0: 0.5, 1: 0.5, ...}
-        # self.train_loss = {}            # format: {0: 0.5}, 1: 0.5, ...}
-        # self.val_accuracy = {}          # format: {0: 0.5, 1: 0.5, ...}
-        # self.val_loss = {}              # format: {0: {expert: 0.5, gate: 0.5}, 1: {expert: 0.5, gate: 0.5}, ...}
-        # self.expert_train_time = {}
-        # self.expert_train_time_wall = {} 
-        # self.gate_train_time = {}
-        # self.gate_train_time_wall = {}
-        # self.prediction_time = None     # format: floating nano seconds
-        # self.prediction_time_wall = None
-        # self.task_params = {}
-
+        self.test_confusion_matrix = {}
+        self.train_loss = {}
+        self.train_accuracy = {}
+        self.val_loss = {}
+        self.val_accuracy = {}
+        self.train_time = {}
+        self.train_time_wall = {}
+        self.prediction_time = None
+        self.prediction_time_wall = None
 
     def train(self):
         """
@@ -93,6 +89,8 @@ class Trainer:
         val_loaders = []
 
         for task_id in range(len(self.task_cla)):
+            start_time = time.process_time()
+            start_time_wall = time.time()
 
             early_stopping = EarlyStopping(self.patience, self.min_delta, 
                                            self.restore_best_weights) if self.early_stop else None
@@ -102,7 +100,7 @@ class Trainer:
             else:   # For all subsequent tasks
                 print(f'Expanding model')
                 self.model.expand_model(self.args.increment)
-                self.model.freeze_old_params()
+                # self.model.freeze_old_params()
 
                 # Generate and integrate rehearsal data
                 task_data = self.data[task_id]['trn']['x']
@@ -118,8 +116,6 @@ class Trainer:
 
             self.model.to(self.device)
 
-            # print(len(self.data[task_id]['val']['y']))
-
             # Prepare data loaders
             train_dataloader = DataLoader(BaseDataset(self.data[task_id]['trn']), 
                                           batch_size=self.args.batch_size, shuffle=True)
@@ -134,6 +130,9 @@ class Trainer:
                     break
 
             all_true, all_preds = self.evaluate(val_loaders, logger)
+
+            self.train_time[task_id] = time.process_time() - start_time
+            self.train_time_wall[task_id] = time.time() - start_time_wall
         
         self.test_confusion_matrix['true'] = all_true
         self.test_confusion_matrix['preds'] = all_preds
@@ -143,7 +142,6 @@ class Trainer:
         print(f"f1_score(micro): {100 * f1_score(all_true, all_preds, average='micro', zero_division=1)}")
         print(f"f1_score(macro): {100 * f1_score(all_true, all_preds, average='macro', zero_division=1)}")
         print(f"Classification report:\n{classification_report(all_true, all_preds, zero_division=1)}")
-
 
     def train_one_epoch(self, task_id, epoch, data_loader, early_stopping):
         """
@@ -188,6 +186,9 @@ class Trainer:
             self.optimiser.step()
             self.optimiser.zero_grad()  # Zero gradients for the next batch
 
+        self.train_loss[task_id] = loss
+        self.train_accuracy[task_id] = acc1
+
         total_time = time.time() - start_time
         total_time_str = str(datetime.timedelta(seconds=int(total_time)))
         print('{} Total time: {} ({:.4f} s / it)'.format(
@@ -195,7 +196,6 @@ class Trainer:
         
         if self.early_stop:
             early_stopping(loss, self.model)
-
 
     @torch.no_grad()
     def evaluate(self, data_loader, logger):
@@ -207,17 +207,19 @@ class Trainer:
             data_loaders (list): List of DataLoader objects for validation data of each task.
             logger (Logger): Logger for recording evaluation metrics.
         """
+        total_start_time = time.process_time()
+        total_start_time_wall = time.time()
         metric_logger = MetricLogger(delimiter="  ")
         self.model.eval()  # Set the model to evaluation mode
 
         all_preds, all_true = [], []
         for task_id, val_loader in enumerate(data_loader):
-            ypreds, ytrue = [], []
-
-            start_time = time.time()
+            start_time_wall = time.time()
             end = time.time()
             iter_time = SmoothedValue(fmt='{avg:.4f}')
             data_time = SmoothedValue(fmt='{avg:.4f}')
+
+            ypreds, ytrue = [], []
 
             for batch_index, (x, y) in enumerate(val_loader):
                 data_time.update(time.time() - end)
@@ -228,6 +230,9 @@ class Trainer:
 
                 loss = self.criterion(output, y)
                 acc1, acc5 = accuracy(output, y, topk=(1, min(5, output.shape[1])))
+
+                self.val_loss[task_id] = loss
+                self.val_accuracy[task_id] = acc1
 
                 # Log Metrics
                 metric_logger.update(loss=loss.item())
@@ -254,9 +259,12 @@ class Trainer:
 
                 end = time.time()
 
-            total_time = time.time() - start_time
+            total_time = time.time() - start_time_wall
             total_time_str = str(datetime.timedelta(seconds=int(total_time)))
             print('{} Total time: {} ({:.4f} s / it)'.format(header, total_time_str, 
                                                              total_time / len(val_loader)))
         
+        self.prediction_time = time.process_time() - total_start_time
+        self.prediction_time_wall = time.time() - total_start_time_wall
+
         return all_true, all_preds

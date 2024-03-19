@@ -36,5 +36,4 @@ momentum: 0
 
 # Saving
 
-save_model: true
 save_dir: saves

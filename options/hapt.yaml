@@ -1,7 +1,6 @@
 # USAGE: python main.py --options options/hapt.yaml
 
 # Data
-
 data_set: hapt
 data_path: /home/arw27/CS4099/dytox-har/har/HAPT
 
@@ -16,6 +15,7 @@ increment: 2
 # Training
 batch_size: 32
 n_epochs: 500
+
 early_stopping: true
 patience: 50
 min_delta: 0
@@ -23,16 +23,13 @@ restore_best_weights: true
 
 # Rehearsal
 rehearsal: GaussianMixtureModel
-rehearsal_samples_per_class: 20
+rehearsal_samples_per_class: 50
 
 # Optimiser
-
 optimiser: SGD
 learning_rate: 0.01
 weight_decay: 0.0001
 momentum: 0.9
 
 # Saving
-
-save_model: true
 save_dir: saves
