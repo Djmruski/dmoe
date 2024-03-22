@@ -10,6 +10,19 @@ from expert import Expert
 
 class DyTox(nn.Module):
 
+    """
+    Implementation of the DyTox model for continual learning, as described in:
+    Title: "DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion"
+    Authors: Arthur Douillard, Alexandre Ramé, Guillaume Couairon, Matthieu Cord
+    Year: 2021
+    Journal: CoRR
+    Volume: abs/2111.11326
+
+    This implementation is inspired by the approach proposed in the paper, focusing on the dynamic token expansion mechanism for adapting vision transformers to continual learning tasks.
+
+    Paper URL: https://arxiv.org/abs/2111.11326
+    """
+
     def __init__(self, num_classes, features, embed_dim, patch_size):
         super().__init__()
 
@@ -24,7 +37,7 @@ class DyTox(nn.Module):
         self.tab_projs = nn.ModuleList([nn.Linear(self.features, self.embed_dim)])
         self.task_attn = Attention(self.patch_size, self.embed_dim)
         self.clf_proj = nn.Linear(self.patch_size * (self.num_patches + 1), self.embed_dim)         # task attention queries using entire input
-        # self.clf_proj = nn.Linear(self.patch_size, self.embed_dim)                                  # task attention queries using task token
+        # self.clf_proj = nn.Linear(self.patch_size, self.embed_dim)                                # task attention queries using task token
 
         # classifier block
         in_dim = self.embed_dim

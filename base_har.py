@@ -1,3 +1,20 @@
+"""
+Implementation of various data manipulation and model preparation techniques for continual learning
+in sensor-based human activity recognition, as inspired by:
+Title: "Continual Learning in Sensor-Based Human Activity Recognition with Dynamic Mixture of Experts"
+Authors: Fahrurrozi Rahman, Martin Schiemer, Andrea Rosales Sanabria, Juan Ye
+Note: Under submission
+DOI: 10.2139/ssrn.4630797
+
+This code includes functions for preprocessing datasets, splitting datasets into training and
+testing sets, transforming data into tensor format for use with PyTorch, and preparing datasets for
+a continual learning context using a dynamic mixture of experts model. The methodologies and
+approaches taken here are based on or inspired by the principles discussed in the unpublished paper
+mentioned above.
+
+Page: to appear
+"""
+
 import numpy as np
 import pandas as pd
 import pickle
