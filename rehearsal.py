@@ -84,8 +84,8 @@ class GaussianDistribution(Rehearsal):
     """
     Manages rehearsal data through a Gaussian Distribution.
     """
-    def __init__(self, data_set, path='saves', **kwargs):
-        super().__init__(data_set, path)
+    def __init__(self, data_set, num_samples_per_class=10, path='saves', **kwargs):
+        super().__init__(data_set, num_samples_per_class, path)
         self.class_means = []
         self.class_covariances = []
 
@@ -122,7 +122,7 @@ class GaussianMixtureModel(Rehearsal):
     Manages rehearsal data through Gaussian Mixture Models.
     """
     def __init__(self, data_set, num_samples_per_class=10, 
-                 components_range=[1, 2, 3, 4, 5, 6, 7, 8, 9], seed=None, path='saves', **kwargs):
+                 components_range=[1, 2, 3, 4], seed=None, path='saves', **kwargs):
         super().__init__(data_set, num_samples_per_class, path)
         self.components_range = components_range
         self.seed = seed

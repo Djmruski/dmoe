@@ -5,4 +5,4 @@ wandb/
 wisdm/
 saves
 evaluate.sh
-*.txt
+output.txt

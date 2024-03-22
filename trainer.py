@@ -56,12 +56,11 @@ class Trainer:
 
         optimisers = {
             'SGD': optim.SGD(self.model.parameters(), lr=args.learning_rate, 
-                                                    momentum=args.momentum, 
-                                                    weight_decay=args.weight_decay),
+                             momentum=args.momentum, weight_decay=args.weight_decay),
             'Adam': optim.Adam(self.model.parameters(), lr=args.learning_rate,
-                                                    weight_decay=args.weight_decay),
+                               weight_decay=args.weight_decay),
             'AdamW': optim.AdamW(self.model.parameters(), lr=args.learning_rate,
-                                                    weight_decay=args.weight_decay)
+                                 weight_decay=args.weight_decay)
         }
 
         self.optimiser = optimisers[args.optimiser]
@@ -100,7 +99,7 @@ class Trainer:
             else:   # For all subsequent tasks
                 print(f'Expanding model')
                 self.model.expand_model(self.args.increment)
-                # self.model.freeze_old_params()
+                self.model.freeze_old_params()
 
                 # Generate and integrate rehearsal data
                 task_data = self.data[task_id]['trn']['x']
@@ -115,6 +114,8 @@ class Trainer:
                 self.data[task_id]['trn']['y'] = augmented_labels
 
             self.model.to(self.device)
+            total_parameters = sum(param.numel() for param in self.model.parameters())
+            print(f'Parameters: {total_parameters}')
 
             # Prepare data loaders
             train_dataloader = DataLoader(BaseDataset(self.data[task_id]['trn']), 
@@ -180,7 +181,7 @@ class Trainer:
 
             # Print Metrics
             header = 'Task: [{}] Epoch: [{}]'.format(task_id, epoch)
-            metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
+            # metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
 
             loss.backward()
             self.optimiser.step()

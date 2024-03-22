@@ -19,17 +19,6 @@ def drop_cols(df, cols=[]):
     return df.drop(columns=cols)
 
 def to_tensor(df, class_col, scale=False, scaler=None):
-    # data = {
-    #     'data': [
-    #         [
-    #             768_dimension_of_ViT_embedding,
-    #             the_label
-    #         ],
-    #         [],
-    #         ...
-    #     ],
-    #     'targets': labels/classes as a whole
-    # }
     X = df.iloc[:, :class_col].to_numpy()
     y = df.iloc[:, class_col].to_numpy()
 
@@ -49,17 +38,6 @@ def to_tensor(df, class_col, scale=False, scaler=None):
 
 def data_dict(df, class_col):
     """ The same implementation as to_tensor() but the features are in numpy"""
-    # data = {
-    #     'data': [
-    #         [
-    #             har_features,
-    #             the_label
-    #         ],
-    #         [],
-    #         ...
-    #     ],
-    #     'targets': labels/classes as a whole
-    # }
     X = df.iloc[:, :class_col].to_numpy()
     y = df.iloc[:, class_col].to_numpy()
     y_map = {v: k for k, v in enumerate(np.unique(y))}
@@ -199,10 +177,6 @@ def make_flexible4a(path, typ='dsads'):
     
     x_test = pd.concat(x_test)    
     x_test.columns = [i for i in range(len(x_test.columns))]
-
-    # print(sorted(x_train[final_col].unique()), len(x_train[final_col].unique()))
-    # print(sorted(x_test[final_col].unique()), len(x_test[final_col].unique()))
-    # exit()
 
     if typ == 'wisdm':
         train_data = to_tensor(x_train, final_col, scale=True)
