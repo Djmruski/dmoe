@@ -181,7 +181,7 @@ class Trainer:
 
             # Print Metrics
             header = 'Task: [{}] Epoch: [{}]'.format(task_id, epoch)
-            # metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
+            metric_logger.print_log(header, batch_index, len(data_loader), iter_time, data_time)
 
             loss.backward()
             self.optimiser.step()

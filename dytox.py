@@ -23,7 +23,8 @@ class DyTox(nn.Module):
         self.task_tokens = nn.ParameterList([nn.Parameter(torch.zeros(1, 1, patch_size))])
         self.tab_projs = nn.ModuleList([nn.Linear(self.features, self.embed_dim)])
         self.task_attn = Attention(self.patch_size, self.embed_dim)
-        self.clf_proj = nn.Linear(self.patch_size * (self.num_patches + 1), self.embed_dim)
+        self.clf_proj = nn.Linear(self.patch_size * (self.num_patches + 1), self.embed_dim)         # task attention queries using entire input
+        # self.clf_proj = nn.Linear(self.patch_size, self.embed_dim)                                  # task attention queries using task token
 
         # classifier block
         in_dim = self.embed_dim

@@ -28,8 +28,10 @@ class Attention(nn.Module):
     def forward(self, x):
         B, N, C = x.shape
 
+
         # creating queries, keys, vectors using input vectors
-        q = self.q(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)
+        # q = self.q(x[:,0]).unsqueeze(1).reshape(B, 1, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)  # queries using task token
+        q = self.q(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)                  # queries using entire input
         k = self.k(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)
         v = self.v(x).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)
 
@@ -37,6 +39,6 @@ class Attention(nn.Module):
         attn_logits = q @ k.transpose(-2, -1)
         attn_logits = attn_logits / math.sqrt(self.dim)
         attention = attn_logits.softmax(dim=-1)
-        values = (attention @ v).transpose(1, 2).reshape(B, N, C)
+        values = (attention @ v).transpose(1, 2).reshape(B, 1, C)
 
         return values
